@@ -44,15 +44,17 @@ function Navbar() {
     <header className="sticky top-3 z-50">
       <Container>
         <div className="mx-auto flex h-14 items-center justify-between rounded-full border border-white/10 bg-background/70 px-4 shadow-sm backdrop-blur-xl">
-          <a href="#" className="flex items-center gap-2 font-semibold tracking-tight text-foreground/90">
+          <a href="/" className="flex items-center gap-2 font-semibold tracking-tight text-foreground/90">
             <span className="text-sm md:text-[15px]">CODORRA · 2026</span>
           </a>
           <nav className="hidden gap-1.5 md:flex text-[13px]">
-            <a href="#about" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">About</a>
-            <a href="#tracks" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">Tracks</a>
-            <a href="#prizes" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">Prizes</a>
-            <a href="#timeline" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">Timeline</a>
-            <a href="#faq" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">FAQ</a>
+            <a href="/about" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">About</a>
+            <a href="/apply" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">Apply</a>
+            <a href="/judges" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">Judges</a>
+            <a href="/sponsors" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">Sponsors</a>
+            <a href="/schedule" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">Schedule</a>
+            <a href="/faq" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">FAQ</a>
+            <a href="/contact" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">Contact</a>
           </nav>
           <div className="flex items-center gap-2">
             <span className="hidden md:inline-block h-6 w-px bg-white/10" />
@@ -62,7 +64,7 @@ function Navbar() {
               variant="secondary"
               className="rounded-full h-10 px-5 border border-white/10 bg-white/5 hover:bg-white/10 text-foreground/90"
             >
-              <a href="#register">Register Now</a>
+              <a href="/apply">Register Now</a>
             </Button>
           </div>
         </div>
@@ -104,10 +106,10 @@ function Hero() {
         </p>
         <div className="flex flex-wrap items-center gap-3">
           <Button size="lg" variant="secondary" asChild className="rounded-full h-11 px-6 border border-white/15 bg-white/10 hover:bg-white/15 text-foreground ring-glow">
-            <a href="#register" className="inline-flex items-center">Register Now <ArrowRight className="ml-2 size-4" /></a>
+            <a href="/apply" className="inline-flex items-center">Apply Now <ArrowRight className="ml-2 size-4" /></a>
           </Button>
           <Button size="lg" variant="ghost" asChild className="rounded-full h-11 px-6 text-foreground/85 hover:bg-white/10">
-            <a href="#faq" className="inline-flex items-center"><BookOpen className="mr-2 size-4" /> Handbook</a>
+            <a href="/criteria" className="inline-flex items-center"><BookOpen className="mr-2 size-4" /> Judging Criteria</a>
           </Button>
         </div>
       </Container>
@@ -363,9 +365,12 @@ function Sponsors() {
             </Card>
           ))}
         </div>
-        <div className="mt-10 text-center">
+        <div className="mt-10 flex items-center justify-center gap-3">
           <Button size="lg" variant="secondary" className="rounded-full h-11 px-6 border border-white/15 bg-white/10 hover:bg-white/15" asChild>
-            <a href="mailto:team@codorra.dev?subject=Sponsor%20CODORRA%20Hackathon">Become a Sponsor</a>
+            <a href="/apply#sponsor">Apply as Sponsor</a>
+          </Button>
+          <Button size="lg" variant="ghost" className="rounded-full h-11 px-6" asChild>
+            <a href="mailto:team@codorra.dev?subject=Sponsor%20CODORRA%20Hackathon">Email Us</a>
           </Button>
         </div>
       </Container>
@@ -401,6 +406,12 @@ function FAQ() {
   </div>
 </div>
 
+        <div className="mt-8 text-center">
+          <Button asChild variant="secondary" className="rounded-full h-10 px-6 border border-white/15 bg-white/10 hover:bg-white/15">
+            <a href="/faq">See Full FAQ</a>
+          </Button>
+        </div>
+
       </Container>
     </section>
   )
@@ -435,6 +446,12 @@ function RegisterCTA() {
                 <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
               </a>
             </Button>
+            <Button asChild size="lg" variant="ghost" className="group h-11 rounded-full px-6 text-[15px]">
+              <a href="/apply" className="flex items-center gap-2">
+                Apply on Site
+                <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+              </a>
+            </Button>
           </div>
 
           <p className="mt-6 text-sm text-muted-foreground">
@@ -452,14 +469,14 @@ function Footer() {
       <Container className="flex flex-col items-center justify-between gap-4 text-sm text-muted-foreground md:flex-row">
         <div>© {new Date().getFullYear()} CODORRA</div>
         <div className="flex items-center gap-6">
-          <a href="#faq" className="hover:text-primary">
-            Handbook
+          <a href="/faq" className="hover:text-primary">
+            FAQ
           </a>
-          <a href="#sponsors" className="hover:text-primary">
-            Become a Sponsor
+          <a href="/sponsors" className="hover:text-primary">
+            Sponsors
           </a>
-          <a href="#" className="hover:text-primary">
-            Privacy
+          <a href="/contact" className="hover:text-primary">
+            Contact
           </a>
         </div>
       </Container>
