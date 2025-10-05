@@ -27,6 +27,7 @@ import {
   Award,
   Mic,
   Laptop,
+  CheckCircle,
 } from "lucide-react"
 
 export default function SchedulePage() {
