@@ -32,7 +32,7 @@ export default function CriteriaPage() {
       title: "Innovation",
       percentage: 30,
       color: "bg-primary/10 text-primary ring-primary/25",
-      description: "How novel and creative is your approach to solving cybersecurity challenges?",
+      description: "Idea quality and relevance to cybersecurity challenges",
       details: [
         "Novel approach to existing problems",
         "Creative use of emerging technologies",
@@ -51,7 +51,7 @@ export default function CriteriaPage() {
       title: "Technical Execution",
       percentage: 30,
       color: "bg-accent/10 text-accent ring-accent/25",
-      description: "How well is your solution implemented from a technical standpoint?",
+      description: "Technical execution and code quality",
       details: [
         "Code quality and architecture",
         "Technical feasibility and scalability",
@@ -70,7 +70,7 @@ export default function CriteriaPage() {
       title: "Design/UX",
       percentage: 20,
       color: "bg-primary/10 text-primary ring-primary/25",
-      description: "How user-friendly and well-designed is your solution?",
+      description: "Presentation clarity",
       details: [
         "User interface design quality",
         "User experience and usability",
@@ -89,7 +89,7 @@ export default function CriteriaPage() {
       title: "Business Value",
       percentage: 20,
       color: "bg-accent/10 text-accent ring-accent/25",
-      description: "What real-world impact and commercial potential does your solution have?",
+      description: "Real-world applicability and impact",
       details: [
         "Market need and problem validation",
         "Commercial viability and scalability",
@@ -173,24 +173,24 @@ export default function CriteriaPage() {
 
   const trackSpecificCriteria = [
     {
-      track: "Core Cybersecurity",
-      focus: "Traditional security domains",
-      emphasis: ["Threat detection accuracy", "Incident response efficiency", "Security architecture", "Compliance adherence"]
-    },
-    {
       track: "AI + Security", 
       focus: "AI/ML in security applications",
-      emphasis: ["Model accuracy and reliability", "Bias and fairness", "Explainability", "Adversarial robustness"]
+      emphasis: ["Defensive AI systems", "AI-assisted monitoring", "Model safety", "Robustness tooling"]
     },
     {
-      track: "Fintech Security",
-      focus: "Financial technology security",
-      emphasis: ["Regulatory compliance", "Fraud detection", "Data privacy", "Transaction security"]
+      track: "Network Security",
+      focus: "Network and infrastructure security",
+      emphasis: ["Software security", "Infrastructure tools", "Protocol security", "Physical network security"]
+    },
+    {
+      track: "Tomfoolery",
+      focus: "Fun, absurd, but working solutions",
+      emphasis: ["Creative execution", "Working prototypes", "Humor and innovation", "Technical depth despite absurdity"]
     },
     {
       track: "Open Innovation",
       focus: "High-impact innovative solutions",
-      emphasis: ["Market disruption potential", "Technical innovation", "User adoption", "Scalability"]
+      emphasis: ["Real-world applicability", "Technical innovation", "Market impact", "Scalability"]
     }
   ]
 
@@ -414,8 +414,8 @@ export default function CriteriaPage() {
                   Learn about our expert panel of judges and their backgrounds in cybersecurity.
                 </p>
                 <Button asChild variant="outline" className="w-full">
-                  <a href="/judges">
-                    View Judges
+                  <a href="/speakers">
+                    View Speakers & Judges
                     <Users className="ml-2 size-4" />
                   </a>
                 </Button>

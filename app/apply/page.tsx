@@ -111,7 +111,7 @@ export default function ApplyPage() {
       <Navbar />
       <PageHeader 
         title="Apply to CODORRA"
-        description="Join us as a participant or partner with us as a sponsor to make this hackathon a success."
+        description="Register via Devpost for Round 1 (free) or apply as a sponsor to support the hackathon."
       />
 
       <PageSection>
@@ -135,20 +135,19 @@ export default function ApplyPage() {
           </TabsList>
 
           <TabsContent value="participant" className="space-y-8">
-            <div className="grid gap-8 md:grid-cols-2">
-              <div className="space-y-6">
-                <Reveal>
-                  <h3 className="text-2xl font-bold">Participant Application</h3>
+            <Reveal>
+              <Card className="glass cursor-target">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <ExternalLink className="size-5" />
+                    Register via Devpost
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
                   <p className="text-muted-foreground">
-                    Ready to build something amazing? Join us for 48 hours of innovation and collaboration.
+                    Round 1 is completely free! Register your team (2-4 members) on Devpost and submit your project during the submission window (May 22-31, 2026).
                   </p>
-                </Reveal>
-
-                <Card className="glass cursor-target">
-                  <CardHeader>
-                    <CardTitle>Why Participate?</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
+                  <div className="space-y-4">
                     {participantBenefits.map((benefit, i) => (
                       <Reveal key={benefit.title} delay={i * 100}>
                         <div className="flex items-start gap-3">
@@ -162,120 +161,16 @@ export default function ApplyPage() {
                         </div>
                       </Reveal>
                     ))}
-                  </CardContent>
-                </Card>
-              </div>
-
-              <Reveal delay={100}>
-                <Card className="glass cursor-target">
-                  <CardHeader>
-                    <CardTitle>Application Form</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <form onSubmit={handleParticipantSubmit} className="space-y-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="name">Full Name *</Label>
-                        <Input
-                          id="name"
-                          value={participantForm.name}
-                          onChange={(e) => setParticipantForm({...participantForm, name: e.target.value})}
-                          placeholder="Your full name"
-                          required
-                        />
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="email">Email Address *</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          value={participantForm.email}
-                          onChange={(e) => setParticipantForm({...participantForm, email: e.target.value})}
-                          placeholder="your.email@example.com"
-                          required
-                        />
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="teamName">Team Name</Label>
-                        <Input
-                          id="teamName"
-                          value={participantForm.teamName}
-                          onChange={(e) => setParticipantForm({...participantForm, teamName: e.target.value})}
-                          placeholder="Your team name (if you have one)"
-                        />
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="teamSize">Team Size</Label>
-                        <Select value={participantForm.teamSize} onValueChange={(value) => setParticipantForm({...participantForm, teamSize: value})}>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select team size" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="1">Solo (1 person)</SelectItem>
-                            <SelectItem value="2">2 people</SelectItem>
-                            <SelectItem value="3">3 people</SelectItem>
-                            <SelectItem value="4">4 people</SelectItem>
-                            <SelectItem value="5">5 people</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="experience">Experience Level</Label>
-                        <Select value={participantForm.experienceLevel} onValueChange={(value) => setParticipantForm({...participantForm, experienceLevel: value})}>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select your experience level" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="beginner">Beginner</SelectItem>
-                            <SelectItem value="intermediate">Intermediate</SelectItem>
-                            <SelectItem value="advanced">Advanced</SelectItem>
-                            <SelectItem value="expert">Expert</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="motivation">Why do you want to participate?</Label>
-                        <Textarea
-                          id="motivation"
-                          value={participantForm.motivation}
-                          onChange={(e) => setParticipantForm({...participantForm, motivation: e.target.value})}
-                          placeholder="Tell us about your interest in cybersecurity and what you hope to achieve..."
-                          rows={4}
-                        />
-                      </div>
-
-                      <Button type="submit" className="w-full">
-                        Submit Application
-                        <ArrowRight className="ml-2 size-4" />
-                      </Button>
-                    </form>
-                  </CardContent>
-                </Card>
-              </Reveal>
-            </div>
-
-            <Reveal delay={200}>
-              <Card className="glass cursor-target">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <ExternalLink className="size-5" />
-                    Alternative: Apply via Devpost
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4">
-                    You can also apply directly through our Devpost page for a streamlined experience.
-                  </p>
-                  <Button asChild variant="outline" className="w-full">
-                    <a href="https://devpost.com" target="_blank" rel="noopener">
-                      Apply on Devpost
+                  </div>
+                  <Button asChild className="w-full" size="lg">
+                    <a href="https://codorra1.devpost.com/" target="_blank" rel="noopener">
+                      Register on Devpost
                       <ExternalLink className="ml-2 size-4" />
                     </a>
                   </Button>
+                  <p className="text-sm text-muted-foreground">
+                    <strong>Round 1:</strong> Free participation • <strong>Round 2:</strong> Tickets required for finalists only
+                  </p>
                 </CardContent>
               </Card>
             </Reveal>
@@ -407,7 +302,7 @@ export default function ApplyPage() {
                     Prefer to discuss sponsorship opportunities directly? Reach out to our team.
                   </p>
                   <Button asChild variant="outline" className="w-full">
-                    <a href="mailto:team@codorra.dev?subject=Sponsor%20CODORRA%20Hackathon">
+                    <a href="mailto:codorra@yahoo.com?subject=Sponsor%20CODORRA%20Hackathon">
                       Email Our Team
                       <Mail className="ml-2 size-4" />
                     </a>

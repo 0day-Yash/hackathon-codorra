@@ -307,12 +307,12 @@ export default function SchedulePage() {
   ]
 
   const importantNotes = [
-    "All times are in IST (Indian Standard Time)",
-    "Online participants have access to all workshops and sessions via live stream",
-    "Meals are provided for in-person participants only",
-    "Venue remains open 24/7 during the hacking period",
-    "Final submissions must be made by 10:00 AM on Day 2",
-    "Demo Day presentations are mandatory for all teams"
+    "All times are in GMT +05:30 (Calcutta timezone)",
+    "Round 1 (May 22-31): Fully online, free participation, submissions via Devpost + GitHub",
+    "Round 2 (June 5-7): Demo Day in Bengaluru, tickets required for finalists only",
+    "Round 2 venue provides 24/7 access, internet, power, and basic infrastructure",
+    "Round 1 submissions close May 31, 2026 at 10:00 AM",
+    "Round 2: 3-minute presentations, live demos, and Q&A with judges"
   ]
 
   return (
@@ -320,14 +320,14 @@ export default function SchedulePage() {
       <Navbar />
       <PageHeader 
         title="Event Schedule"
-        description="Complete timeline for CODORRA 2026 - from pre-event workshops to final awards ceremony."
+        description="Complete timeline for CODORRA 2026 - Round 1: Online (May 22-31) and Round 2: Demo Day (June 5-7)."
       />
 
       <PageSection>
         <SectionHeader
-          eyebrow="Complete Timeline"
-          title="48-Hour Journey"
-          desc="From team formation to final presentations - your complete hackathon experience mapped out."
+          eyebrow="Two-Phase Timeline"
+          title="Round 1 & Round 2 Schedule"
+          desc="Round 1: Online submissions (May 22-31, 2026). Round 2: Demo Day in Bengaluru (June 5-7, 2026)."
           className="cursor-target"
         />
         

@@ -346,7 +346,7 @@ export default function SponsorsPage() {
                   Ready to discuss sponsorship opportunities? Our team is here to help you find the perfect partnership level.
                 </p>
                 <Button asChild className="w-full">
-                  <a href="mailto:team@codorra.dev?subject=Sponsor%20CODORRA%20Hackathon">
+                  <a href="mailto:codorra@yahoo.com?subject=Sponsor%20CODORRA%20Hackathon">
                     Email Our Team
                     <ArrowRight className="ml-2 size-4" />
                   </a>
