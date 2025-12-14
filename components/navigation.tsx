@@ -8,14 +8,14 @@ export function Navbar() {
   return (
     <header className="sticky top-3 z-50">
       <Container>
-        <div className="mx-auto flex h-14 items-center justify-between rounded-full border border-white/10 bg-background/70 px-4 shadow-sm backdrop-blur-xl">
+        <div className="mx-auto flex h-14 items-center justify-between rounded-lg border border-white/10 bg-background/70 px-4 shadow-sm backdrop-blur-xl">
           <a href="/" className="flex items-center gap-2 font-semibold tracking-tight text-foreground/90">
             <span className="text-sm md:text-[15px]">CODORRA · 2026</span>
           </a>
           <nav className="hidden gap-1.5 md:flex text-[13px]">
             <a href="/about" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">About</a>
             <a href="/apply" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">Apply</a>
-            <a href="/judges" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">Judges</a>
+            <a href="/speakers" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">Speakers</a>
             <a href="/sponsors" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">Sponsors</a>
             <a href="/schedule" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">Schedule</a>
             <a href="/faq" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">FAQ</a>

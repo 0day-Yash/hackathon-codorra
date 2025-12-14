@@ -6,7 +6,7 @@ The mission is making cool and useful apps, or websites. Plus entrepreneurship w
 
 * Is there a central *theme/track* (e.g., AI, fintech, climate-tech, cybersecurity) or fully open?
 
-The theme should be cybersecurity.
+The theme should be cybersecurity.  
 
 * How long is it gonna run? (24h sprint, 48h grind, or 1-week marathon?)
 

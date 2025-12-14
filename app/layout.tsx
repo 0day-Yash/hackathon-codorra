@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Plus_Jakarta_Sans } from "next/font/google"
+import { Plus_Jakarta_Sans, Roboto_Mono } from "next/font/google"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
@@ -19,6 +19,12 @@ const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
 })
 
+const robotoMono = Roboto_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-roboto-mono",
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -26,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans ${jakarta.variable} ${GeistMono.variable} antialiased`}>
+      <body className={`${robotoMono.variable} ${jakarta.variable} ${GeistMono.variable} antialiased`} style={{ fontFamily: 'var(--font-roboto-mono), "Roboto Mono", monospace' }}>
         {/* Top Aurora background */}
         <div className="pointer-events-none fixed inset-x-0 top-0 z-0 h-[420px] md:h-[520px] overflow-hidden">
           <div className="absolute inset-0 opacity-80 blur-xl">

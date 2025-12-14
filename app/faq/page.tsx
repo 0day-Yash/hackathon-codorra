@@ -35,7 +35,7 @@ export default function FAQPage() {
       questions: [
         {
           q: "Who can participate in CODORRA?",
-          a: "CODORRA is open to students, professionals, and cybersecurity enthusiasts. Teams must have 3-5 members. No prior cybersecurity experience is required, but basic programming knowledge is recommended."
+          a: "CODORRA is open to students, professionals, and cybersecurity enthusiasts. Teams must have 2-4 members. No prior cybersecurity experience is required, but basic programming knowledge is recommended."
         },
         {
           q: "How do I register for the hackathon?",
@@ -43,7 +43,7 @@ export default function FAQPage() {
         },
         {
           q: "What is the registration fee?",
-          a: "The registration fee is ₹1,000 per person. This covers venue access, meals, swag, and all event activities. Online participants receive digital swag and certificates."
+          a: "Round 1 is completely free for all participants. Round 2 requires tickets only for shortlisted finalists: Individual Normal ₹500, Individual VIP ₹1000, Team Normal (2-4) ₹1500, Team VIP (2-4) ₹2500."
         },
         {
           q: "Can I participate as an individual?",
@@ -62,7 +62,7 @@ export default function FAQPage() {
       questions: [
         {
           q: "Where is the hackathon venue located?",
-          a: "The main venue is in Bengaluru, India. The exact location will be shared with registered participants closer to the event date. The venue is easily accessible by public transport."
+          a: "Round 1 is fully online. Round 2 Demo Day is in Bengaluru, India. The exact location will be shared with finalists closer to the event date."
         },
         {
           q: "What facilities are available at the venue?",
@@ -116,7 +116,7 @@ export default function FAQPage() {
       questions: [
         {
           q: "What is the ideal team size?",
-          a: "Teams should have 3-5 members. This size allows for diverse skill sets while maintaining effective communication and collaboration."
+          a: "Teams should have 2-4 members. This size allows for diverse skill sets while maintaining effective communication and collaboration."
         },
         {
           q: "Can I change my team after registration?",
@@ -195,14 +195,14 @@ export default function FAQPage() {
   const quickFacts = [
     {
       icon: Clock,
-      title: "Duration",
-      value: "48 Hours",
-      description: "Intensive hacking period"
+      title: "Format",
+      value: "Two-Phase",
+      description: "Round 1: Online (Free) • Round 2: Demo Day"
     },
     {
       icon: Users,
       title: "Team Size",
-      value: "3-5 Members",
+      value: "2-4 Members",
       description: "Optimal collaboration"
     },
     {
@@ -319,7 +319,7 @@ export default function FAQPage() {
                 </p>
                 <div className="space-y-2">
                   <p className="text-sm">
-                    <strong>Email:</strong> team@codorra.dev
+                    <strong>Email:</strong> codorra@yahoo.com
                   </p>
                   <p className="text-sm">
                     <strong>Response Time:</strong> Within 24 hours
@@ -343,7 +343,7 @@ export default function FAQPage() {
                 </p>
                 <div className="space-y-2">
                   <p className="text-sm">
-                    <strong>Discord:</strong> Active community discussions
+                    <strong>Discord:</strong> <a href="https://discord.gg/9QpwAmX4Ke" target="_blank" rel="noopener" className="text-primary hover:underline">discord.gg/9QpwAmX4Ke</a>
                   </p>
                   <p className="text-sm">
                     <strong>WhatsApp:</strong> Quick updates and announcements

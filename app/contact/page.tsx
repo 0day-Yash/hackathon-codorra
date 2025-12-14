@@ -47,16 +47,16 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: "Email",
-      value: "team@codorra.dev",
+      value: "codorra@yahoo.com",
       description: "General inquiries and support",
-      action: "mailto:team@codorra.dev"
+      action: "mailto:codorra@yahoo.com"
     },
     {
       icon: MessageSquare,
       title: "Discord",
       value: "Join our community",
       description: "Real-time discussions and updates",
-      action: "https://discord.gg/codorra"
+      action: "https://discord.gg/9QpwAmX4Ke"
     },
     {
       icon: Globe,
@@ -107,7 +107,7 @@ export default function ContactPage() {
   const socialLinks = [
     {
       name: "Discord",
-      url: "https://discord.gg/codorra",
+      url: "https://discord.gg/9QpwAmX4Ke",
       description: "Join our active community for discussions, updates, and networking"
     },
     {
@@ -296,7 +296,10 @@ export default function ContactPage() {
                       <strong>Online Track:</strong> Global participation
                     </p>
                     <p className="text-sm text-muted-foreground">
-                      <strong>Date:</strong> March 15-17, 2026
+                      <strong>Round 1:</strong> May 22-31, 2026 (Online, Free)
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      <strong>Round 2:</strong> June 5-7, 2026 (Bengaluru, Tickets required)
                     </p>
                   </CardContent>
                 </Card>

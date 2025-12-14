@@ -54,8 +54,8 @@ export default function AboutPage() {
   const hackathonStructure = [
     {
       icon: Clock,
-      title: "48-Hour Sprint",
-      description: "Intensive hacking period with 24/7 venue access for in-person participants"
+      title: "Two-Phase Format",
+      description: "Round 1: Online submissions (May 22-31). Round 2: Demo Day in Bengaluru (June 5-7)"
     },
     {
       icon: Building2,
@@ -65,7 +65,7 @@ export default function AboutPage() {
     {
       icon: Users,
       title: "Team Formation",
-      description: "Teams of 3-5 members with diverse skill sets and backgrounds"
+      description: "Teams of 2-4 members with diverse skill sets and backgrounds"
     },
     {
       icon: Code,
@@ -104,7 +104,7 @@ export default function AboutPage() {
     },
     {
       title: "Skills Gap",
-      description: "The cybersecurity workforce gap is projected to reach 3.5 million unfilled positions by 2025."
+      description: "The cybersecurity workforce gap is projected to reach 3.5 million unfilled positions by 2026."
     },
     {
       title: "Innovation Opportunity",
@@ -121,7 +121,7 @@ export default function AboutPage() {
       <Navbar />
       <PageHeader 
         title="About CODORRA"
-        description="A 48-hour cybersecurity hackathon bringing together innovators, builders, and security experts to create solutions that matter."
+        description="A two-phase cybersecurity hackathon bringing together innovators, builders, and security experts to create solutions that matter."
       />
 
       <PageSection>
@@ -241,7 +241,7 @@ export default function AboutPage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Building2 className="size-5 text-primary" />
-                  In-Person (Bengaluru)
+                  Round 2: In-Person (Bengaluru)
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
@@ -273,13 +273,13 @@ export default function AboutPage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Globe className="size-5 text-accent" />
-                  Online Track
+                  Round 1: Online (Free)
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="flex items-start gap-2">
                   <Zap className="size-4 text-primary mt-0.5" />
-                  <span>Same judging criteria and prizes</span>
+                  <span>Round 1 is completely free for all participants</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <MessageSquare className="size-4 text-primary mt-0.5" />
@@ -295,7 +295,7 @@ export default function AboutPage() {
                 </div>
                 <div className="flex items-start gap-2">
                   <Trophy className="size-4 text-primary mt-0.5" />
-                  <span>Dedicated "Best Online" prize category</span>
+                  <span>Virtual demo option available for finalists in Round 2</span>
                 </div>
               </CardContent>
             </Card>
