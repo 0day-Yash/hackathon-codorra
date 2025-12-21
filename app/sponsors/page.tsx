@@ -9,7 +9,6 @@ import { Navbar, Footer } from "@/components/navigation"
 import { Reveal } from "@/components/fx/reveal"
 import { SectionHeader } from "@/components/section-header"
 import { OrnamentRings } from "@/components/ornament-rings"
-import Lightning from "@/components/lightning"
 import {
   Building2,
   Award,
@@ -221,21 +220,15 @@ export default function SponsorsPage() {
         </CardGrid>
       </PageSection>
 
-      <PageSection className="relative overflow-hidden">
-        {/* Lightning background effect */}
-        <div className="pointer-events-none absolute inset-0 hidden md:block">
-          <Lightning hue={220} center={0.3} xOffset={0} speed={1} intensity={0.7} size={1.1} />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/40 to-transparent" />
-        </div>
-        
+      <PageSection>
         <SectionHeader
           eyebrow="Sponsorship Opportunities"
           title="Become a Sponsor"
           desc="Join industry leaders in supporting cybersecurity innovation and gain access to top talent."
-          className="cursor-target relative z-10"
+          className="cursor-target"
         />
         
-        <div className="grid gap-8 md:grid-cols-3 relative z-10">
+        <div className="grid gap-8 md:grid-cols-3">
           {sponsorTiers.map((tier, i) => (
             <Reveal key={tier.name} delay={i * 100}>
               <Card className="glass cursor-target group hover:translate-y-[-2px] transition-all">
@@ -291,37 +284,6 @@ export default function SponsorsPage() {
             </Reveal>
           ))}
         </CardGrid>
-      </PageSection>
-
-      <PageSection>
-        <SectionHeader
-          eyebrow="Custom Challenges"
-          title="Sponsor Challenge Tracks"
-          desc="Gold sponsors can create custom challenge tracks with dedicated prizes and judging criteria."
-          className="cursor-target"
-        />
-        
-        <div className="space-y-6">
-          {challengeTracks.map((challenge, i) => (
-            <Reveal key={challenge.title} delay={i * 100}>
-              <Card className="glass cursor-target">
-                <CardHeader>
-                  <CardTitle className="flex items-center justify-between">
-                    <span>{challenge.title}</span>
-                    <Badge variant="outline">{challenge.sponsor}</Badge>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-muted-foreground">{challenge.description}</p>
-                  <div className="flex items-center gap-2">
-                    <Trophy className="size-4 text-primary" />
-                    <span className="font-semibold text-primary">{challenge.prize}</span>
-                  </div>
-                </CardContent>
-              </Card>
-            </Reveal>
-          ))}
-        </div>
       </PageSection>
 
       <PageSection>

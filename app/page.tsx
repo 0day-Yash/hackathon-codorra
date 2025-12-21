@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils"
 import { Reveal } from "@/components/fx/reveal"
 import { SectionHeader } from "@/components/section-header"
 import { OrnamentRings } from "@/components/ornament-rings"
-import {
+import {  
   MapPin,
   Clock,
   BookOpen,
