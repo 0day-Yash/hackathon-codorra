@@ -153,19 +153,9 @@ Presentation clarity
 
 Real-world applicability & impact
 
-🎟️ Tickets (Round 2 Only)
+🎟️ Participation Fees
 
-Round 1 is completely free.
-
-Round 2 requires tickets only for shortlisted finalists:
-
-Individual Normal Ticket: ₹500
-
-Individual VIP Ticket: ₹1000
-
-Team Normal Ticket (2–4 members): ₹1500
-
-Team VIP Ticket (2–4 members): ₹2500
+Round 1 and Round 2 are completely free for all participants. There are no registration or participation fees for any round of the event. Infrastructure, internet, and 24/7 venue access will be provided during the Demo Day for all shortlisted finalists.
 
 🌍 Participation Modes
 

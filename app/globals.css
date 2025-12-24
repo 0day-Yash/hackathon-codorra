@@ -15,10 +15,11 @@
   --popover-foreground: var(--foreground);
 
   /* Brand + accents */
-  --primary: #f5a524; /* premium amber for CTAs */
-  --primary-foreground: #0e0e10;
-  --accent: #0ecf9a; /* muted teal accent */
-  --accent-foreground: #081014;
+  --primary: #c026d3; /* deep magenta/purple */
+  --primary-foreground: #ffffff;
+  --accent: #f97316; /* vibrant orange */
+  --accent-foreground: #ffffff;
+  --brand-gradient: linear-gradient(135deg, #a21caf 0%, #d946ef 35%, #f97316 100%);
 
   /* Secondary/muted/borders */
   --secondary: #14181d;
@@ -62,15 +63,15 @@
   --popover: var(--card);
   --popover-foreground: var(--foreground);
 
-  --primary: #f5a524;
-  --primary-foreground: #0e0e10;
-  --secondary: #14181d;
+  --primary: #c026d3;
+  --primary-foreground: #ffffff;
+  --secondary: #12151a;
   --secondary-foreground: var(--foreground);
-  --muted: #161a20;
-  --muted-foreground: #9aa4ae;
+  --muted: #14181f;
+  --muted-foreground: #8a949e;
 
-  --accent: #0ecf9a;
-  --accent-foreground: #081014;
+  --accent: #f97316;
+  --accent-foreground: #ffffff;
 
   --destructive: #e5484d;
   --destructive-foreground: #ffedee;
@@ -209,8 +210,25 @@
   .glass {
     background: color-mix(in srgb, var(--color-card) 88%, transparent);
     backdrop-filter: saturate(1.1) blur(8px);
-    border: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
-    box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-border) 60%, transparent), 0 10px 30px -10px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), 0 10px 40px -15px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 15px 50px -20px rgba(0, 0, 0, 0.8);
+  }
+
+  .text-gradient {
+    background: var(--brand-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-brand-gradient {
+    background: var(--brand-gradient);
   }
 
   /* Accent glow ring for interactive elements */

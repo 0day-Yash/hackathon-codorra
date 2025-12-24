@@ -144,7 +144,7 @@ const TextPressure = ({
     return () => cancelAnimationFrame(rafId);
   }, [width, weight, italic, alpha, chars.length]);
 
-  const dynamicClassName = [className, flex ? 'flex' : '', stroke ? 'stroke' : ''].filter(Boolean).join(' ');
+  const dynamicClassName = [className, flex ? 'flex-pressure' : '', stroke ? 'stroke-pressure' : ''].filter(Boolean).join(' ');
 
   return (
     <div
@@ -156,23 +156,24 @@ const TextPressure = ({
         background: 'transparent'
       }}
     >
-      <style>{`
+      <style dangerouslySetInnerHTML={{
+        __html: `
         @font-face {
           font-family: '${fontFamily}';
           src: url('${fontUrl}');
           font-style: normal;
         }
 
-        .flex {
+        .flex-pressure {
           display: flex;
           justify-content: space-between;
         }
 
-        .stroke span {
+        .stroke-pressure span {
           position: relative;
           color: ${textColor};
         }
-        .stroke span::after {
+        .stroke-pressure span::after {
           content: attr(data-char);
           position: absolute;
           left: 0;
@@ -186,7 +187,7 @@ const TextPressure = ({
         .text-pressure-title {
           color: ${textColor};
         }
-      `}</style>
+      ` }} />
 
       <h1
         ref={titleRef}

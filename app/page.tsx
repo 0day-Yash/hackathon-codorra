@@ -4,15 +4,16 @@ import type React from "react"
 import TextPressure from "@/components/text-pressure"
 import TargetCursor from "@/components/target-cursor"
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import ScheduleGrid from "@/components/schedule/schedule-grid"
+import { Navbar, Footer } from "@/components/navigation"
 import { cn } from "@/lib/utils"
 import { Reveal } from "@/components/fx/reveal"
 import { SectionHeader } from "@/components/section-header"
 import { OrnamentRings } from "@/components/ornament-rings"
-import {  
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import ScheduleGrid from "@/components/schedule/schedule-grid"
+import {
   MapPin,
   Clock,
   BookOpen,
@@ -21,6 +22,7 @@ import {
   Wifi,
   Users,
   GitBranch,
+  Code,
   MessageSquare,
   ShieldCheck,
   Trophy,
@@ -39,37 +41,7 @@ function Container({ className, children }: { className?: string; children: Reac
   return <div className={cn("mx-auto w-full max-w-7xl px-4", className)}>{children}</div>
 }
 
-function Navbar() {
-  return (
-    <header className="sticky top-3 z-50">
-      <Container>
-          <div className="mx-auto flex h-14 items-center justify-between rounded-lg border border-white/10 bg-background/70 px-4 shadow-sm backdrop-blur-xl">
-            <a href="/" className="flex items-center gap-2 font-semibold tracking-tight text-foreground/90">
-              <span className="text-sm md:text-[15px]">CODORRA · 2026</span>
-            </a>
-            <nav className="hidden gap-1.5 md:flex text-[13px]">
-            <a href="/about" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">About</a>
-            <a href="/speakers" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">Speakers</a>
-            <a href="/sponsors" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">Sponsors</a>
-            <a href="/schedule" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">Schedule</a>
-            <a href="/contact" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">Contact</a>
-          </nav>
-          <div className="flex items-center gap-2">
-            <span className="hidden md:inline-block h-6 w-px bg-white/10" />
-            <Button
-              asChild
-              size="sm"
-              variant="secondary"
-              className="rounded-full h-10 px-5 border border-white/10 bg-white/5 hover:bg-white/10 text-foreground/90"
-            >
-              <a href="/apply">Register Now</a>
-            </Button>
-          </div>
-        </div>
-      </Container>
-    </header>
-  )
-}
+
 
 function Hero() {
   return (
@@ -103,11 +75,11 @@ function Hero() {
           Two-phase cybersecurity hackathon. Teams of 2–4. Build practical security tools and demo at Demo Day.
         </p>
         <div className="flex flex-wrap items-center gap-3">
-          <Button size="lg" variant="secondary" asChild className="rounded-full h-11 px-6 border border-white/15 bg-white/10 hover:bg-white/15 text-foreground ring-glow">
-            <a href="/apply" className="inline-flex items-center">Apply Now <ArrowRight className="ml-2 size-4" /></a>
+          <Button size="lg" variant="secondary" asChild className="rounded-full h-12 px-8 border-none bg-brand-gradient hover:opacity-90 text-white ring-glow min-w-[160px] font-bold">
+            <a href="/apply" className="inline-flex items-center justify-center">Apply Now <ArrowRight className="ml-2 size-4" /></a>
           </Button>
-          <Button size="lg" variant="ghost" asChild className="rounded-full h-11 px-6 text-foreground/85 hover:bg-white/10">
-            <a href="/criteria" className="inline-flex items-center"><BookOpen className="mr-2 size-4" /> Judging Criteria</a>
+          <Button size="lg" variant="ghost" asChild className="rounded-full h-12 px-8 text-foreground/85 hover:bg-white/10 min-w-[160px]">
+            <a href="/criteria" className="inline-flex items-center justify-center"><BookOpen className="mr-2 size-4" /> Judging Criteria</a>
           </Button>
         </div>
       </Container>
@@ -134,83 +106,66 @@ function About() {
     <section id="about" className="section relative border-b">
       <TargetCursor spinDuration={2} hideDefaultCursor={true} />
       <div className="pointer-events-none absolute inset-0 radial-mask opacity-[0.1]" />
-      <Container className="grid items-start gap-8 md:grid-cols-2 lg:gap-12">
-        <Reveal>
-          <div>
-            <SectionHeader
-              eyebrow="Two-phase format"
-              title="Round 1: Online • Round 2: Demo Day"
-              desc="Round 1 is fully online and free. Submit via Devpost + GitHub. Finalists invited to Round 2 Demo Day in Bengaluru (or present virtually). Coordination on Discord + WhatsApp."
-              className="cursor-target"
-            />
-            <div className="grid gap-4 sm:grid-cols-2">
-              {features.map((s) => (
-                <Card key={s.k} className="glass cursor-target">
-                  <CardHeader className="pb-2 flex items-center gap-2">
-                    <s.icon className="size-4 text-accent" />
-                    <CardTitle className="text-sm text-muted-foreground">{s.k}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-lg font-semibold">{s.v}</CardContent>
-                </Card>
-              ))}
-            </div>
+      <Container className="grid items-start gap-12 lg:grid-cols-12">
+        <Reveal className="lg:col-span-12">
+          <SectionHeader
+            eyebrow="Two-phase format"
+            title="Round 1: Online • Round 2: Demo Day"
+            desc="Round 1 is fully online and free. Submit via Devpost + GitHub. Finalists invited to Round 2 Demo Day in Bengaluru (or present virtually). Coordination on Discord + WhatsApp."
+            className="cursor-target max-w-3xl mb-12"
+          />
+        </Reveal>
+
+        <Reveal delay={100} className="lg:col-span-8">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {features.map((s, idx) => (
+              <Card key={s.k} className={cn(
+                "glass cursor-target border-white/5 hover:border-white/10 transition-colors",
+                idx === 0 || idx === 3 ? "sm:col-span-2" : ""
+              )}>
+                <CardHeader className="pb-2 flex flex-row items-center gap-2">
+                  <div className="p-2 rounded-lg bg-white/5">
+                    <s.icon className="size-4 text-white/50" />
+                  </div>
+                  <CardTitle className="text-sm font-bold tracking-widest uppercase text-muted-foreground/60">{s.k}</CardTitle>
+                </CardHeader>
+                <CardContent className="text-xl font-bold italic tracking-tight">{s.v}</CardContent>
+              </Card>
+            ))}
           </div>
         </Reveal>
 
-        <Reveal delay={100}>
-          <div className="grid gap-4">
-            <Card className="glass cursor-target">
-              <CardHeader>
-                <CardTitle>Judging</CardTitle>
-              </CardHeader>
-              <CardContent className="text-muted-foreground">
-                <ul className="grid gap-3 text-sm">
-                  <li className="grid grid-cols-[auto_1fr] items-start gap-2">
-                    <Trophy className="mt-0.5 size-4 text-accent" />
-                    <span>Idea quality & relevance to cybersecurity</span>
+        <Reveal delay={200} className="lg:col-span-4 space-y-6">
+          <Card className="glass cursor-target border-white/5 h-full">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 italic">
+                <Trophy className="size-5 text-brand-gradient" />
+                Judging & Ops
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-muted-foreground space-y-8">
+              <ul className="grid gap-4 text-sm">
+                {[
+                  { icon: BrainCircuit, t: "Idea quality & relevance" },
+                  { icon: Code, t: "Technical execution" },
+                  { icon: ShieldCheck, t: "Real-world impact" }
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 group">
+                    <div className="mt-1 size-1.5 rounded-full bg-brand-gradient flex-shrink-0" />
+                    <span className="group-hover:text-foreground transition-colors">{item.t}</span>
                   </li>
-                  <li className="grid grid-cols-[auto_1fr] items-start gap-2">
-                    <Presentation className="mt-0.5 size-4 text-accent" />
-                    <span>Technical execution & code quality</span>
-                  </li>
-                  <li className="grid grid-cols-[auto_1fr] items-start gap-2">
-                    <ShieldCheck className="mt-0.5 size-4 text-accent" />
-                    <span>Presentation clarity</span>
-                  </li>
-                  <li className="grid grid-cols-[auto_1fr] items-start gap-2">
-                    <BadgeCheck className="mt-0.5 size-4 text-accent" />
-                    <span>Real-world applicability & impact</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+                ))}
+              </ul>
 
-            <Card className="glass cursor-target">
-              <CardHeader>
-                <CardTitle>Ops & Perks</CardTitle>
-              </CardHeader>
-              <CardContent className="text-muted-foreground">
-                <ul className="grid gap-3 text-sm">
-                  <li className="grid grid-cols-[auto_1fr] items-start gap-2">
-                    <Pizza className="mt-0.5 size-4 text-accent" />
-                    <span>Food: simple pizza twice a day</span>
-                  </li>
-                  <li className="grid grid-cols-[auto_1fr] items-start gap-2">
-                    <Coffee className="mt-0.5 size-4 text-accent" />
-                    <span>Coffee on tap</span>
-                  </li>
-                  <li className="grid grid-cols-[auto_1fr] items-start gap-2">
-                    <ShieldCheck className="mt-0.5 size-4 text-accent" />
-                    <span>Security: ID checks; venue open overnight</span>
-                  </li>
-                  <li className="grid grid-cols-[auto_1fr] items-start gap-2">
-                    <BadgeCheck className="mt-0.5 size-4 text-accent" />
-                    <span>Swag: T‑shirts, stickers, certificates (shipping for online)</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
+              <div className="pt-6 border-t border-white/5 space-y-4">
+                <div className="flex items-center gap-3 text-xs font-mono uppercase tracking-widest text-muted-foreground/50">
+                  <BadgeCheck className="size-4" />
+                  Venue & Perks
+                </div>
+                <p className="text-xs leading-relaxed">24/7 Access • High-speed WiFi • Pizza & Coffee on tap • Swag & Certificates</p>
+              </div>
+            </CardContent>
+          </Card>
         </Reveal>
       </Container>
       <div className="absolute right-6 top-10">
@@ -237,20 +192,32 @@ function Tracks() {
           desc="Pick one primary track for judging; crossover projects are welcome."
           className="cursor-target"
         />
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2">
           {tracks.map((t, i) => (
             <Reveal key={t.title} delay={i * 70}>
-              <Card className="group glass cursor-target transition-all hover:translate-y-[-2px] hover:shadow-md hover:ring-1 hover:ring-accent/30">
-                <CardHeader className="pb-2 flex items-center gap-3">
-                  <div className={`${t.hue === "accent" ? "bg-accent/10 ring-accent/25 text-accent" : "bg-primary/10 ring-primary/25 text-primary"} rounded-lg p-2 ring-1`}>
-                    <t.icon className="size-4" />
+              <a href={`/tracks/${t.title.toLowerCase().replace(/ \+ /g, '-').replace(/ /g, '-')}`} className="block group h-full">
+                <Card className="glass cursor-target h-full transition-all group-hover:bg-white/5 border-white/10 group-hover:border-white/20 p-4 md:p-8">
+                  <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+                    <div className="bg-white/5 border border-white/10 text-white/40 rounded-2xl p-4 shrink-0 transition-transform group-hover:scale-110 group-hover:text-white/60 shadow-xl shadow-black/20">
+                      <t.icon className="size-8 md:size-10" />
+                    </div>
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-3">
+                        <CardTitle className="text-2xl md:text-3xl font-extrabold italic tracking-tight">{t.title}</CardTitle>
+                        <ArrowRight className="size-5 opacity-0 -translate-x-4 transition-all group-hover:opacity-100 group-hover:translate-x-0 text-white/30" />
+                      </div>
+                      <p className="text-base text-muted-foreground leading-relaxed">
+                        {t.desc}
+                      </p>
+                      <div className="pt-4">
+                        <Button variant="outline" size="sm" className="rounded-full h-9 px-5 border-white/10 group-hover:border-white/20 group-hover:bg-white/5 transition-all text-xs font-bold uppercase tracking-wider">
+                          Details
+                        </Button>
+                      </div>
+                    </div>
                   </div>
-                  <CardTitle className="text-lg">{t.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="text-sm text-muted-foreground">
-                  {t.desc}
-                </CardContent>
-              </Card>
+                </Card>
+              </a>
             </Reveal>
           ))}
         </div>
@@ -329,44 +296,53 @@ function Timeline() {
 
 function Sponsors() {
   return (
-    <section id="sponsors" className="section relative border-b">
+    <section id="sponsors" className="section relative border-b py-24 md:py-32">
       <Container>
-        <SectionHeader
-          eyebrow="Partners"
-          title="Sponsors & Community"
-          desc="We're seeking ~$7k in partners. Own a challenge track (> $2k), run workshops, and access hiring opportunities. Email codorra@yahoo.com."
-          align="center"
-        />
-        <div className="grid gap-6 md:grid-cols-3">
-          {[
-            { name: "Gold", perks: ["Stage mentions + logo on hero", "Talk/workshop slot", "Booth + hiring access", "Custom challenge track (> $2k)"] },
-            { name: "Silver", perks: ["Logo on site + socials", "Workshop/lightning talk", "Shortlist access"] },
-            { name: "Community Partner", perks: ["Logo in partners", "Social mentions", "Ticket discounts (optional)"] },
-          ].map((t) => (
-            <Card key={t.name} className="glass overflow-hidden">
-              <CardHeader>
-                <CardTitle className="text-xl">{t.name}</CardTitle>
-              </CardHeader>
-              <CardContent className="text-sm text-muted-foreground">
-                <ul className="grid gap-2">
-                  {t.perks.map((p) => (
-                    <li key={p} className="flex items-start gap-2.5">
-                      <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent flex-shrink-0" />
-                      <span className="flex-1 text-left">{p}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-        <div className="mt-10 flex items-center justify-center gap-3">
-          <Button size="lg" variant="secondary" className="rounded-full h-11 px-6 border border-white/15 bg-white/10 hover:bg-white/15" asChild>
-            <a href="/apply#sponsor">Apply as Sponsor</a>
-          </Button>
-          <Button size="lg" variant="ghost" className="rounded-full h-11 px-6" asChild>
-            <a href="mailto:codorra@yahoo.com?subject=Sponsor%20CODORRA%20Hackathon">Email Us</a>
-          </Button>
+        <div className="grid lg:grid-cols-[1fr_auto] gap-16 items-center">
+          <Reveal className="space-y-12">
+            <div className="space-y-6">
+              <h2 className="text-4xl md:text-6xl font-extrabold italic tracking-tighter text-balance">
+                Partner with the Build Squad
+              </h2>
+              <p className="max-w-xl text-xl text-muted-foreground leading-relaxed">
+                Join industry leaders in supporting the next generation of cybersecurity innovators. Run workshops, host challenges, and access unique hiring opportunities.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 grayscale opacity-40">
+              {['Diamond', 'Gold', 'Silver', 'Bronze'].map(tier => (
+                <div key={tier} className="flex flex-col items-center gap-3">
+                  <div className="h-px w-full bg-white/10" />
+                  <span className="text-[10px] font-bold uppercase tracking-[0.2em]">{tier}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-wrap gap-6 pt-4">
+              <Button size="lg" variant="secondary" className="rounded-full h-14 px-10 border-none bg-brand-gradient hover:opacity-90 text-white font-extrabold text-lg min-w-[220px] shadow-2xl shadow-primary/20" asChild>
+                <a href="/apply-as-sponsor">Apply as Sponsor</a>
+              </Button>
+              <Button size="lg" variant="outline" className="rounded-full h-14 px-10 border-white/10 bg-white/5 hover:bg-white/10 font-bold min-w-[180px]" asChild>
+                <a href="/sponsors">See All Partners</a>
+              </Button>
+            </div>
+          </Reveal>
+
+          <Reveal delay={100} className="hidden lg:block">
+            <div className="relative">
+              <div className="absolute inset-0 bg-brand-gradient opacity-10 blur-[120px] animate-pulse" />
+              <div className="glass p-12 rounded-[40px] border-white/10 relative z-10 text-center space-y-4">
+                <div className="size-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mx-auto mb-6">
+                  <ShieldCheck className="size-10 text-white/40" />
+                </div>
+                <h3 className="text-2xl font-bold italic">Immune System for the Future</h3>
+                <p className="text-sm text-muted-foreground max-w-[200px] mx-auto">Help us secure what matters most. Contact our partnerships lead.</p>
+                <Button variant="ghost" className="text-white/40 hover:text-white" asChild>
+                  <a href="mailto:codorra@yahoo.com">codorra@yahoo.com</a>
+                </Button>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </Container>
     </section>
@@ -380,26 +356,26 @@ function FAQ() {
     { q: "Where will it happen?", a: "Round 1: Fully online. Round 2: Bengaluru venue (finalists only) with hybrid option." },
     { q: "How are submissions handled?", a: "Round 1: Devpost + GitHub links (mandatory). Finalists present at Round 2 Demo Day." },
     { q: "Judging criteria?", a: "Idea quality & relevance, technical execution & code quality, presentation clarity, real-world applicability & impact." },
-    { q: "Fees?", a: "Round 1 is completely free. Round 2 tickets: Individual Normal ₹500, Individual VIP ₹1000, Team Normal (2–4) ₹1500, Team VIP (2–4) ₹2500." },
+    { q: "Fees?", a: "The hackathon is completely free for everyone. There are no registration or participation fees for any round." },
   ]
   return (
     <section id="faq" className="section border-b">
       <Container>
         <SectionHeader eyebrow="Good to know" title="FAQ" align="center" />
         <div className="mt-6">
-  <div className="mx-auto max-w-2xl"> {/* control width here */}
-    <div className="rounded-xl border glass p-2 md:p-3">
-      <Accordion type="single" collapsible>
-        {faqs.map((f, i) => (
-          <AccordionItem key={i} value={`item-${i}`}>
-            <AccordionTrigger className="text-left">{f.q}</AccordionTrigger>
-            <AccordionContent className="text-muted-foreground">{f.a}</AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
-    </div>
-  </div>
-</div>
+          <div className="mx-auto max-w-2xl"> {/* control width here */}
+            <div className="rounded-xl border glass p-2 md:p-3">
+              <Accordion type="single" collapsible>
+                {faqs.map((f, i) => (
+                  <AccordionItem key={i} value={`item-${i}`}>
+                    <AccordionTrigger className="text-left">{f.q}</AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">{f.a}</AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </div>
+        </div>
 
         <div className="mt-8 text-center">
           <Button asChild variant="secondary" className="rounded-full h-10 px-6 border border-white/15 bg-white/10 hover:bg-white/15">
@@ -420,23 +396,23 @@ function RegisterCTA() {
           <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-foreground/70">
             Join the build
           </div>
-          
+
           <h2 className="mt-4 text-4xl font-bold md:text-5xl">Ready to register?</h2>
-          
+
           <p className="mx-auto mt-4 max-w-[540px] text-base text-muted-foreground">
             Round 1 is completely free. Assemble your 2–4 person team and submit via Devpost.
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button asChild size="lg" className="group h-11 rounded-full bg-accent px-6 text-[15px] transition-colors hover:bg-accent/90">
-              <a href="https://codorra1.devpost.com/" target="_blank" rel="noopener" className="flex items-center gap-2">
+            <Button asChild size="lg" className="group h-11 rounded-full bg-brand-gradient border-none px-8 text-[15px] transition-opacity hover:opacity-90 text-white font-bold min-w-[200px]">
+              <a href="https://codorra1.devpost.com/" target="_blank" rel="noopener" className="flex items-center justify-center gap-2">
                 Register on Devpost
                 <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
               </a>
             </Button>
 
-            <Button asChild size="lg" variant="outline" className="group h-11 rounded-full border-white/10 bg-white/5 px-6 text-[15px] hover:bg-white/10">
-              <a href="https://discord.gg/9QpwAmX4Ke" target="_blank" rel="noopener" className="flex items-center gap-2">
+            <Button asChild size="lg" variant="outline" className="group h-11 rounded-full border-white/10 bg-white/5 px-8 text-[15px] hover:bg-white/10 min-w-[180px]">
+              <a href="https://discord.gg/9QpwAmX4Ke" target="_blank" rel="noopener" className="flex items-center justify-center gap-2">
                 Join Discord
                 <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
               </a>
@@ -444,7 +420,7 @@ function RegisterCTA() {
           </div>
 
           <p className="mt-6 text-sm text-muted-foreground">
-            Round 1: Free • Round 2 tickets required for finalists only
+            The hackathon is completely free for everyone. No registration or participation fees.
           </p>
         </div>
       </Container>
@@ -452,26 +428,7 @@ function RegisterCTA() {
   )
 }
 
-function Footer() {
-  return (
-    <footer className="py-12">
-      <Container className="flex flex-col items-center justify-between gap-4 text-sm text-muted-foreground md:flex-row">
-        <div>© {new Date().getFullYear()} CODORRA</div>
-        <div className="flex items-center gap-6">
-          <a href="/faq" className="hover:text-primary">
-            FAQ
-          </a>
-          <a href="/sponsors" className="hover:text-primary">
-            Sponsors
-          </a>
-          <a href="/contact" className="hover:text-primary">
-            Contact
-          </a>
-        </div>
-      </Container>
-    </footer>
-  )
-}
+
 
 export default function Page() {
   return (

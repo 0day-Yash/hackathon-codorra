@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://codorra.tech/sitemap.xml

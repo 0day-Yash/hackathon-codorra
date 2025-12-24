@@ -119,7 +119,7 @@ export default function AboutPage() {
   return (
     <main>
       <Navbar />
-      <PageHeader 
+      <PageHeader
         title="About CODORRA"
         description="A two-phase cybersecurity hackathon bringing together innovators, builders, and security experts to create solutions that matter."
       />
@@ -134,11 +134,11 @@ export default function AboutPage() {
         <CardGrid cols={4}>
           {themeExplanation.map((item, i) => (
             <Reveal key={item.title} delay={i * 100}>
-              <Card className="glass cursor-target">
+              <Card className="glass border-white/10 h-full flex flex-col">
                 <CardHeader>
                   <CardTitle className="text-lg">{item.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="text-muted-foreground">
+                <CardContent className="text-muted-foreground text-xs leading-relaxed flex-grow">
                   {item.description}
                 </CardContent>
               </Card>
@@ -157,14 +157,14 @@ export default function AboutPage() {
         <CardGrid cols={4}>
           {missionPoints.map((item, i) => (
             <Reveal key={item.title} delay={i * 100}>
-              <Card className="glass cursor-target group hover:translate-y-[-2px] transition-all">
-                <CardHeader className="pb-2 flex items-center gap-3">
-                  <div className="bg-accent/10 ring-accent/25 text-accent rounded-lg p-2 ring-1">
+              <Card className="glass border-white/10 h-full flex flex-col group">
+                <CardHeader className="pb-4 flex items-center gap-3">
+                  <div className="bg-brand-gradient text-white rounded-lg p-2 border border-white/10">
                     <item.icon className="size-4" />
                   </div>
                   <CardTitle className="text-lg">{item.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="text-muted-foreground">
+                <CardContent className="text-muted-foreground text-xs leading-relaxed flex-grow">
                   {item.description}
                 </CardContent>
               </Card>
@@ -189,7 +189,7 @@ export default function AboutPage() {
                   <Reveal key={item.title} delay={i * 100}>
                     <Card className="glass cursor-target">
                       <CardHeader className="pb-2 flex items-center gap-3">
-                        <div className="bg-primary/10 ring-primary/25 text-primary rounded-lg p-2 ring-1">
+                        <div className="bg-white/5 border border-white/10 text-white/50 rounded-lg p-2">
                           <item.icon className="size-4" />
                         </div>
                         <CardTitle className="text-lg">{item.title}</CardTitle>
@@ -211,7 +211,7 @@ export default function AboutPage() {
                   <Reveal key={item.title} delay={i * 100}>
                     <Card className="glass cursor-target">
                       <CardHeader className="pb-2 flex items-center gap-3">
-                        <div className="bg-accent/10 ring-accent/25 text-accent rounded-lg p-2 ring-1">
+                        <div className="bg-white/5 border border-white/10 text-white/50 rounded-lg p-2">
                           <item.icon className="size-4" />
                         </div>
                         <CardTitle className="text-lg">{item.title}</CardTitle>
@@ -237,65 +237,65 @@ export default function AboutPage() {
         />
         <TwoColumnLayout
           left={
-            <Card className="glass cursor-target">
+            <Card className="glass border-white/10 h-full flex flex-col group">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Building2 className="size-5 text-primary" />
+                  <Building2 className="size-5 text-gradient font-bold" />
                   Round 2: In-Person (Bengaluru)
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-3">
-                <div className="flex items-start gap-2">
-                  <BadgeCheck className="size-4 text-accent mt-0.5" />
-                  <span>24/7 venue access with security</span>
+              <CardContent className="space-y-3 flex-grow">
+                <div className="flex items-start gap-2 text-xs text-muted-foreground">
+                  <div className="mt-1.5 size-1.5 rounded-full bg-brand-gradient flex-shrink-0" />
+                  <span className="group-hover:text-foreground transition-colors">24/7 venue access with security</span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <Pizza className="size-4 text-accent mt-0.5" />
-                  <span>Food and coffee provided</span>
+                <div className="flex items-start gap-2 text-xs text-muted-foreground">
+                  <div className="mt-1.5 size-1.5 rounded-full bg-brand-gradient flex-shrink-0" />
+                  <span className="group-hover:text-foreground transition-colors">Food and coffee provided</span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <Users className="size-4 text-accent mt-0.5" />
-                  <span>Direct networking and mentorship</span>
+                <div className="flex items-start gap-2 text-xs text-muted-foreground">
+                  <div className="mt-1.5 size-1.5 rounded-full bg-brand-gradient flex-shrink-0" />
+                  <span className="group-hover:text-foreground transition-colors">Direct networking and mentorship</span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <Wifi className="size-4 text-accent mt-0.5" />
-                  <span>High-speed internet and backup 4G</span>
+                <div className="flex items-start gap-2 text-xs text-muted-foreground">
+                  <div className="mt-1.5 size-1.5 rounded-full bg-brand-gradient flex-shrink-0" />
+                  <span className="group-hover:text-foreground transition-colors">High-speed internet and backup 4G</span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <BadgeCheck className="size-4 text-accent mt-0.5" />
-                  <span>Physical swag and certificates</span>
+                <div className="flex items-start gap-2 text-xs text-muted-foreground">
+                  <div className="mt-1.5 size-1.5 rounded-full bg-brand-gradient flex-shrink-0" />
+                  <span className="group-hover:text-foreground transition-colors">Physical swag and certificates</span>
                 </div>
               </CardContent>
             </Card>
           }
           right={
-            <Card className="glass cursor-target">
+            <Card className="glass border-white/10 h-full flex flex-col group">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Globe className="size-5 text-accent" />
+                  <Globe className="size-5 text-gradient font-bold" />
                   Round 1: Online (Free)
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-3">
-                <div className="flex items-start gap-2">
-                  <Zap className="size-4 text-primary mt-0.5" />
-                  <span>Round 1 is completely free for all participants</span>
+              <CardContent className="space-y-3 flex-grow">
+                <div className="flex items-start gap-2 text-xs text-muted-foreground">
+                  <div className="bg-brand-gradient size-4 rounded-full mt-0.5 shrink-0 border border-white/10" />
+                  <span className="group-hover:text-foreground transition-colors">Round 1 is completely free for all participants</span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <MessageSquare className="size-4 text-primary mt-0.5" />
-                  <span>Discord community and support</span>
+                <div className="flex items-start gap-2 text-xs text-muted-foreground">
+                  <div className="mt-1.5 size-1.5 rounded-full bg-brand-gradient flex-shrink-0" />
+                  <span className="group-hover:text-foreground transition-colors">Discord community and support</span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <Presentation className="size-4 text-primary mt-0.5" />
-                  <span>Virtual workshops and sessions</span>
+                <div className="flex items-start gap-2 text-xs text-muted-foreground">
+                  <div className="mt-1.5 size-1.5 rounded-full bg-brand-gradient flex-shrink-0" />
+                  <span className="group-hover:text-foreground transition-colors">Virtual workshops and sessions</span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <BadgeCheck className="size-4 text-primary mt-0.5" />
-                  <span>Digital certificates and swag shipping</span>
+                <div className="flex items-start gap-2 text-xs text-muted-foreground">
+                  <div className="mt-1.5 size-1.5 rounded-full bg-brand-gradient flex-shrink-0" />
+                  <span className="group-hover:text-foreground transition-colors">Digital certificates and swag shipping</span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <Trophy className="size-4 text-primary mt-0.5" />
-                  <span>Virtual demo option available for finalists in Round 2</span>
+                <div className="flex items-start gap-2 text-xs text-muted-foreground">
+                  <div className="mt-1.5 size-1.5 rounded-full bg-brand-gradient flex-shrink-0" />
+                  <span className="group-hover:text-foreground transition-colors">Virtual demo option available for finalists in Round 2</span>
                 </div>
               </CardContent>
             </Card>

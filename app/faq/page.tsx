@@ -31,7 +31,7 @@ export default function FAQPage() {
     {
       title: "Registration & Eligibility",
       icon: Users,
-      color: "bg-primary/10 text-primary ring-primary/25",
+      color: "border border-white/10 bg-white/5 text-white/50",
       questions: [
         {
           q: "Who can participate in CODORRA?",
@@ -43,7 +43,7 @@ export default function FAQPage() {
         },
         {
           q: "What is the registration fee?",
-          a: "Round 1 is completely free for all participants. Round 2 requires tickets only for shortlisted finalists: Individual Normal ₹500, Individual VIP ₹1000, Team Normal (2-4) ₹1500, Team VIP (2-4) ₹2500."
+          a: "The hackathon is completely free for everyone. There are no registration or participation fees for any round of the event."
         },
         {
           q: "Can I participate as an individual?",
@@ -58,7 +58,7 @@ export default function FAQPage() {
     {
       title: "Venue & Facilities",
       icon: MapPin,
-      color: "bg-accent/10 text-accent ring-accent/25",
+      color: "border border-white/10 bg-white/5 text-white/50",
       questions: [
         {
           q: "Where is the hackathon venue located?",
@@ -85,7 +85,7 @@ export default function FAQPage() {
     {
       title: "Online Participation",
       icon: Globe,
-      color: "bg-primary/10 text-primary ring-primary/25",
+      color: "border border-white/10 bg-white/5 text-white/50",
       questions: [
         {
           q: "How does online participation work?",
@@ -112,7 +112,7 @@ export default function FAQPage() {
     {
       title: "Team Formation & Collaboration",
       icon: Users,
-      color: "bg-accent/10 text-accent ring-accent/25",
+      color: "border border-white/10 bg-white/5 text-white/50",
       questions: [
         {
           q: "What is the ideal team size?",
@@ -139,7 +139,7 @@ export default function FAQPage() {
     {
       title: "Prizes & Recognition",
       icon: Trophy,
-      color: "bg-primary/10 text-primary ring-primary/25",
+      color: "border border-white/10 bg-white/5 text-white/50",
       questions: [
         {
           q: "What prizes are available?",
@@ -166,7 +166,7 @@ export default function FAQPage() {
     {
       title: "Technical & Logistics",
       icon: Shield,
-      color: "bg-accent/10 text-accent ring-accent/25",
+      color: "border border-white/10 bg-white/5 text-white/50",
       questions: [
         {
           q: "What development tools and platforms are provided?",
@@ -222,7 +222,7 @@ export default function FAQPage() {
   return (
     <main>
       <Navbar />
-      <PageHeader 
+      <PageHeader
         title="Frequently Asked Questions"
         description="Everything you need to know about CODORRA 2026 - from registration to prizes and everything in between."
       />
@@ -234,13 +234,13 @@ export default function FAQPage() {
           desc="Key information about CODORRA 2026 at a glance."
           className="cursor-target"
         />
-        
+
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {quickFacts.map((fact, i) => (
             <Reveal key={fact.title} delay={i * 100}>
               <Card className="glass cursor-target text-center">
                 <CardHeader>
-                  <div className="bg-accent/10 ring-accent/25 text-accent rounded-lg p-3 ring-1 w-fit mx-auto mb-4">
+                  <div className="bg-white/5 border border-white/10 text-white/40 rounded-lg p-3 w-fit mx-auto mb-4">
                     <fact.icon className="size-6" />
                   </div>
                   <CardTitle className="text-2xl font-bold">{fact.value}</CardTitle>
@@ -262,18 +262,18 @@ export default function FAQPage() {
           desc="Browse questions by category to find the information you need quickly."
           className="cursor-target"
         />
-        
+
         <div className="space-y-8">
           {faqCategories.map((category, categoryIndex) => (
             <Reveal key={category.title} delay={categoryIndex * 100}>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className={`${category.color} rounded-lg p-2 ring-1`}>
+                  <div className={`${category.color} rounded-lg p-2`}>
                     <category.icon className="size-5" />
                   </div>
                   <h2 className="text-2xl font-bold">{category.title}</h2>
                 </div>
-                
+
                 <Card className="glass cursor-target">
                   <CardContent className="p-0">
                     <Accordion type="single" collapsible className="w-full">
@@ -303,13 +303,13 @@ export default function FAQPage() {
           desc="Can't find what you're looking for? Our team is here to help."
           className="cursor-target"
         />
-        
+
         <div className="grid gap-6 md:grid-cols-2">
           <Reveal>
             <Card className="glass cursor-target">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <MessageSquare className="size-5 text-primary" />
+                  <MessageSquare className="size-5 text-white/40" />
                   Contact Support
                 </CardTitle>
               </CardHeader>
@@ -333,7 +333,7 @@ export default function FAQPage() {
             <Card className="glass cursor-target">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Globe className="size-5 text-accent" />
+                  <Globe className="size-5 text-white/40" />
                   Join Community
                 </CardTitle>
               </CardHeader>
