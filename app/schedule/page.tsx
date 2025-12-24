@@ -275,20 +275,20 @@ export default function SchedulePage() {
   ]
 
   const eventTypeColors = {
-    workshop: "bg-primary/10 text-primary ring-primary/25",
-    networking: "bg-accent/10 text-accent ring-accent/25",
-    ceremony: "bg-primary/10 text-primary ring-primary/25",
-    admin: "bg-muted/10 text-muted-foreground ring-muted/25",
-    keynote: "bg-accent/10 text-accent ring-accent/25",
-    announcement: "bg-primary/10 text-primary ring-primary/25",
-    start: "bg-accent/10 text-accent ring-accent/25",
-    meal: "bg-muted/10 text-muted-foreground ring-muted/25",
-    mentoring: "bg-accent/10 text-accent ring-accent/25",
-    panel: "bg-primary/10 text-primary ring-primary/25",
-    checkin: "bg-muted/10 text-muted-foreground ring-muted/25",
-    submission: "bg-accent/10 text-accent ring-accent/25",
-    presentation: "bg-primary/10 text-primary ring-primary/25",
-    judging: "bg-accent/10 text-accent ring-accent/25"
+    workshop: "border border-white/10 text-white/50",
+    networking: "border border-white/10 text-white/50",
+    ceremony: "border border-white/10 text-white/50",
+    admin: "border border-white/10 text-white/50",
+    keynote: "border border-white/10 text-white/50",
+    announcement: "border border-white/10 text-white/50",
+    start: "border border-white/10 text-white/50",
+    meal: "border border-white/10 text-white/50",
+    mentoring: "border border-white/10 text-white/50",
+    panel: "border border-white/10 text-white/50",
+    checkin: "border border-white/10 text-white/50",
+    submission: "border border-white/10 text-white/50",
+    presentation: "border border-white/10 text-white/50",
+    judging: "border border-white/10 text-white/50"
   }
 
   const venueInfo = [
@@ -336,12 +336,12 @@ export default function SchedulePage() {
             <Reveal key={day.day} delay={dayIndex * 100}>
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="bg-accent/10 ring-accent/25 text-accent rounded-lg p-3 ring-1">
+                  <div className="bg-brand-gradient text-white rounded-lg p-3 border border-white/10">
                     <Calendar className="size-6" />
                   </div>
                   <div>
-                    <h2 className="text-2xl font-bold">{day.day}</h2>
-                    <p className="text-muted-foreground">{day.date}</p>
+                    <h2 className="text-2xl font-bold italic tracking-tight">{day.day}</h2>
+                    <p className="text-muted-foreground font-mono text-sm uppercase tracking-wider">{day.date}</p>
                   </div>
                 </div>
 
@@ -352,39 +352,41 @@ export default function SchedulePage() {
 
                     return (
                       <Reveal key={event.title} delay={eventIndex * 50}>
-                        <Card className="glass cursor-target">
-                          <CardHeader className="pb-2">
+                        <Card className="glass cursor-target h-full flex flex-col border-white/10">
+                          <CardHeader className="pb-2 flex-grow">
                             <div className="flex items-center justify-between mb-2">
                               <div className={`${typeColor} rounded-lg p-2 ring-1`}>
                                 <EventIcon className="size-4" />
                               </div>
                               <div className="flex gap-1">
                                 {event.online && (
-                                  <Badge variant="outline" className="text-xs">
+                                  <Badge variant="outline" className="text-[10px] uppercase border-white/10 bg-white/5">
                                     <Globe className="size-3 mr-1" />
                                     Online
                                   </Badge>
                                 )}
                                 {!event.online && (
-                                  <Badge variant="secondary" className="text-xs">
+                                  <Badge className="text-[10px] uppercase bg-brand-gradient border-none text-white font-bold">
                                     <MapPin className="size-3 mr-1" />
                                     In-Person
                                   </Badge>
                                 )}
                               </div>
                             </div>
-                            <CardTitle className="text-lg">{event.title}</CardTitle>
-                            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                              <Clock className="size-3" />
-                              {event.time}
-                            </div>
-                            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                              <MapPin className="size-3" />
-                              {event.location}
+                            <CardTitle className="text-lg mb-2">{event.title}</CardTitle>
+                            <div className="space-y-1">
+                              <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                                <Clock className="size-3 text-white/40" />
+                                {event.time}
+                              </div>
+                              <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                                <MapPin className="size-3 text-white/40" />
+                                {event.location}
+                              </div>
                             </div>
                           </CardHeader>
-                          <CardContent>
-                            <p className="text-sm text-muted-foreground">{event.description}</p>
+                          <CardContent className="pt-2">
+                            <p className="text-xs text-muted-foreground leading-relaxed">{event.description}</p>
                           </CardContent>
                         </Card>
                       </Reveal>
@@ -411,7 +413,7 @@ export default function SchedulePage() {
               <Card className="glass cursor-target">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <venue.icon className="size-5 text-accent" />
+                    <venue.icon className="size-5 text-white/40" />
                     {venue.title}
                   </CardTitle>
                 </CardHeader>
@@ -422,7 +424,7 @@ export default function SchedulePage() {
                     <ul className="space-y-1">
                       {venue.features.map((feature, j) => (
                         <li key={j} className="flex items-start gap-2 text-sm text-muted-foreground">
-                          <CheckCircle className="size-3 text-accent mt-1" />
+                          <div className="mt-1.5 size-1.5 rounded-full bg-brand-gradient flex-shrink-0" />
                           {feature}
                         </li>
                       ))}
@@ -452,8 +454,8 @@ export default function SchedulePage() {
               <ul className="space-y-3">
                 {importantNotes.map((note, i) => (
                   <li key={i} className="flex items-start gap-2">
-                    <MessageSquare className="size-4 text-accent mt-0.5" />
-                    <span className="text-sm">{note}</span>
+                    <div className="mt-1.5 size-1.5 rounded-full bg-brand-gradient flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground leading-relaxed">{note}</span>
                   </li>
                 ))}
               </ul>

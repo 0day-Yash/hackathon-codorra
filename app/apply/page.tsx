@@ -29,7 +29,7 @@ export default function ApplyPage() {
                       Join us on Devpost and start building the next big security solution.
                     </p>
                   </div>
-                  <Button asChild size="lg" className="rounded-full bg-accent hover:bg-accent/90">
+                  <Button asChild size="lg" className="rounded-full bg-brand-gradient hover:opacity-90 border-none h-11 px-8 text-white font-bold">
                     <a href="https://codorra1.devpost.com/" target="_blank" rel="noopener" className="flex items-center gap-2">
                       Register on Devpost
                       <ExternalLink className="size-4" />

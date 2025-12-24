@@ -35,7 +35,7 @@ export default function ApplyAsSponsorPage() {
                                         To ensure the best experience for our partners, we provide custom quotes and tailored benefit packages for all sponsors.
                                     </p>
                                     <p className="text-muted-foreground">
-                                        Please send an email to <span className="text-accent font-mono">codorra@yahoo.com</span> with the following details, and our team will get back to you within 48 hours to discuss a custom arrangement.
+                                        Please send an email to <span className="text-white font-mono bg-white/5 px-2 py-0.5 rounded border border-white/10">codorra@yahoo.com</span> with the following details, and our team will get back to you within 48 hours to discuss a custom arrangement.
                                     </p>
                                 </div>
 
@@ -44,14 +44,14 @@ export default function ApplyAsSponsorPage() {
                                     <ul className="space-y-2">
                                         {infoRequired.map((item, i) => (
                                             <li key={i} className="flex items-center gap-3 text-sm text-muted-foreground">
-                                                <CheckCircle2 className="size-4 text-accent" />
+                                                <div className="size-1.5 rounded-full bg-brand-gradient flex-shrink-0" />
                                                 {item}
                                             </li>
                                         ))}
                                     </ul>
                                 </div>
 
-                                <Button asChild size="lg" className="w-full bg-accent hover:bg-accent/90">
+                                <Button asChild size="lg" className="w-full bg-brand-gradient hover:opacity-90 transition-opacity border-none h-11 text-white font-bold">
                                     <a href="mailto:codorra@yahoo.com?subject=Sponsorship%20Inquiry%20-%20CODORRA%202026">
                                         <Mail className="mr-2 size-4" />
                                         Mail us to Apply
@@ -68,19 +68,19 @@ export default function ApplyAsSponsorPage() {
                                 </CardHeader>
                                 <CardContent className="space-y-6">
                                     <div className="space-y-2">
-                                        <h4 className="font-bold text-accent">Custom Tailored Benefits</h4>
+                                        <h4 className="font-bold text-white/90">Custom Tailored Benefits</h4>
                                         <p className="text-sm text-muted-foreground leading-relaxed">
                                             We don't believe in one-size-fits-all sponsorship. Whether you want to recruit talent, promote your new API, or build brand trust, we'll design a package that hits your KPIs.
                                         </p>
                                     </div>
                                     <div className="space-y-2">
-                                        <h4 className="font-bold text-accent">Direct Talent Pipeline</h4>
+                                        <h4 className="font-bold text-white/90">Direct Talent Pipeline</h4>
                                         <p className="text-sm text-muted-foreground leading-relaxed">
                                             CODORRA attracts the brightest minds in security. As a sponsor, you get direct access to participants' projects and resumes.
                                         </p>
                                     </div>
                                     <div className="space-y-2">
-                                        <h4 className="font-bold text-accent">Meme-Tier to Enterprise</h4>
+                                        <h4 className="font-bold text-white/90">Meme-Tier to Enterprise</h4>
                                         <p className="text-sm text-muted-foreground leading-relaxed">
                                             From serious defense tech to certified "tomfoolery", your brand will be associated with creativity and technical depth.
                                         </p>

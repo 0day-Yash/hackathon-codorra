@@ -8,9 +8,36 @@ import Aurora from "@/components/aurora"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "CODORRA Hackathon 2026",
-  description: "48-hour cybersecurity-focused hackathon in Bengaluru + Online.",
-  generator: "v0.app",
+  title: "CODORRA 2026 | India's Premier Cybersecurity Hackathon",
+  description: "Join 500+ builders for a 48-hour cybersecurity-focused hackathon in Bengaluru + Online. Solve AI, Network, and Infrastructure security challenges. win prizes and internships.",
+  keywords: ["hackathon", "cybersecurity", "AI security", "Bengaluru tech events", "coding competition", "CODORRA", "security builders"],
+  authors: [{ name: "CODORRA Team" }],
+  openGraph: {
+    title: "CODORRA 2026 | Cybersecurity Hackathon",
+    description: "48-hour build-fest for security innovators. Join us in Bengaluru or Online.",
+    url: "https://codorra.tech",
+    siteName: "CODORRA",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "CODORRA 2026 Hackathon Banner",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CODORRA 2026 | Cybersecurity Hackathon",
+    description: "Build the future of security. Bengaluru + Online.",
+    images: ["/og-image.png"],
+  },
+  icons: {
+    icon: "/icon.png",
+    apple: "/icon.png",
+  },
 }
 
 const jakarta = Plus_Jakarta_Sans({

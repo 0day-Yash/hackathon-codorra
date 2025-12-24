@@ -9,8 +9,9 @@ export function Navbar() {
     <header className="sticky top-3 z-50">
       <Container>
         <div className="mx-auto flex h-14 items-center justify-between rounded-lg border border-white/10 bg-background/70 px-4 shadow-sm backdrop-blur-xl">
-          <a href="/" className="flex items-center gap-2 font-semibold tracking-tight text-foreground/90">
-            <span className="text-sm md:text-[15px]">CODORRA · 2026</span>
+          <a href="/" className="flex items-center gap-2 font-semibold tracking-tight text-foreground/90 group">
+            <img src="/CODORRA.png" alt="CODORRA Logo" className="h-6 w-auto brightness-200 group-hover:brightness-100 transition-all" />
+            <span className="text-sm md:text-[15px] italic font-bold">CODORRA · 2026</span>
           </a>
           <nav className="hidden gap-1.5 md:flex text-[13px]">
             <a href="/about" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">About</a>

@@ -3,360 +3,207 @@
 import type React from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { PageHeader, PageSection, CardGrid, Container } from "@/components/page-layout"
+import { PageHeader, PageSection, Container } from "@/components/page-layout"
 import { Navbar, Footer } from "@/components/navigation"
 import { Reveal } from "@/components/fx/reveal"
 import { SectionHeader } from "@/components/section-header"
 import { OrnamentRings } from "@/components/ornament-rings"
 import {
-  Building2,
-  Award,
-  Users,
-  MessageSquare,
   ExternalLink,
-  Mail,
-  Star,
-  CheckCircle,
   ArrowRight,
-  Trophy,
-  Presentation,
-  Briefcase,
-  Gavel,
-  Gift,
+  Diamond,
+  Star,
+  Users,
+  Shield,
+  Palette,
 } from "lucide-react"
 
 export default function SponsorsPage() {
   const confirmedSponsors = [
     {
-      name: "TechCorp Security",
-      logo: "/placeholder-logo.png",
-      description: "Leading provider of enterprise security solutions and threat intelligence platforms.",
-      website: "https://techcorpsecurity.com",
-      perks: ["Main Stage Sponsor", "Workshop: Advanced Threat Detection", "Hiring Booth"]
+      name: "PurpleRain Tech",
+      tier: "Diamond",
+      logo: "/sponsors/purplerain.png",
+      bio: "PurpleRain Tech is building the immune system for the digital world. Their advanced engineering and uncompromising standards provide enterprise-grade cybersecurity for networks globally, defending what matters most with real-time monitoring and proactive response.",
+      website: "https://www.purplerain.tech/",
     },
     {
-      name: "SecureVentures",
-      logo: "/placeholder-logo.png",
-      description: "Venture capital firm focused on cybersecurity startups and emerging security technologies.",
-      website: "https://secureventures.com",
-      perks: ["Investor Panel", "Startup Pitch Session", "Mentorship Program"]
+      name: "BrowserOS",
+      tier: "Silver",
+      logo: "https://browseros.com/favicon.ico", // Keeping remote for now as local wasn't found
+      bio: "BrowserOS is an open-source, AI-native browser designed for the future of web automation. It allows users to build AI agents that automate tedious browser tasks using plain English, all while running locally for maximum privacy.",
+      website: "https://browseros.com/",
     },
     {
-      name: "CyberDefense Labs",
-      logo: "/placeholder-logo.png",
-      description: "Research organization specializing in cybersecurity innovation and threat analysis.",
-      website: "https://cyberdefenselabs.com",
-      perks: ["Research Workshop", "Technical Challenge"]
-    },
-    {
-      name: "PaySecure",
-      logo: "/placeholder-logo.png",
-      description: "Fintech security company providing fraud prevention and compliance solutions.",
-      website: "https://paysecure.com",
-      perks: ["Fintech Track Sponsor", "Compliance Workshop"]
-    },
-    {
-      name: "DevTools Pro",
-      logo: "/placeholder-logo.png",
-      description: "Developer tools company offering security-focused development platforms.",
-      website: "https://devtoolspro.com",
-      perks: ["Tool Credits", "Developer Resources"]
+      name: ".xyz domains",
+      tier: "Bronze",
+      logo: "/sponsors/xyz_logo.svg.png",
+      bio: ".xyz is the go-to domain extension for the next generation of innovators and creators. It provides a unique and flexible namespace for the modern web, supporting a global community of builders.",
+      website: "https://gen.xyz/",
     }
   ]
 
-  const sponsorTiers = [
-    {
-      name: "Core Partner",
-      investment: "Custom Package",
-      icon: Star,
-      color: "bg-primary/10 text-primary ring-primary/25",
-      perks: [
-        "Main stage mentions + logo on hero section",
-        "Dedicated talk/workshop slot (30-45 min)",
-        "Booth space + hiring access to participants",
-        "Custom challenge track with dedicated prizes",
-        "Logo on all marketing materials",
-        "Social media mentions and coverage"
-      ]
-    },
-    {
-      name: "Strategic Partner",
-      investment: "Custom Package",
-      icon: Award,
-      color: "bg-accent/10 text-accent ring-accent/25",
-      perks: [
-        "Logo on website and social media",
-        "Workshop or lightning talk slot (15-20 min)",
-        "Access to participant shortlist for hiring",
-        "Logo on event materials",
-        "Social media mentions"
-      ]
-    },
-    {
-      name: "Community Partner",
-      investment: "Custom Package",
-      icon: Users,
-      color: "bg-primary/10 text-primary ring-primary/25",
-      perks: [
-        "Logo in partners section",
-        "Social media mentions",
-        "Brand visibility and partner recognition",
-        "Community recognition"
-      ]
-    },
-    {
-      name: "Judging Partner",
-      investment: "Custom Package",
-      icon: Gavel,
-      color: "bg-accent/10 text-accent ring-accent/25",
-      perks: [
-        "Dedicated Judge seat on the panel",
-        "Logo on judging materials",
-        "Introduction during Demo Day",
-        "Access to project source code and decks"
-      ]
-    },
-    {
-      name: "Ecosystem Partner",
-      investment: "Custom Package",
-      icon: Gift,
-      color: "bg-primary/10 text-primary ring-primary/25",
-      perks: [
-        "Logo in partners section",
-        "Social media mentions",
-        "Direct product/API adoption by hackers",
-        "Swag distribution opportunities"
-      ]
-    }
-  ]
-
-  const sponsorBenefits = [
-    {
-      icon: Users,
-      title: "Talent Access",
-      description: "Connect with top cybersecurity talent from students to professionals"
-    },
-    {
-      icon: MessageSquare,
-      title: "Brand Visibility",
-      description: "Reach 500+ participants and 10,000+ community members"
-    },
-    {
-      icon: Briefcase,
-      title: "Business Development",
-      description: "Network with industry leaders and potential partners"
-    },
-    {
-      icon: Trophy,
-      title: "Innovation Pipeline",
-      description: "Discover cutting-edge solutions and emerging technologies"
-    }
-  ]
-
-  const challengeTracks = [
-    {
-      sponsor: "TechCorp Security",
-      title: "Advanced Threat Detection Challenge",
-      description: "Build AI-powered systems to detect sophisticated cyber threats in real-time.",
-      prize: "$2,000 + Internship Opportunity"
-    },
-    {
-      sponsor: "PaySecure",
-      title: "Fintech Security Innovation",
-      description: "Create solutions for fraud prevention, KYC/AML, or secure payment processing.",
-      prize: "$1,500 + Mentorship Program"
-    },
-    {
-      sponsor: "CyberDefense Labs",
-      title: "Research Innovation Award",
-      description: "Develop novel approaches to cybersecurity research and threat analysis.",
-      prize: "$1,000 + Research Collaboration"
-    }
+  const tiers = [
+    { name: "Diamond", icon: Diamond, label: "Diamond Sponsors" },
+    { name: "Gold", icon: Star, label: "Gold Sponsors" },
+    { name: "Silver", icon: Shield, label: "Silver Sponsors" },
+    { name: "Bronze", icon: Users, label: "Bronze Sponsors" },
   ]
 
   return (
-    <main>
+    <main className="min-h-screen bg-background">
       <Navbar />
-      <PageHeader
-        title="Our Sponsors"
-        description="Industry leaders and innovators supporting the next generation of cybersecurity talent."
-      />
+      <PageSection className="pt-24 pb-12">
+        <SectionHeader
+          eyebrow="Our Partners"
+          title="Current Sponsors"
+          desc="Join industry leaders in supporting the next generation of cybersecurity innovators through superior engineering and support."
+          className="cursor-target mb-16"
+        />
+
+        <div className="space-y-24">
+          {tiers.map((tier) => {
+            const sponsors = confirmedSponsors.filter(s => s.tier === tier.name)
+            if (sponsors.length === 0 && tier.name !== "Diamond") return null // Only show non-empty tiers except Diamond as it's the anchor
+
+            return (
+              <div key={tier.name} className="space-y-12">
+                {/* Tier Separator */}
+                <div className="flex items-center gap-4">
+                  <div className="h-px flex-grow bg-white/10" />
+                  <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5">
+                    <tier.icon className="size-4 text-white/40" />
+                    <span className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground">{tier.label}</span>
+                  </div>
+                  <div className="h-px flex-grow bg-white/10" />
+                </div>
+
+                <div className={`grid gap-8 ${tier.name === "Diamond" ? "grid-cols-1" :
+                  tier.name === "Gold" || tier.name === "Silver" ? "md:grid-cols-2" :
+                    "md:grid-cols-3 lg:grid-cols-4"
+                  }`}>
+                  {sponsors.map((sponsor, i) => (
+                    <Reveal key={sponsor.name} delay={i * 100}>
+                      <Card className={`glass cursor-target group border-white/10 overflow-hidden relative flex flex-col h-full ${tier.name === "Diamond" ? "md:p-12 p-8" : "p-8"
+                        }`}>
+                        {tier.name === "Diamond" && (
+                          <div className="absolute right-0 top-0 h-full w-[40%] bg-brand-gradient opacity-[0.03] pointer-events-none" />
+                        )}
+
+                        <div className={`${tier.name === "Diamond" ? "grid md:grid-cols-[1.5fr_1fr] gap-12 items-center" : "space-y-8 flex-grow"}`}>
+                          <div className="space-y-8">
+                            <div className="flex flex-col gap-6">
+                              {tier.name === "Diamond" && (
+                                <span className="w-fit bg-brand-gradient text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1 rounded">Diamond Sponsor</span>
+                              )}
+                              <div className="flex items-center gap-6">
+                                <div className="h-20 w-20 md:h-24 md:w-24 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center p-4 group-hover:border-white/20 transition-all duration-500 shrink-0">
+                                  <img
+                                    src={sponsor.logo}
+                                    alt={`${sponsor.name} logo`}
+                                    className="h-full w-full object-contain filter grayscale brightness-200 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500"
+                                  />
+                                </div>
+                                {tier.name === "Diamond" ? (
+                                  <CardTitle className="text-4xl md:text-6xl font-extrabold italic tracking-tighter">
+                                    {sponsor.name}
+                                  </CardTitle>
+                                ) : (
+                                  tier.name !== "Diamond" && (
+                                    <span className="text-[10px] uppercase tracking-widest font-bold px-2 py-1 rounded bg-white/5 text-muted-foreground border border-white/10 ml-auto">
+                                      {sponsor.tier}
+                                    </span>
+                                  )
+                                )}
+                              </div>
+                            </div>
+
+                            <div className="space-y-4">
+                              {tier.name !== "Diamond" && (
+                                <CardTitle className="text-2xl font-extrabold italic tracking-tight">
+                                  {sponsor.name}
+                                </CardTitle>
+                              )}
+                              <p className={`${tier.name === "Diamond" ? "text-xl" : "text-sm"} text-muted-foreground leading-relaxed tracking-wide`}>
+                                {sponsor.bio}
+                              </p>
+                            </div>
+                          </div>
+
+                          {tier.name === "Diamond" && (
+                            <div className="flex justify-center md:justify-end">
+                              <div className="h-48 w-48 md:h-80 md:w-full rounded-3xl bg-white/5 border border-white/10 flex items-center justify-center overflow-hidden group-hover:border-white/20 transition-all duration-500 relative">
+                                <div className="absolute inset-0 bg-brand-gradient opacity-10 blur-3xl rounded-full scale-75 group-hover:scale-100 transition-transform duration-700" />
+                                <img
+                                  src="/sponsors/purplerain-device.avif"
+                                  alt="PurpleRain Device Mockup"
+                                  className="h-full w-full object-cover relative z-10 drop-shadow-2xl scale-105 group-hover:scale-110 transition-transform duration-700"
+                                />
+                              </div>
+                            </div>
+                          )}
+                        </div>
+
+                        <div className={`mt-10 pt-8 border-t border-white/5 flex ${tier.name === "Diamond" ? "justify-start" : "justify-center"}`}>
+                          <Button asChild size={tier.name === "Diamond" ? "lg" : "sm"} className={`rounded-full transition-all border-none font-bold text-white px-8 ${tier.name === "Diamond" ? "h-12 bg-brand-gradient hover:opacity-90 min-w-[200px]" : "h-10 bg-white/10 hover:bg-white/15 w-full"
+                            }`}>
+                            <a href={sponsor.website} target="_blank" rel="noopener">
+                              {tier.name === "Diamond" ? "Launch Website" : "Visit Website"}
+                              <ExternalLink className={`ml-2 ${tier.name === "Diamond" ? "size-4" : "size-3.5"}`} />
+                            </a>
+                          </Button>
+                        </div>
+                      </Card>
+                    </Reveal>
+                  ))}
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </PageSection>
 
       <PageSection>
         <SectionHeader
-          eyebrow="Confirmed Partners"
-          title="Current Sponsors"
-          desc="Meet the organizations making CODORRA 2026 possible through their support and partnership."
+          eyebrow="Ready?"
+          title="Apply to Partner"
+          desc="Custom partnership journeys start with a conversation."
           className="cursor-target"
         />
 
-        <CardGrid cols={3}>
-          {confirmedSponsors.map((sponsor, i) => (
-            <Reveal key={sponsor.name} delay={i * 100}>
-              <Card className="glass cursor-target group hover:translate-y-[-2px] transition-all">
-                <CardHeader className="text-center">
-                  <div className="flex justify-center mb-4">
-                    <div className="h-16 w-16 rounded-lg bg-muted flex items-center justify-center">
-                      <img
-                        src={sponsor.logo}
-                        alt={`${sponsor.name} logo`}
-                        className="h-12 w-12 object-contain"
-                      />
-                    </div>
-                  </div>
-                  <CardTitle className="text-lg">{sponsor.name}</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-sm text-muted-foreground">{sponsor.description}</p>
-
-                  <div className="space-y-2">
-                    <h4 className="text-sm font-semibold">Sponsor Benefits:</h4>
-                    <ul className="space-y-1">
-                      {sponsor.perks.map((perk, j) => (
-                        <li key={j} className="flex items-start gap-2 text-xs text-muted-foreground">
-                          <CheckCircle className="size-3 text-accent mt-0.5" />
-                          {perk}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <Button size="sm" variant="outline" asChild className="w-full">
-                    <a href={sponsor.website} target="_blank" rel="noopener">
-                      Visit Website
-                      <ExternalLink className="ml-2 size-3" />
+        <div className="max-w-2xl mx-auto">
+          <Reveal>
+            <Card className="glass border-white/10 overflow-hidden relative">
+              <div className="absolute top-0 right-0 p-8 opacity-[0.03] pointer-events-none">
+                <OrnamentRings className="h-64 w-64" />
+              </div>
+              <CardContent className="p-10 text-center space-y-8 relative z-10">
+                <div className="space-y-4">
+                  <h3 className="text-3xl font-bold italic tracking-tight">Let's build the immune system of the digital world together.</h3>
+                  <p className="text-muted-foreground text-lg leading-relaxed">
+                    Contact us for a custom quote and a sponsorship package tailored specifically to your brand's goals.
+                  </p>
+                </div>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                  <Button asChild size="lg" className="h-12 px-8 rounded-full bg-brand-gradient hover:opacity-90 transition-opacity border-none text-white font-bold min-w-[180px]">
+                    <a href="/apply-as-sponsor">
+                      Apply as Sponsor
+                      <ArrowRight className="ml-2 size-4" />
                     </a>
                   </Button>
-                </CardContent>
-              </Card>
-            </Reveal>
-          ))}
-        </CardGrid>
-      </PageSection>
-
-      <PageSection>
-        <SectionHeader
-          eyebrow="Sponsorship Opportunities"
-          title="Become a Sponsor"
-          desc="Join industry leaders in supporting cybersecurity innovation and gain access to top talent."
-          className="cursor-target"
-        />
-
-        <div className="grid gap-8 md:grid-cols-3">
-          {sponsorTiers.map((tier, i) => (
-            <Reveal key={tier.name} delay={i * 100}>
-              <Card className="glass cursor-target group hover:translate-y-[-2px] transition-all">
-                <CardHeader>
-                  <CardTitle className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <div className={`${tier.color} rounded-lg p-2 ring-1`}>
-                        <tier.icon className="size-4" />
-                      </div>
-                      <span>{tier.name}</span>
-                    </div>
-                    <span className="text-accent font-bold">{tier.investment}</span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    {tier.perks.map((perk, j) => (
-                      <li key={j} className="flex items-start gap-2 text-sm">
-                        <CheckCircle className="size-4 text-accent mt-0.5" />
-                        <span>{perk}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </Reveal>
-          ))}
-        </div>
-      </PageSection>
-
-      <PageSection>
-        <SectionHeader
-          eyebrow="Why Sponsor?"
-          title="Sponsor Benefits"
-          desc="Partner with us to support cybersecurity innovation while gaining valuable business opportunities."
-          className="cursor-target"
-        />
-
-        <CardGrid cols={4}>
-          {sponsorBenefits.map((benefit, i) => (
-            <Reveal key={benefit.title} delay={i * 100}>
-              <Card className="glass cursor-target">
-                <CardHeader className="pb-2 flex items-center gap-3">
-                  <div className="bg-accent/10 ring-accent/25 text-accent rounded-lg p-2 ring-1">
-                    <benefit.icon className="size-4" />
-                  </div>
-                  <CardTitle className="text-lg">{benefit.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="text-muted-foreground">
-                  {benefit.description}
-                </CardContent>
-              </Card>
-            </Reveal>
-          ))}
-        </CardGrid>
-      </PageSection>
-
-      <PageSection>
-        <SectionHeader
-          eyebrow="Get Involved"
-          title="Ready to Sponsor?"
-          desc="Join us in supporting the next generation of cybersecurity innovators."
-          className="cursor-target"
-        />
-
-        <div className="grid gap-6 md:grid-cols-2">
-          <Reveal>
-            <Card className="glass cursor-target">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Mail className="size-5" />
-                  Contact Our Team
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground">
-                  Contact us for a custom quote and a sponsorship package tailored specifically to your brand's goals and needs.
-                </p>
-                <Button asChild className="w-full">
-                  <a href="mailto:codorra@yahoo.com?subject=Sponsor%20CODORRA%20Hackathon">
-                    Email Our Team
-                    <ArrowRight className="ml-2 size-4" />
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
-          </Reveal>
-
-          <Reveal delay={100}>
-            <Card className="glass cursor-target">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Presentation className="size-5" />
-                  Apply Online
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground">
-                  View the required information and start your sponsorship journey with a tailored approach.
-                </p>
-                <Button asChild variant="outline" className="w-full">
-                  <a href="/apply-as-sponsor">
-                    Apply as Sponsor
-                    <ArrowRight className="ml-2 size-4" />
-                  </a>
-                </Button>
+                  <Button asChild variant="outline" size="lg" className="h-12 px-8 rounded-full border-white/10 hover:bg-white/5 min-w-[180px]">
+                    <a href="mailto:codorra@yahoo.com?subject=Sponsor%20CODORRA%20Hackathon">
+                      Email Our Team
+                    </a>
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           </Reveal>
         </div>
       </PageSection>
 
-      <div className="absolute right-6 top-10">
+      <div className="absolute right-6 top-10 pointer-events-none">
         <OrnamentRings className="h-64 w-64" />
       </div>
       <Footer />
