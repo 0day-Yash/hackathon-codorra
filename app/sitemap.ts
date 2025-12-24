@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://codorra.tech'
+    const baseUrl = 'https://codorra.purplerain.tech'
 
     return [
         {
