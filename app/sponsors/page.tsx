@@ -22,13 +22,14 @@ import {
   Trophy,
   Presentation,
   Briefcase,
+  Gavel,
+  Gift,
 } from "lucide-react"
 
 export default function SponsorsPage() {
   const confirmedSponsors = [
     {
       name: "TechCorp Security",
-      tier: "Gold",
       logo: "/placeholder-logo.png",
       description: "Leading provider of enterprise security solutions and threat intelligence platforms.",
       website: "https://techcorpsecurity.com",
@@ -36,7 +37,6 @@ export default function SponsorsPage() {
     },
     {
       name: "SecureVentures",
-      tier: "Gold", 
       logo: "/placeholder-logo.png",
       description: "Venture capital firm focused on cybersecurity startups and emerging security technologies.",
       website: "https://secureventures.com",
@@ -44,15 +44,13 @@ export default function SponsorsPage() {
     },
     {
       name: "CyberDefense Labs",
-      tier: "Silver",
-      logo: "/placeholder-logo.png", 
+      logo: "/placeholder-logo.png",
       description: "Research organization specializing in cybersecurity innovation and threat analysis.",
       website: "https://cyberdefenselabs.com",
       perks: ["Research Workshop", "Technical Challenge"]
     },
     {
       name: "PaySecure",
-      tier: "Silver",
       logo: "/placeholder-logo.png",
       description: "Fintech security company providing fraud prevention and compliance solutions.",
       website: "https://paysecure.com",
@@ -60,7 +58,6 @@ export default function SponsorsPage() {
     },
     {
       name: "DevTools Pro",
-      tier: "Community",
       logo: "/placeholder-logo.png",
       description: "Developer tools company offering security-focused development platforms.",
       website: "https://devtoolspro.com",
@@ -70,8 +67,8 @@ export default function SponsorsPage() {
 
   const sponsorTiers = [
     {
-      name: "Gold Partner",
-      investment: "$2,000+",
+      name: "Core Partner",
+      investment: "Custom Package",
       icon: Star,
       color: "bg-primary/10 text-primary ring-primary/25",
       perks: [
@@ -84,8 +81,8 @@ export default function SponsorsPage() {
       ]
     },
     {
-      name: "Silver Partner", 
-      investment: "$1,000+",
+      name: "Strategic Partner",
+      investment: "Custom Package",
       icon: Award,
       color: "bg-accent/10 text-accent ring-accent/25",
       perks: [
@@ -98,14 +95,38 @@ export default function SponsorsPage() {
     },
     {
       name: "Community Partner",
-      investment: "$500+",
+      investment: "Custom Package",
       icon: Users,
       color: "bg-primary/10 text-primary ring-primary/25",
       perks: [
         "Logo in partners section",
         "Social media mentions",
-        "Optional ticket discounts for participants",
+        "Brand visibility and partner recognition",
         "Community recognition"
+      ]
+    },
+    {
+      name: "Judging Partner",
+      investment: "Custom Package",
+      icon: Gavel,
+      color: "bg-accent/10 text-accent ring-accent/25",
+      perks: [
+        "Dedicated Judge seat on the panel",
+        "Logo on judging materials",
+        "Introduction during Demo Day",
+        "Access to project source code and decks"
+      ]
+    },
+    {
+      name: "Ecosystem Partner",
+      investment: "Custom Package",
+      icon: Gift,
+      color: "bg-primary/10 text-primary ring-primary/25",
+      perks: [
+        "Logo in partners section",
+        "Social media mentions",
+        "Direct product/API adoption by hackers",
+        "Swag distribution opportunities"
       ]
     }
   ]
@@ -141,7 +162,7 @@ export default function SponsorsPage() {
       prize: "$2,000 + Internship Opportunity"
     },
     {
-      sponsor: "PaySecure", 
+      sponsor: "PaySecure",
       title: "Fintech Security Innovation",
       description: "Create solutions for fraud prevention, KYC/AML, or secure payment processing.",
       prize: "$1,500 + Mentorship Program"
@@ -157,7 +178,7 @@ export default function SponsorsPage() {
   return (
     <main>
       <Navbar />
-      <PageHeader 
+      <PageHeader
         title="Our Sponsors"
         description="Industry leaders and innovators supporting the next generation of cybersecurity talent."
       />
@@ -169,7 +190,7 @@ export default function SponsorsPage() {
           desc="Meet the organizations making CODORRA 2026 possible through their support and partnership."
           className="cursor-target"
         />
-        
+
         <CardGrid cols={3}>
           {confirmedSponsors.map((sponsor, i) => (
             <Reveal key={sponsor.name} delay={i * 100}>
@@ -177,24 +198,18 @@ export default function SponsorsPage() {
                 <CardHeader className="text-center">
                   <div className="flex justify-center mb-4">
                     <div className="h-16 w-16 rounded-lg bg-muted flex items-center justify-center">
-                      <img 
-                        src={sponsor.logo} 
+                      <img
+                        src={sponsor.logo}
                         alt={`${sponsor.name} logo`}
                         className="h-12 w-12 object-contain"
                       />
                     </div>
                   </div>
                   <CardTitle className="text-lg">{sponsor.name}</CardTitle>
-                  <Badge 
-                    variant={sponsor.tier === "Gold" ? "default" : sponsor.tier === "Silver" ? "secondary" : "outline"}
-                    className="w-fit mx-auto"
-                  >
-                    {sponsor.tier} Partner
-                  </Badge>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-sm text-muted-foreground">{sponsor.description}</p>
-                  
+
                   <div className="space-y-2">
                     <h4 className="text-sm font-semibold">Sponsor Benefits:</h4>
                     <ul className="space-y-1">
@@ -227,7 +242,7 @@ export default function SponsorsPage() {
           desc="Join industry leaders in supporting cybersecurity innovation and gain access to top talent."
           className="cursor-target"
         />
-        
+
         <div className="grid gap-8 md:grid-cols-3">
           {sponsorTiers.map((tier, i) => (
             <Reveal key={tier.name} delay={i * 100}>
@@ -266,7 +281,7 @@ export default function SponsorsPage() {
           desc="Partner with us to support cybersecurity innovation while gaining valuable business opportunities."
           className="cursor-target"
         />
-        
+
         <CardGrid cols={4}>
           {sponsorBenefits.map((benefit, i) => (
             <Reveal key={benefit.title} delay={i * 100}>
@@ -293,7 +308,7 @@ export default function SponsorsPage() {
           desc="Join us in supporting the next generation of cybersecurity innovators."
           className="cursor-target"
         />
-        
+
         <div className="grid gap-6 md:grid-cols-2">
           <Reveal>
             <Card className="glass cursor-target">
@@ -305,7 +320,7 @@ export default function SponsorsPage() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
-                  Ready to discuss sponsorship opportunities? Our team is here to help you find the perfect partnership level.
+                  Contact us for a custom quote and a sponsorship package tailored specifically to your brand's goals and needs.
                 </p>
                 <Button asChild className="w-full">
                   <a href="mailto:codorra@yahoo.com?subject=Sponsor%20CODORRA%20Hackathon">
@@ -327,10 +342,10 @@ export default function SponsorsPage() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
-                  Submit your sponsorship application through our online form for a streamlined process.
+                  View the required information and start your sponsorship journey with a tailored approach.
                 </p>
                 <Button asChild variant="outline" className="w-full">
-                  <a href="/apply#sponsor">
+                  <a href="/apply-as-sponsor">
                     Apply as Sponsor
                     <ArrowRight className="ml-2 size-4" />
                   </a>

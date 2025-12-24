@@ -309,7 +309,7 @@ export default function SchedulePage() {
   const importantNotes = [
     "All times are in GMT +05:30 (Calcutta timezone)",
     "Round 1 (May 22-31): Fully online, free participation, submissions via Devpost + GitHub",
-    "Round 2 (June 5-7): Demo Day in Bengaluru, tickets required for finalists only",
+    "Round 2 (June 5-7): Demo Day in Bengaluru, open for all shortlisted finalists",
     "Round 2 venue provides 24/7 access, internet, power, and basic infrastructure",
     "Round 1 submissions close May 31, 2026 at 10:00 AM",
     "Round 2: 3-minute presentations, live demos, and Q&A with judges"
@@ -318,7 +318,7 @@ export default function SchedulePage() {
   return (
     <main>
       <Navbar />
-      <PageHeader 
+      <PageHeader
         title="Event Schedule"
         description="Complete timeline for CODORRA 2026 - Round 1: Online (May 22-31) and Round 2: Demo Day (June 5-7)."
       />
@@ -330,7 +330,7 @@ export default function SchedulePage() {
           desc="Round 1: Online submissions (May 22-31, 2026). Round 2: Demo Day in Bengaluru (June 5-7, 2026)."
           className="cursor-target"
         />
-        
+
         <div className="space-y-12">
           {scheduleEvents.map((day, dayIndex) => (
             <Reveal key={day.day} delay={dayIndex * 100}>
@@ -344,12 +344,12 @@ export default function SchedulePage() {
                     <p className="text-muted-foreground">{day.date}</p>
                   </div>
                 </div>
-                
+
                 <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                   {day.events.map((event, eventIndex) => {
                     const EventIcon = event.icon
                     const typeColor = eventTypeColors[event.type as keyof typeof eventTypeColors]
-                    
+
                     return (
                       <Reveal key={event.title} delay={eventIndex * 50}>
                         <Card className="glass cursor-target">
@@ -404,7 +404,7 @@ export default function SchedulePage() {
           desc="Details about both in-person and online participation options."
           className="cursor-target"
         />
-        
+
         <div className="grid gap-6 md:grid-cols-2">
           {venueInfo.map((venue, i) => (
             <Reveal key={venue.title} delay={i * 100}>
@@ -442,7 +442,7 @@ export default function SchedulePage() {
           desc="Essential information to help you make the most of your hackathon experience."
           className="cursor-target"
         />
-        
+
         <Reveal>
           <Card className="glass cursor-target">
             <CardHeader>
@@ -469,7 +469,7 @@ export default function SchedulePage() {
           desc="High-level view of the hackathon timeline for easy reference."
           className="cursor-target"
         />
-        
+
         <Reveal>
           <div className="-mx-2">
             <MuiTimeline />

@@ -77,7 +77,7 @@ export default function ContactPage() {
     {
       name: "Alex Chen",
       role: "Technical Lead",
-      email: "alex@codorra.dev", 
+      email: "alex@codorra.dev",
       bio: "Managing technical infrastructure and participant support."
     },
     {
@@ -130,7 +130,7 @@ export default function ContactPage() {
   return (
     <main>
       <Navbar />
-      <PageHeader 
+      <PageHeader
         title="Contact Us"
         description="Get in touch with the CODORRA team for questions, support, or partnership opportunities."
       />
@@ -142,7 +142,7 @@ export default function ContactPage() {
           desc="Multiple ways to reach our team and connect with the community."
           className="cursor-target"
         />
-        
+
         <div className="grid gap-6 md:grid-cols-3">
           {contactInfo.map((info, i) => (
             <Reveal key={info.title} delay={i * 100}>
@@ -176,7 +176,7 @@ export default function ContactPage() {
           desc="Have a specific question or inquiry? Fill out our contact form and we'll get back to you within 24 hours."
           className="cursor-target"
         />
-        
+
         <TwoColumnLayout
           left={
             <Reveal>
@@ -191,7 +191,7 @@ export default function ContactPage() {
                       <Input
                         id="name"
                         value={contactForm.name}
-                        onChange={(e) => setContactForm({...contactForm, name: e.target.value})}
+                        onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
                         placeholder="Your full name"
                         required
                       />
@@ -203,7 +203,7 @@ export default function ContactPage() {
                         id="email"
                         type="email"
                         value={contactForm.email}
-                        onChange={(e) => setContactForm({...contactForm, email: e.target.value})}
+                        onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
                         placeholder="your.email@example.com"
                         required
                       />
@@ -211,7 +211,7 @@ export default function ContactPage() {
 
                     <div className="space-y-2">
                       <Label htmlFor="inquiryType">Inquiry Type</Label>
-                      <Select value={contactForm.inquiryType} onValueChange={(value) => setContactForm({...contactForm, inquiryType: value})}>
+                      <Select value={contactForm.inquiryType} onValueChange={(value) => setContactForm({ ...contactForm, inquiryType: value })}>
                         <SelectTrigger>
                           <SelectValue placeholder="Select inquiry type" />
                         </SelectTrigger>
@@ -228,7 +228,7 @@ export default function ContactPage() {
                       <Input
                         id="subject"
                         value={contactForm.subject}
-                        onChange={(e) => setContactForm({...contactForm, subject: e.target.value})}
+                        onChange={(e) => setContactForm({ ...contactForm, subject: e.target.value })}
                         placeholder="Brief subject line"
                         required
                       />
@@ -239,7 +239,7 @@ export default function ContactPage() {
                       <Textarea
                         id="message"
                         value={contactForm.message}
-                        onChange={(e) => setContactForm({...contactForm, message: e.target.value})}
+                        onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
                         placeholder="Tell us how we can help you..."
                         rows={6}
                         required
@@ -299,7 +299,7 @@ export default function ContactPage() {
                       <strong>Round 1:</strong> May 22-31, 2026 (Online, Free)
                     </p>
                     <p className="text-sm text-muted-foreground">
-                      <strong>Round 2:</strong> June 5-7, 2026 (Bengaluru, Tickets required)
+                      <strong>Round 2:</strong> June 5-7, 2026 (Bengaluru, Free for finalists)
                     </p>
                   </CardContent>
                 </Card>
@@ -316,7 +316,7 @@ export default function ContactPage() {
           desc="The people behind CODORRA 2026 - dedicated to making this hackathon an unforgettable experience."
           className="cursor-target"
         />
-        
+
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {teamMembers.map((member, i) => (
             <Reveal key={member.name} delay={i * 100}>
@@ -347,7 +347,7 @@ export default function ContactPage() {
           desc="Follow us on social media and join our community channels for updates, discussions, and networking."
           className="cursor-target"
         />
-        
+
         <div className="grid gap-6 md:grid-cols-2">
           {socialLinks.map((social, i) => (
             <Reveal key={social.name} delay={i * 100}>
@@ -380,7 +380,7 @@ export default function ContactPage() {
           desc="Quick access to frequently requested information and resources."
           className="cursor-target"
         />
-        
+
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           <Reveal>
             <Card className="glass cursor-target">

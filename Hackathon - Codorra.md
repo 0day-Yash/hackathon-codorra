@@ -147,8 +147,8 @@ We will see
 
 IF they pay more than 2,000$
 
-* What are the sponsor tiers (Gold, Silver, Community Partner)?  
-  We have them planned
+* What are the sponsorship options?  
+  We offer custom partnership packages.
 
 * Will we tie up with colleges/incubators to funnel participants?
 
@@ -176,9 +176,9 @@ Maybe, depends on if they pay us enough
 
 About $2000 sounds reasonable, we need over $7000 in sponsors (so that we can pay for hosting, ads, salary etc).
 
-* Where’s the money coming from (sponsors, ticket sales, hybrid model)?
+* Where’s the money coming from (sponsors, partners, hybrid model)?
 
-Sponsors, and 1000rs per head ticket
+Sponsors, and partners (completely free for participants)
 
 * How much can we scale in year 1 without going broke?
 

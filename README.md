@@ -71,7 +71,7 @@
 - **Eligibility**: Open to students, indie hackers, and professionals.
 - **Balance**: TBD — possibly 1:10 (offline:online), depending on signups.
 - **Registration**:
-  - ₹1000/head ticketing.
+  - Completely free for everyone.
   - Cap depends on venue size and demand.
 - **Diversity Tracks**: None officially. *(Note: keep this part quiet to avoid backlash.)*
 
@@ -98,7 +98,7 @@
   - Cloud providers, dev tool companies, fintechs, cybersecurity orgs (Bengaluru-based preferred).
 - **Sponsor Benefits**:
   - Own track if contribution > $2000.
-  - Tiered packages (Gold, Silver, Community Partner).
+  - Custom partnership packages available (Core, Strategic, Community).
 - **Institutional Partnerships**:
   - Colleges/incubators only if they fund or contribute actively.
 
@@ -128,7 +128,7 @@
   - ~$2000 for venue, food, internet, swag, prizes, etc.
 - **Funding Sources**:
   - Sponsors (target: $7,000+).
-  - Ticket sales (~₹1000 per participant).
+  - Sponsors and partners.
 - **Scaling Plan**:
   - Year 1 (July 2026) = MVP run.
   - Future editions scale based on interest + funding.

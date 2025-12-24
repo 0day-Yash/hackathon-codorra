@@ -12,7 +12,7 @@ export default function ApplyPage() {
   return (
     <main>
       <Navbar />
-      <PageHeader 
+      <PageHeader
         title="Apply to CODORRA"
         description="Register your team on Devpost to participate in the hackathon."
       />
@@ -35,6 +35,12 @@ export default function ApplyPage() {
                       <ExternalLink className="size-4" />
                     </a>
                   </Button>
+                  <div className="pt-4 border-t border-white/10 w-full">
+                    <p className="text-sm text-muted-foreground mb-3">Looking to partner with us instead?</p>
+                    <Button asChild variant="link" className="text-accent hover:text-accent/80 p-0 h-auto">
+                      <a href="/apply-as-sponsor">Apply as a Sponsor →</a>
+                    </Button>
+                  </div>
                 </div>
               </CardContent>
             </Card>

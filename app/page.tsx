@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils"
 import { Reveal } from "@/components/fx/reveal"
 import { SectionHeader } from "@/components/section-header"
 import { OrnamentRings } from "@/components/ornament-rings"
-import {  
+import {
   MapPin,
   Clock,
   BookOpen,
@@ -43,11 +43,11 @@ function Navbar() {
   return (
     <header className="sticky top-3 z-50">
       <Container>
-          <div className="mx-auto flex h-14 items-center justify-between rounded-lg border border-white/10 bg-background/70 px-4 shadow-sm backdrop-blur-xl">
-            <a href="/" className="flex items-center gap-2 font-semibold tracking-tight text-foreground/90">
-              <span className="text-sm md:text-[15px]">CODORRA · 2026</span>
-            </a>
-            <nav className="hidden gap-1.5 md:flex text-[13px]">
+        <div className="mx-auto flex h-14 items-center justify-between rounded-lg border border-white/10 bg-background/70 px-4 shadow-sm backdrop-blur-xl">
+          <a href="/" className="flex items-center gap-2 font-semibold tracking-tight text-foreground/90">
+            <span className="text-sm md:text-[15px]">CODORRA · 2026</span>
+          </a>
+          <nav className="hidden gap-1.5 md:flex text-[13px]">
             <a href="/about" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">About</a>
             <a href="/speakers" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">Speakers</a>
             <a href="/sponsors" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">Sponsors</a>
@@ -334,14 +334,14 @@ function Sponsors() {
         <SectionHeader
           eyebrow="Partners"
           title="Sponsors & Community"
-          desc="We're seeking ~$7k in partners. Own a challenge track (> $2k), run workshops, and access hiring opportunities. Email codorra@yahoo.com."
+          desc="We're seeking partners to support the cybersecurity ecosystem. Run workshops, host challenges, and access hiring opportunities. Email codorra@yahoo.com."
           align="center"
         />
         <div className="grid gap-6 md:grid-cols-3">
           {[
-            { name: "Gold", perks: ["Stage mentions + logo on hero", "Talk/workshop slot", "Booth + hiring access", "Custom challenge track (> $2k)"] },
-            { name: "Silver", perks: ["Logo on site + socials", "Workshop/lightning talk", "Shortlist access"] },
-            { name: "Community Partner", perks: ["Logo in partners", "Social mentions", "Ticket discounts (optional)"] },
+            { name: "Global Partner", perks: ["Stage mentions + logo on hero", "Talk/workshop slot", "Booth + hiring access", "Custom challenge track"] },
+            { name: "Regional Partner", perks: ["Logo on site + socials", "Workshop/lightning talk", "Shortlist access"] },
+            { name: "Community Partner", perks: ["Logo in partners", "Social mentions", "Brand visibility"] },
           ].map((t) => (
             <Card key={t.name} className="glass overflow-hidden">
               <CardHeader>
@@ -362,7 +362,7 @@ function Sponsors() {
         </div>
         <div className="mt-10 flex items-center justify-center gap-3">
           <Button size="lg" variant="secondary" className="rounded-full h-11 px-6 border border-white/15 bg-white/10 hover:bg-white/15" asChild>
-            <a href="/apply#sponsor">Apply as Sponsor</a>
+            <a href="/apply-as-sponsor">Apply as Sponsor</a>
           </Button>
           <Button size="lg" variant="ghost" className="rounded-full h-11 px-6" asChild>
             <a href="mailto:codorra@yahoo.com?subject=Sponsor%20CODORRA%20Hackathon">Email Us</a>
@@ -380,26 +380,26 @@ function FAQ() {
     { q: "Where will it happen?", a: "Round 1: Fully online. Round 2: Bengaluru venue (finalists only) with hybrid option." },
     { q: "How are submissions handled?", a: "Round 1: Devpost + GitHub links (mandatory). Finalists present at Round 2 Demo Day." },
     { q: "Judging criteria?", a: "Idea quality & relevance, technical execution & code quality, presentation clarity, real-world applicability & impact." },
-    { q: "Fees?", a: "Round 1 is completely free. Round 2 tickets: Individual Normal ₹500, Individual VIP ₹1000, Team Normal (2–4) ₹1500, Team VIP (2–4) ₹2500." },
+    { q: "Fees?", a: "The hackathon is completely free for everyone. There are no registration or participation fees for any round." },
   ]
   return (
     <section id="faq" className="section border-b">
       <Container>
         <SectionHeader eyebrow="Good to know" title="FAQ" align="center" />
         <div className="mt-6">
-  <div className="mx-auto max-w-2xl"> {/* control width here */}
-    <div className="rounded-xl border glass p-2 md:p-3">
-      <Accordion type="single" collapsible>
-        {faqs.map((f, i) => (
-          <AccordionItem key={i} value={`item-${i}`}>
-            <AccordionTrigger className="text-left">{f.q}</AccordionTrigger>
-            <AccordionContent className="text-muted-foreground">{f.a}</AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
-    </div>
-  </div>
-</div>
+          <div className="mx-auto max-w-2xl"> {/* control width here */}
+            <div className="rounded-xl border glass p-2 md:p-3">
+              <Accordion type="single" collapsible>
+                {faqs.map((f, i) => (
+                  <AccordionItem key={i} value={`item-${i}`}>
+                    <AccordionTrigger className="text-left">{f.q}</AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">{f.a}</AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </div>
+        </div>
 
         <div className="mt-8 text-center">
           <Button asChild variant="secondary" className="rounded-full h-10 px-6 border border-white/15 bg-white/10 hover:bg-white/15">
@@ -420,9 +420,9 @@ function RegisterCTA() {
           <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-foreground/70">
             Join the build
           </div>
-          
+
           <h2 className="mt-4 text-4xl font-bold md:text-5xl">Ready to register?</h2>
-          
+
           <p className="mx-auto mt-4 max-w-[540px] text-base text-muted-foreground">
             Round 1 is completely free. Assemble your 2–4 person team and submit via Devpost.
           </p>
@@ -444,7 +444,7 @@ function RegisterCTA() {
           </div>
 
           <p className="mt-6 text-sm text-muted-foreground">
-            Round 1: Free • Round 2 tickets required for finalists only
+            The hackathon is completely free for everyone. No registration or participation fees.
           </p>
         </div>
       </Container>

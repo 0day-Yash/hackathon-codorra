@@ -43,7 +43,7 @@ export default function FAQPage() {
         },
         {
           q: "What is the registration fee?",
-          a: "Round 1 is completely free for all participants. Round 2 requires tickets only for shortlisted finalists: Individual Normal ₹500, Individual VIP ₹1000, Team Normal (2-4) ₹1500, Team VIP (2-4) ₹2500."
+          a: "The hackathon is completely free for everyone. There are no registration or participation fees for any round of the event."
         },
         {
           q: "Can I participate as an individual?",
@@ -222,7 +222,7 @@ export default function FAQPage() {
   return (
     <main>
       <Navbar />
-      <PageHeader 
+      <PageHeader
         title="Frequently Asked Questions"
         description="Everything you need to know about CODORRA 2026 - from registration to prizes and everything in between."
       />
@@ -234,7 +234,7 @@ export default function FAQPage() {
           desc="Key information about CODORRA 2026 at a glance."
           className="cursor-target"
         />
-        
+
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {quickFacts.map((fact, i) => (
             <Reveal key={fact.title} delay={i * 100}>
@@ -262,7 +262,7 @@ export default function FAQPage() {
           desc="Browse questions by category to find the information you need quickly."
           className="cursor-target"
         />
-        
+
         <div className="space-y-8">
           {faqCategories.map((category, categoryIndex) => (
             <Reveal key={category.title} delay={categoryIndex * 100}>
@@ -273,7 +273,7 @@ export default function FAQPage() {
                   </div>
                   <h2 className="text-2xl font-bold">{category.title}</h2>
                 </div>
-                
+
                 <Card className="glass cursor-target">
                   <CardContent className="p-0">
                     <Accordion type="single" collapsible className="w-full">
@@ -303,7 +303,7 @@ export default function FAQPage() {
           desc="Can't find what you're looking for? Our team is here to help."
           className="cursor-target"
         />
-        
+
         <div className="grid gap-6 md:grid-cols-2">
           <Reveal>
             <Card className="glass cursor-target">

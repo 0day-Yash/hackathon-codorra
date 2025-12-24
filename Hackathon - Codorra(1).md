@@ -82,7 +82,7 @@
 
 * **Balance:** TBD after signups (maybe 1:10 ratio offline:online).
 
-* **Registration:** Ticket-based (\~₹1000 per head). Cap depends on venue.
+* **Registration:** Completely free for everyone. Cap depends on venue.
 
 * **Diversity tracks:** None officially. (Note: this will get you dragged 💀 so maybe keep it quiet).
 
@@ -112,7 +112,7 @@
 
   * Own track if they pay \>$2000.
 
-  * Tiered packages (Gold/Silver/Community Partner).
+  * Custom partnership packages available (Core/Strategic/Community).
 
 * **College/Incubator tie-ups:** Only if they contribute funding/participants.
 
@@ -136,7 +136,7 @@
 
 * **Budget target:** \~$2000 core costs (venue, food, internet, swag, prizes).
 
-* **Revenue:** Sponsors ($7k+ target), participant tickets (\~₹1000/head).
+* **Revenue:** Sponsors ($7k+ target). Participation is completely free for everyone.
 
 * **Scaling:** Year 1 \= test run, July 2026\. Future years scale up depending on sponsor support \+ participant demand.
 
