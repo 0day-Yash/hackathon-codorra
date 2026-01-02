@@ -1,0 +1,313 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Neutrals */
+  --background: #0b0e11; /* deep charcoal */
+  --foreground: #f3f6f8; /* off-white */
+
+  /* Surfaces */
+  --card: #101317;
+  --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+
+  /* Brand + accents */
+  --primary: #c026d3; /* deep magenta/purple */
+  --primary-foreground: #ffffff;
+  --accent: #f97316; /* vibrant orange */
+  --accent-foreground: #ffffff;
+  --brand-gradient: linear-gradient(135deg, #a21caf 0%, #d946ef 35%, #f97316 100%);
+
+  /* Secondary/muted/borders */
+  --secondary: #14181d;
+  --secondary-foreground: var(--foreground);
+  --muted: #161a20;
+  --muted-foreground: #9aa4ae;
+
+  --destructive: #e5484d;
+  --destructive-foreground: #1f0a0a;
+
+  --border: #1f252c;
+  --input: var(--border);
+  --ring: #2a323b;
+
+  /* Charts (not flashy, harmonized) */
+  --chart-1: #0ecf9a;
+  --chart-2: #f5a524;
+  --chart-3: #4c89ff;
+  --chart-4: #9aa4ae;
+  --chart-5: #2f7a6e;
+
+  --radius: 0.75rem;
+
+  /* Sidebar tokens (unused here but kept consistent) */
+  --sidebar: var(--secondary);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+.dark {
+  /* Keep same palette; dark mode equals base here for simplicity */
+  --background: #0b0e11;
+  --foreground: #f3f6f8;
+  --card: #101317;
+  --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+
+  --primary: #c026d3;
+  --primary-foreground: #ffffff;
+  --secondary: #12151a;
+  --secondary-foreground: var(--foreground);
+  --muted: #14181f;
+  --muted-foreground: #8a949e;
+
+  --accent: #f97316;
+  --accent-foreground: #ffffff;
+
+  --destructive: #e5484d;
+  --destructive-foreground: #ffedee;
+
+  --border: #1f252c;
+  --input: var(--border);
+  --ring: #2a323b;
+
+  --chart-1: #0ecf9a;
+  --chart-2: #f5a524;
+  --chart-3: #4c89ff;
+  --chart-4: #9aa4ae;
+  --chart-5: #2f7a6e;
+
+  --sidebar: var(--secondary);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+@theme inline {
+  /* Use Roboto Mono for everything */
+  --font-sans: var(--font-roboto-mono), "Roboto Mono", monospace;
+  --font-body: var(--font-roboto-mono), "Roboto Mono", monospace;
+  --font-mono: var(--font-geist-mono);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    overflow-x: hidden;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-roboto-mono), "Roboto Mono", monospace !important;
+    overflow-x: hidden;
+  }
+  
+  /* Use Roboto Mono for everything including headings */
+  h1, h2, h3, h4, h5, h6, p, li, td, th, span, div, a, button, input, textarea, select, label, 
+  .font-sans, [class*="font-"] {
+    font-family: var(--font-roboto-mono), "Roboto Mono", monospace !important;
+  }
+  
+  /* Exception: TextPressure component should use Compressa VF (must come after general rule) */
+  h1.text-pressure-title,
+  h1.text-pressure-title span,
+  .text-pressure-title,
+  .text-pressure-title span {
+    font-family: 'Compressa VF', sans-serif !important;
+  }
+  
+  /* Specifically target description and muted text */
+  .text-muted-foreground,
+  [class*="text-muted"],
+  [class*="description"],
+  [class*="desc"],
+  small,
+  .text-sm,
+  .text-xs,
+  .text-base,
+  .text-lg {
+    font-family: var(--font-roboto-mono), "Roboto Mono", monospace !important;
+  }
+}
+
+@layer utilities {
+  /* Subtle dotted grid backdrop */
+  .bg-dots {
+    background-image: radial-gradient(
+      circle at 1px 1px,
+      color-mix(in srgb, var(--color-ring) 40%, transparent) 1px,
+      transparent 1px
+    );
+    background-size: 18px 18px;
+  }
+
+  /* Soft radial vignette mask to focus content */
+  .radial-mask {
+    background: radial-gradient(
+        1200px 600px at 20% -20%,
+        color-mix(in srgb, var(--color-accent) 12%, transparent),
+        transparent 60%
+      ),
+      radial-gradient(
+        1000px 480px at 90% 10%,
+        color-mix(in srgb, var(--color-primary) 10%, transparent),
+        transparent 60%
+      );
+  }
+
+  /* Glass card surface with thin border + subtle glow */
+  .glass {
+    background: color-mix(in srgb, var(--color-card) 88%, transparent);
+    backdrop-filter: saturate(1.1) blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), 0 10px 40px -15px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 15px 50px -20px rgba(0, 0, 0, 0.8);
+  }
+
+  .text-gradient {
+    background: var(--brand-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-brand-gradient {
+    background: var(--brand-gradient);
+  }
+
+  /* Accent glow ring for interactive elements */
+  .ring-glow {
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-accent) 35%, transparent), 0 0 24px
+      color-mix(in srgb, var(--color-accent) 18%, transparent);
+  }
+
+  /* Circuit line overlay (mask gradient) */
+  .circuit-overlay {
+    position: relative;
+    isolation: isolate;
+  }
+  .circuit-overlay::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(90deg, color-mix(in srgb, var(--color-ring) 35%, transparent) 1px, transparent 1px) 0 0
+      / 12px 100%, linear-gradient(0deg, color-mix(in srgb, var(--color-ring) 25%, transparent) 1px, transparent 1px) 0
+      0 / 100% 12px;
+    mask-image: radial-gradient(120% 100% at 10% 10%, black, transparent 70%);
+    opacity: 0.45;
+  }
+
+  /* Clean section padding */
+  .section {
+    @apply py-20 md:py-28;
+  }
+}
+
+/* Reveal-on-scroll (reduced-motion safe) */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity .6s ease, transform .6s ease;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Parallax helper: no styles here (JS-driven), but pointer-events off for ornaments */
+.parallax-ornament {
+  pointer-events: none;
+}
+
+/* Animated timeline pulse */
+@keyframes pulseDot {
+  0%,
+  100% {
+    transform: scale(0.9);
+    opacity: 0.75;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+.timeline-dot {
+  animation: pulseDot 2.2s ease-in-out infinite;
+}
+
+/* Sponsor marquee */
+@keyframes marqueeX {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee {
+  display: flex;
+  white-space: nowrap;
+  gap: 48px;
+  will-change: transform;
+  animation: marqueeX 22s linear infinite;
+}
+.marquee:hover {
+  animation-play-state: paused;
+}
