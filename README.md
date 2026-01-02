@@ -1,7 +1,5 @@
 # CODORRA Hackathon – Core Blueprint (Draft v1)
 
----
-
 ## 1. Core Identity & Theme
 
 - **Mission**: Build cool & useful apps/websites with an entrepreneurial edge (judges score both tech + pitch).
