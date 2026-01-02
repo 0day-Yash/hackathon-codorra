@@ -30,7 +30,7 @@ export default function SponsorsPage() {
     {
       name: "BrowserOS",
       tier: "Silver",
-      logo: "https://browseros.com/favicon.ico", // Keeping remote for now as local wasn't found
+      logo: "/browserOS.svg",
       bio: "BrowserOS is an open-source, AI-native browser designed for the future of web automation. It allows users to build AI agents that automate tedious browser tasks using plain English, all while running locally for maximum privacy.",
       website: "https://browseros.com/",
     },
@@ -97,11 +97,11 @@ export default function SponsorsPage() {
                                 <span className="w-fit bg-brand-gradient text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1 rounded">Diamond Sponsor</span>
                               )}
                               <div className="flex items-center gap-6">
-                                <div className="h-20 w-20 md:h-24 md:w-24 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center p-4 group-hover:border-white/20 transition-all duration-500 shrink-0">
+                                <div className="h-20 w-auto min-w-20 md:h-24 md:min-w-24 px-4 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center py-4 group-hover:border-white/20 transition-all duration-500 shrink-0">
                                   <img
                                     src={sponsor.logo}
                                     alt={`${sponsor.name} logo`}
-                                    className="h-full w-full object-contain filter grayscale brightness-200 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500"
+                                    className="max-h-12 max-w-[120px] md:max-h-16 md:max-w-[160px] h-auto w-auto object-contain filter grayscale brightness-200 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500"
                                   />
                                 </div>
                                 {tier.name === "Diamond" ? (

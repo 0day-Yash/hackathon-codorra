@@ -19,7 +19,7 @@ import {
   Users,
 } from "lucide-react"
 
-type SpeakerCategory = "All" | "Speakers" | "Judges" | "Organizing Team" | "Volunteers"
+type SpeakerCategory = "All" | "Speakers" | "Judges" | "Organizing Team" | "Volunteers" | "Host" | "CTO"
 
 interface Person {
   name: string
@@ -35,54 +35,44 @@ export default function SpeakersPage() {
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedCategory, setSelectedCategory] = useState<SpeakerCategory>("All")
 
-  const categories: SpeakerCategory[] = ["All", "Speakers", "Judges", "Organizing Team", "Volunteers"]
+  const categories: SpeakerCategory[] = ["All", "Host", "CTO", "Speakers", "Judges", "Organizing Team", "Volunteers"]
 
-  // Speakers
-  const speakers: Person[] = [
+  // Host
+  const hosts: Person[] = [
     {
-      name: "Aadil Ahmed",
-      role: "SWE",
-      company: "Solana Foundation",
-      image: "/avatars/avatar1.svg",
-      linkedin: "https://linkedin.com/in/aadilahmed",
-      twitter: "https://twitter.com/aadilahmed",
-      category: "Speakers"
+      name: "Yash Kulkarni",
+      role: "Founder & CEO",
+      company: "PurpleRain TechSafe",
+      image: "/avatars/yash.png",
+      linkedin: "https://www.linkedin.com/in/yashkulkarni08/",
+      category: "Host"
     },
     {
-      name: "Michael Chen",
-      role: "Security Engineer",
-      company: "TechStart",
-      image: "/avatars/avatar7.svg",
-      linkedin: "https://linkedin.com/in/michaelchen",
-      category: "Speakers"
-    },
-    {
-      name: "Sarah Johnson",
-      role: "Security Architect",
-      company: "CloudGuard",
-      image: "/avatars/avatar8.svg",
-      linkedin: "https://linkedin.com/in/sarahjohnson",
-      category: "Speakers"
-    },
-    {
-      name: "James Wilson",
-      role: "CTO",
-      company: "BlockSecure",
-      image: "/avatars/avatar1.svg",
-      linkedin: "https://linkedin.com/in/jameswilson",
-      category: "Speakers"
-    },
-    {
-      name: "Lisa Park",
-      role: "Head of Security",
-      company: "FinTech Solutions",
-      image: "/avatars/avatar2.svg",
-      linkedin: "https://linkedin.com/in/lisapark",
-      category: "Speakers"
+      name: "Jonathan Jaladi",
+      role: "Head of Marketing",
+      company: "PurpleRain TechSafe",
+      image: "/avatars/jonathan.png",
+      linkedin: "https://www.linkedin.com/in/jonathan-jaladi-173165216/",
+      category: "Host"
     }
   ]
 
-  // Judges
+  // CTO
+  const ctos: Person[] = [
+    {
+      name: "Jenin Sutradhar",
+      role: "Chief Technology Officer",
+      company: "PurpleRain TechSafe",
+      image: "/avatars/jenin.png",
+      linkedin: "https://www.linkedin.com/in/jenin-s-b50a2328a/",
+      category: "CTO"
+    }
+  ]
+
+  // Speakers
+  const speakers: Person[] = []
+
+  // Judges (keeping 2 dummy ones)
   const judges: Person[] = [
     {
       name: "David Kim",
@@ -99,131 +89,16 @@ export default function SpeakersPage() {
       image: "/avatars/avatar1.svg",
       linkedin: "https://linkedin.com/in/emmathompson",
       category: "Judges"
-    },
-    {
-      name: "Robert Martinez",
-      role: "Cybersecurity Consultant",
-      company: "SecureNet",
-      image: "/avatars/avatar2.svg",
-      linkedin: "https://linkedin.com/in/robertmartinez",
-      category: "Judges"
-    },
-    {
-      name: "Dr. Ananya Patel",
-      role: "Research Scientist",
-      company: "AI Security Labs",
-      image: "/avatars/avatar3.svg",
-      linkedin: "https://linkedin.com/in/ananyapatel",
-      category: "Judges"
-    },
-    {
-      name: "Chris Anderson",
-      role: "Security Lead",
-      company: "TechGuard",
-      image: "/avatars/avatar4.svg",
-      linkedin: "https://linkedin.com/in/chrisanderson",
-      category: "Judges"
     }
   ]
 
   // Organizing Team
-  const organizingTeam: Person[] = [
-    {
-      name: "Rajesh Kumar",
-      role: "Event Director",
-      company: "CODORRA",
-      image: "/avatars/avatar5.svg",
-      linkedin: "https://linkedin.com/in/rajeshkumar",
-      category: "Organizing Team"
-    },
-
-    {
-      name: "Rohan Kapoor",
-      role: "Logistics Coordinator",
-      company: "CODORRA",
-      image: "/avatars/avatar3.svg",
-      linkedin: "https://linkedin.com/in/rohankapoor",
-      category: "Organizing Team"
-    },
-    {
-      name: "Kavya Iyer",
-      role: "Content Lead",
-      company: "CODORRA",
-      image: "/avatars/avatar4.svg",
-      linkedin: "https://linkedin.com/in/kavyaiyer",
-      category: "Organizing Team"
-    }
-  ]
+  const organizingTeam: Person[] = []
 
   // Volunteers
-  const volunteers: Person[] = [
-    {
-      name: "Amit Shah",
-      role: "Volunteer",
-      company: "Student Volunteer",
-      image: "/avatars/avatar5.svg",
-      linkedin: "https://linkedin.com/in/amitshah",
-      category: "Volunteers"
-    },
-    {
-      name: "Divya Menon",
-      role: "Volunteer",
-      company: "Student Volunteer",
-      image: "/avatars/avatar6.svg",
-      linkedin: "https://linkedin.com/in/divyamenon",
-      category: "Volunteers"
-    },
-    {
-      name: "Karan Malhotra",
-      role: "Volunteer",
-      company: "Student Volunteer",
-      image: "/avatars/avatar7.svg",
-      linkedin: "https://linkedin.com/in/karanmalhotra",
-      category: "Volunteers"
-    },
-    {
-      name: "Meera Joshi",
-      role: "Volunteer",
-      company: "Student Volunteer",
-      image: "/avatars/avatar8.svg",
-      linkedin: "https://linkedin.com/in/meerajoshi",
-      category: "Volunteers"
-    },
-    {
-      name: "Nikhil Rao",
-      role: "Volunteer",
-      company: "Student Volunteer",
-      image: "/avatars/avatar1.svg",
-      linkedin: "https://linkedin.com/in/nikhilrao",
-      category: "Volunteers"
-    },
-    {
-      name: "Pooja Agarwal",
-      role: "Volunteer",
-      company: "Student Volunteer",
-      image: "/avatars/avatar2.svg",
-      linkedin: "https://linkedin.com/in/poojaagarwal",
-      category: "Volunteers"
-    },
-    {
-      name: "Rahul Verma",
-      role: "Volunteer",
-      company: "Student Volunteer",
-      image: "/avatars/avatar3.svg",
-      linkedin: "https://linkedin.com/in/rahulverma",
-      category: "Volunteers"
-    },
-    {
-      name: "Shreya Nair",
-      role: "Volunteer",
-      company: "Student Volunteer",
-      image: "/avatars/avatar4.svg",
-      linkedin: "https://linkedin.com/in/shreyanair",
-      category: "Volunteers"
-    }
-  ]
+  const volunteers: Person[] = []
 
-  const allPeople = [...speakers, ...judges, ...organizingTeam, ...volunteers]
+  const allPeople = [...hosts, ...ctos, ...speakers, ...judges, ...organizingTeam, ...volunteers]
 
   const filteredPeople = allPeople.filter(person => {
     const matchesSearch = 
@@ -239,6 +114,8 @@ export default function SpeakersPage() {
   })
 
   const groupedPeople = {
+    Host: hosts,
+    CTO: ctos,
     Speakers: speakers,
     Judges: judges,
     "Organizing Team": organizingTeam,
@@ -315,11 +192,158 @@ export default function SpeakersPage() {
           {/* Show grouped view when "All" is selected, otherwise show filtered */}
           {selectedCategory === "All" ? (
             <>
+              {/* Host Section */}
+              {hosts.length > 0 && (
+                <div className="mb-16">
+                  <Reveal>
+                    <h2 className="text-2xl font-bold mb-6">Host</h2>
+                  </Reveal>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                    {hosts.map((person, i) => (
+                      <Reveal key={person.name} delay={i * 30}>
+                        <Card className="group overflow-hidden border border-border/50 bg-gradient-to-br from-card/90 via-card/80 to-card/70 backdrop-blur-md hover:border-accent/40 hover:shadow-xl hover:shadow-accent/10 hover:-translate-y-1 transition-all duration-300">
+                          <CardContent className="p-0">
+                            <div className="relative w-full aspect-square overflow-hidden">
+                              <Avatar className="w-full h-full rounded-none">
+                                <AvatarImage 
+                                  src={person.image} 
+                                  alt={person.name}
+                                  className="object-cover"
+                                />
+                                <AvatarFallback className="text-2xl bg-muted">
+                                  {person.name.split(' ').map(n => n[0]).join('')}
+                                </AvatarFallback>
+                              </Avatar>
+                              
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                              
+                              <div className="absolute top-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                {person.linkedin && (
+                                  <a
+                                    href={person.linkedin}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="bg-background/90 backdrop-blur-sm rounded-full p-2 hover:bg-accent hover:text-accent-foreground transition-colors shadow-lg"
+                                    onClick={(e) => e.stopPropagation()}
+                                  >
+                                    <Linkedin className="size-4" />
+                                  </a>
+                                )}
+                                {person.twitter && (
+                                  <a
+                                    href={person.twitter}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="bg-background/90 backdrop-blur-sm rounded-full p-2 hover:bg-accent hover:text-accent-foreground transition-colors shadow-lg"
+                                    onClick={(e) => e.stopPropagation()}
+                                  >
+                                    <Twitter className="size-4" />
+                                  </a>
+                                )}
+                              </div>
+
+                              <div className="absolute bottom-3 left-3">
+                                <Badge className="bg-background/90 backdrop-blur-sm text-xs text-foreground border border-white/20 shadow-lg">
+                                  Host
+                                </Badge>
+                              </div>
+                            </div>
+
+                            <div className="p-4 space-y-1">
+                              <h3 className="font-semibold text-lg leading-tight">
+                                {person.name}
+                              </h3>
+                              <p className="text-sm text-muted-foreground">
+                                {person.role} · {person.company}
+                              </p>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </Reveal>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* CTO Section */}
+              {ctos.length > 0 && (
+                <div className="mb-16">
+                  <Reveal>
+                    <h2 className="text-2xl font-bold mb-6">CTO</h2>
+                  </Reveal>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                    {ctos.map((person, i) => (
+                      <Reveal key={person.name} delay={i * 30}>
+                        <Card className="group overflow-hidden border border-border/50 bg-gradient-to-br from-card/90 via-card/80 to-card/70 backdrop-blur-md hover:border-accent/40 hover:shadow-xl hover:shadow-accent/10 hover:-translate-y-1 transition-all duration-300">
+                          <CardContent className="p-0">
+                            <div className="relative w-full aspect-square overflow-hidden">
+                              <Avatar className="w-full h-full rounded-none">
+                                <AvatarImage 
+                                  src={person.image} 
+                                  alt={person.name}
+                                  className="object-cover"
+                                />
+                                <AvatarFallback className="text-2xl bg-muted">
+                                  {person.name.split(' ').map(n => n[0]).join('')}
+                                </AvatarFallback>
+                              </Avatar>
+                              
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                              
+                              <div className="absolute top-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                {person.linkedin && (
+                                  <a
+                                    href={person.linkedin}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="bg-background/90 backdrop-blur-sm rounded-full p-2 hover:bg-accent hover:text-accent-foreground transition-colors shadow-lg"
+                                    onClick={(e) => e.stopPropagation()}
+                                  >
+                                    <Linkedin className="size-4" />
+                                  </a>
+                                )}
+                                {person.twitter && (
+                                  <a
+                                    href={person.twitter}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="bg-background/90 backdrop-blur-sm rounded-full p-2 hover:bg-accent hover:text-accent-foreground transition-colors shadow-lg"
+                                    onClick={(e) => e.stopPropagation()}
+                                  >
+                                    <Twitter className="size-4" />
+                                  </a>
+                                )}
+                              </div>
+
+                              <div className="absolute bottom-3 left-3">
+                                <Badge className="bg-background/90 backdrop-blur-sm text-xs text-foreground border border-white/20 shadow-lg">
+                                  CTO
+                                </Badge>
+                              </div>
+                            </div>
+
+                            <div className="p-4 space-y-1">
+                              <h3 className="font-semibold text-lg leading-tight">
+                                {person.name}
+                              </h3>
+                              <p className="text-sm text-muted-foreground">
+                                {person.role} · {person.company}
+                              </p>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </Reveal>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* Speakers Section */}
-              <div className="mb-16">
-                <Reveal>
-                  <h2 className="text-2xl font-bold mb-6">Speakers</h2>
-                </Reveal>
+              {speakers.length > 0 && (
+                <div className="mb-16">
+                  <Reveal>
+                    <h2 className="text-2xl font-bold mb-6">Speakers</h2>
+                  </Reveal>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
                   {speakers.map((person, i) => (
                     <Reveal key={person.name} delay={i * 30}>
@@ -385,12 +409,14 @@ export default function SpeakersPage() {
                   ))}
                 </div>
               </div>
+              )}
 
               {/* Judges Section */}
-              <div className="mb-16">
-                <Reveal>
-                  <h2 className="text-2xl font-bold mb-6">Judges</h2>
-                </Reveal>
+              {judges.length > 0 && (
+                <div className="mb-16">
+                  <Reveal>
+                    <h2 className="text-2xl font-bold mb-6">Judges</h2>
+                  </Reveal>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
                   {judges.map((person, i) => (
                     <Reveal key={person.name} delay={i * 30}>
@@ -456,12 +482,14 @@ export default function SpeakersPage() {
                   ))}
                 </div>
               </div>
+              )}
 
               {/* Organizing Team Section */}
-              <div className="mb-16">
-                <Reveal>
-                  <h2 className="text-2xl font-bold mb-6">Organizing Team</h2>
-                </Reveal>
+              {organizingTeam.length > 0 && (
+                <div className="mb-16">
+                  <Reveal>
+                    <h2 className="text-2xl font-bold mb-6">Organizing Team</h2>
+                  </Reveal>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
                   {organizingTeam.map((person, i) => (
                     <Reveal key={person.name} delay={i * 30}>
@@ -516,12 +544,14 @@ export default function SpeakersPage() {
                   ))}
                 </div>
               </div>
+              )}
 
               {/* Volunteers Section */}
-              <div className="mb-16">
-                <Reveal>
-                  <h2 className="text-2xl font-bold mb-6">Volunteers</h2>
-                </Reveal>
+              {volunteers.length > 0 && (
+                <div className="mb-16">
+                  <Reveal>
+                    <h2 className="text-2xl font-bold mb-6">Volunteers</h2>
+                  </Reveal>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
                   {volunteers.map((person, i) => (
                     <Reveal key={person.name} delay={i * 30}>
@@ -576,6 +606,7 @@ export default function SpeakersPage() {
                   ))}
                 </div>
               </div>
+              )}
             </>
           ) : (
             /* Filtered View */

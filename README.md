@@ -7,7 +7,6 @@
 
 **CODORRA** is a 48-hour cybersecurity-focused hackathon designed for builders, researchers, and innovators. Whether you're hardening infrastructure or building defensive AI, CODORRA is the arena to prove your skills.
 
----
 
 ## 🛡️ Event Details
 
