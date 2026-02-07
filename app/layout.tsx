@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "CODORRA 2026 | Cybersecurity Hackathon",
     description: "48-hour build-fest for security innovators. Join us in Bengaluru or Online.",
-    url: "https://codorra.tech",
+    url: "https://codorra.purplerain.tech",
     siteName: "CODORRA",
     images: [
       {
