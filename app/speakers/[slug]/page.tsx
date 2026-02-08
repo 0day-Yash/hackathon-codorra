@@ -18,6 +18,9 @@ import {
     GraduationCap,
     Globe,
     ExternalLink,
+    Users,
+    Mail,
+    Phone,
 } from "lucide-react"
 import { allPeople } from "@/config/team-data"
 
@@ -115,26 +118,26 @@ export default function PersonProfilePage() {
                                 <div className="p-6 rounded-2xl border border-white/5 bg-white/5 backdrop-blur-sm space-y-4">
                                     <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Quick Info</h4>
                                     <div className="space-y-3">
-                                        <div className="flex items-center gap-3 text-sm">
-                                            <div className="p-2 rounded-lg bg-primary/10 text-primary">
-                                                <Briefcase className="size-4" />
-                                            </div>
-                                            <div>
-                                                <p className="font-medium">{person.role}</p>
-                                                <p className="text-muted-foreground">{person.company}</p>
-                                            </div>
-                                        </div>
-                                        {person.experience && (
+                                        {person.hackathonRole && (
                                             <div className="flex items-center gap-3 text-sm">
-                                                <div className="p-2 rounded-lg bg-accent/10 text-accent">
-                                                    <GraduationCap className="size-4" />
+                                                <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                                                    <Users className="size-4" />
                                                 </div>
                                                 <div>
-                                                    <p className="font-medium">Experience</p>
-                                                    <p className="text-muted-foreground">{person.experience}</p>
+                                                    <p className="font-medium text-primary">Hackathon Assignment</p>
+                                                    <p className="text-muted-foreground">{person.hackathonRole}</p>
                                                 </div>
                                             </div>
                                         )}
+                                        <div className="flex items-center gap-3 text-sm">
+                                            <div className="p-2 rounded-lg bg-accent/10 text-accent">
+                                                <Briefcase className="size-4" />
+                                            </div>
+                                            <div>
+                                                <p className="font-medium">Original Role</p>
+                                                <p className="text-muted-foreground">{person.role} at {person.company}</p>
+                                            </div>
+                                        </div>
                                         <div className="flex items-center gap-3 text-sm">
                                             <div className="p-2 rounded-lg bg-white/10 text-white">
                                                 <Globe className="size-4" />
@@ -144,6 +147,28 @@ export default function PersonProfilePage() {
                                                 <p className="text-muted-foreground">{person.category}</p>
                                             </div>
                                         </div>
+                                        {person.email && (
+                                            <div className="flex items-center gap-3 text-sm">
+                                                <div className="p-2 rounded-lg bg-white/10 text-white">
+                                                    <Mail className="size-4" />
+                                                </div>
+                                                <div>
+                                                    <p className="font-medium">Email</p>
+                                                    <p className="text-muted-foreground text-[10px] sm:text-xs break-all">{person.email}</p>
+                                                </div>
+                                            </div>
+                                        )}
+                                        {person.contact && (
+                                            <div className="flex items-center gap-3 text-sm">
+                                                <div className="p-2 rounded-lg bg-white/10 text-white">
+                                                    <Phone className="size-4" />
+                                                </div>
+                                                <div>
+                                                    <p className="font-medium">Contact</p>
+                                                    <p className="text-muted-foreground text-xs">{person.contact}</p>
+                                                </div>
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                             </Reveal>
@@ -159,8 +184,16 @@ export default function PersonProfilePage() {
                                     <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
                                         {person.name}
                                     </h1>
-                                    <p className="text-xl md:text-2xl text-muted-foreground font-medium">
-                                        {person.role} at <span className="text-foreground">{person.company}</span>
+                                    <p className="text-xl md:text-2xl text-muted-foreground font-medium flex flex-wrap items-center gap-x-3">
+                                        {person.hackathonRole ? (
+                                            <>
+                                                <span className="text-primary">{person.hackathonRole}</span>
+                                                <span className="hidden md:inline text-muted-foreground/30">|</span>
+                                                <span className="text-lg md:text-xl opacity-80">{person.role} at {person.company}</span>
+                                            </>
+                                        ) : (
+                                            <>{person.role} at <span className="text-foreground">{person.company}</span></>
+                                        )}
                                     </p>
                                 </div>
                             </Reveal>

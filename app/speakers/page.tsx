@@ -19,13 +19,13 @@ import {
   ExternalLink,
   Users,
 } from "lucide-react"
-import { allPeople, organizingCommittee, speakers, judges, volunteers, type Person, type SpeakerCategory } from "@/config/team-data"
+import { allPeople, organizingCommittee, speakers, judges, type Person, type SpeakerCategory } from "@/config/team-data"
 
 export default function SpeakersPage() {
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedCategory, setSelectedCategory] = useState<SpeakerCategory | "All">("All")
 
-  const categories: (SpeakerCategory | "All")[] = ["All", "Organizing Committee", "Speakers", "Volunteers", "Judges"]
+  const categories: (SpeakerCategory | "All")[] = ["All", "Organizing Committee", "Speakers", "Judges"]
 
   const filteredPeople = allPeople.filter(person => {
     const matchesSearch =
@@ -152,21 +152,6 @@ export default function SpeakersPage() {
                 </div>
               </div>
             )}
-
-            {(selectedCategory === "All" || selectedCategory === "Volunteers") && volunteers.length > 0 && (
-              <div className="space-y-6">
-                <Reveal>
-                  <h2 className="text-2xl font-bold">Volunteers</h2>
-                </Reveal>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-                  {volunteers
-                    .filter(p => p.name.toLowerCase().includes(searchQuery.toLowerCase()) || p.role.toLowerCase().includes(searchQuery.toLowerCase()) || p.company.toLowerCase().includes(searchQuery.toLowerCase()))
-                    .map((person, i) => (
-                      <PersonCard key={person.slug} person={person} index={i} />
-                    ))}
-                </div>
-              </div>
-            )}
           </div>
 
           {filteredPeople.length === 0 && (
@@ -235,7 +220,11 @@ function PersonCard({ person, index }: { person: Person; index: number }) {
                 {person.name}
               </h3>
               <p className="text-sm text-muted-foreground">
-                {person.role} · {person.company}
+                {(person.category === "Organizing Committee" && person.hackathonRole)
+                  ? (
+                    <span className="text-primary/90 font-medium">{person.hackathonRole}</span>
+                  )
+                  : `${person.role} · ${person.company}`}
               </p>
             </div>
           </CardContent>
