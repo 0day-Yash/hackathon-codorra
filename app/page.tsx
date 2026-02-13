@@ -34,6 +34,8 @@ import {
   BrainCircuit,
   Banknote,
   Sparkles,
+  Smartphone,
+  Globe,
 } from "lucide-react"
 import Lightning from "@/components/lightning"
 
@@ -70,9 +72,9 @@ function Hero() {
           <Clock className="size-3.5 opacity-70" />
           <span>Two-Phase Hackathon</span>
         </div>
-        <h1 className="text-balance text-4xl font-extrabold tracking-tight md:text-6xl">CODORRA Hackathon 2026</h1>
-        <p className="text-pretty max-w-2xl text-muted-foreground">
-          Two-phase cybersecurity hackathon. Teams of 2–4. Build practical security tools and demo at Demo Day.
+        <h1 className="text-balance text-4xl font-extrabold tracking-tight md:text-6xl text-brand-gradient">CODORRA 2026</h1>
+        <p className="text-pretty max-w-2xl text-muted-foreground text-lg">
+          Two-phase Mobile, AI, Web, and Cybersecurity hackathon. Teams of 2–4. Build practical solutions and showcase them at Demo Day.
         </p>
         <div className="flex flex-wrap items-center gap-3">
           <Button size="lg" variant="secondary" asChild className="rounded-full h-12 px-8 border-none bg-brand-gradient hover:opacity-90 text-white ring-glow min-w-[160px] font-bold">
@@ -100,7 +102,7 @@ function About() {
     { icon: Users, k: "Team", v: "Teams of 2–4" },
     { icon: GitBranch, k: "Submissions", v: "Devpost + GitHub links" },
     { icon: MessageSquare, k: "Comms", v: "Discord + WhatsApp" },
-    { icon: ShieldCheck, k: "Theme", v: "Cybersecurity focus" },
+    { icon: ShieldCheck, k: "Theme", v: "Mobile, AI, Web & Security" },
   ]
   return (
     <section id="about" className="section relative border-b">
@@ -176,12 +178,18 @@ function About() {
 }
 
 function Tracks() {
-  const tracks = [
-    { title: "AI + Security", icon: BrainCircuit, hue: "primary" as const, desc: "Defensive AI systems, AI-assisted monitoring, model safety, robustness tooling." },
-    { title: "Network Security", icon: Shield, hue: "accent" as const, desc: "Software, infrastructure, networking tools, protocol security products." },
-    { title: "Tomfoolery", icon: Sparkles, hue: "primary" as const, desc: "Useless, funny, absurd ideas — but they must work. Stupid concept ≠ stupid execution." },
-    { title: "Open Innovation", icon: Banknote, hue: "accent" as const, desc: "Any high-impact security project that doesn't fit neatly into the above categories." },
+  const mainTracks = [
+    { title: "Mobile", icon: Smartphone, hue: "primary" as const, desc: "Building next-gen iOS/Android apps, cross-platform tools, and innovative mobile experiences." },
+    { title: "AI", icon: BrainCircuit, hue: "accent" as const, desc: "Generative AI, LLMs, machine learning models, and AI-powered productivity tooling." },
+    { title: "Web", icon: Globe, hue: "primary" as const, desc: "Scalable SaaS, Web3/Decentralized apps, and high-performance web architectures." },
+    { title: "Cybersecurity", icon: Shield, hue: "accent" as const, desc: "Network security, AppSec, threat intelligence, and cryptographic privacy products." },
   ]
+  const openInnovation = {
+    title: "Open Innovation",
+    icon: Sparkles,
+    desc: "Have a unique idea that doesn't fit the specific categories? The Open Innovation track is for high-impact projects across any tech domain. We value creativity, utility, and raw technical brilliance above all else.",
+  }
+
   return (
     <section id="tracks" className="section relative border-b">
       <TargetCursor spinDuration={2} hideDefaultCursor={true} />
@@ -193,9 +201,42 @@ function Tracks() {
           className="cursor-target"
         />
         <div className="grid gap-8 md:grid-cols-2">
-          {tracks.map((t, i) => (
+          {/* Featured: Open Innovation */}
+          <Reveal className="md:col-span-2">
+            <a href="/tracks/open-innovation" className="block group">
+              <Card className="glass cursor-target border-brand-gradient/30 bg-brand-gradient/5 group-hover:bg-brand-gradient/10 transition-all p-6 md:p-12 relative overflow-hidden rounded-[2rem]">
+                <div className="absolute -right-20 -top-20 opacity-[0.03] group-hover:opacity-[0.05] transition-opacity">
+                  <openInnovation.icon className="size-[500px]" />
+                </div>
+                <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-12">
+                  <div className="bg-brand-gradient text-white rounded-3xl p-6 md:p-8 shadow-2xl shadow-primary/20 group-hover:scale-105 transition-transform shrink-0">
+                    <openInnovation.icon className="size-12 md:size-16" />
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-4">
+                      <CardTitle className="text-3xl md:text-5xl font-black italic tracking-tighter">
+                        {openInnovation.title}
+                      </CardTitle>
+                      <ArrowRight className="size-8 opacity-0 -translate-x-4 transition-all group-hover:opacity-100 group-hover:translate-x-0 text-white/40" />
+                    </div>
+                    <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl">
+                      {openInnovation.desc}
+                    </p>
+                    <div className="pt-2">
+                      <Button className="rounded-full bg-white text-black hover:bg-white/90 font-bold px-8 h-12 shadow-xl shadow-white/10 transition-all hover:translate-y-[-2px]">
+                        Explore Track
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </a>
+          </Reveal>
+
+          {/* Grid: Main Tracks */}
+          {mainTracks.map((t, i) => (
             <Reveal key={t.title} delay={i * 70}>
-              <a href={`/tracks/${t.title.toLowerCase().replace(/ \+ /g, '-').replace(/ /g, '-')}`} className="block group h-full">
+              <a href={`/tracks/${t.title.toLowerCase().replace(/ /g, '-')}`} className="block group h-full">
                 <Card className="glass cursor-target h-full transition-all group-hover:bg-white/5 border-white/10 group-hover:border-white/20 p-4 md:p-8">
                   <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
                     <div className="bg-white/5 border border-white/10 text-white/40 rounded-2xl p-4 shrink-0 transition-transform group-hover:scale-110 group-hover:text-white/60 shadow-xl shadow-black/20">
@@ -305,7 +346,7 @@ function Sponsors() {
                 Partner with the Build Squad
               </h2>
               <p className="max-w-xl text-xl text-muted-foreground leading-relaxed">
-                Join industry leaders in supporting the next generation of cybersecurity innovators. Run workshops, host challenges, and access unique hiring opportunities.
+                Join industry leaders in supporting the next generation of tech innovators. Run workshops, host challenges, and access unique hiring opportunities across AI, Web, and Mobile.
               </p>
             </div>
 
@@ -352,7 +393,7 @@ function Sponsors() {
 function FAQ() {
   const faqs = [
     { q: "Who can participate?", a: "Open to students, professionals, and independent builders. Team size is 2–4." },
-    { q: "What's the theme?", a: "Cybersecurity focus; open innovation allowed if high impact." },
+    { q: "What's the theme?", a: "Broad focus on Mobile, AI, Web, and Cybersecurity; open innovation is highly encouraged." },
     { q: "Where will it happen?", a: "Round 1: Fully online. Round 2: Bengaluru venue (finalists only) with hybrid option." },
     { q: "How are submissions handled?", a: "Round 1: Devpost + GitHub links (mandatory). Finalists present at Round 2 Demo Day." },
     { q: "Judging criteria?", a: "Idea quality & relevance, technical execution & code quality, presentation clarity, real-world applicability & impact." },
