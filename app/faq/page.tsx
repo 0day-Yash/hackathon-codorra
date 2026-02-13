@@ -35,7 +35,7 @@ export default function FAQPage() {
       questions: [
         {
           q: "Who can participate in CODORRA?",
-          a: "CODORRA is open to students, professionals, and cybersecurity enthusiasts. Teams must have 2-4 members. No prior cybersecurity experience is required, but basic programming knowledge is recommended."
+          a: "CODORRA is open to students, professionals, and tech enthusiasts. Teams must have 2-4 members. No prior specific experience is required, but basic programming knowledge is recommended."
         },
         {
           q: "How do I register for the hackathon?",
@@ -143,7 +143,7 @@ export default function FAQPage() {
       questions: [
         {
           q: "What prizes are available?",
-          a: "Prizes include cash awards, internship opportunities, cloud credits, gadgets, and certificates. We have overall winners, track-specific awards, and special recognition categories."
+          a: "Prizes include cash awards, internship opportunities, cloud credits, gadgets, and certificates. We have overall winners, domain-specific awards (AI, Web, Mobile, Security), and special recognition categories."
         },
         {
           q: "How are winners selected?",

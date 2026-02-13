@@ -25,7 +25,7 @@ export default function SpeakersPage() {
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedCategory, setSelectedCategory] = useState<SpeakerCategory | "All">("All")
 
-  const categories: (SpeakerCategory | "All")[] = ["All", "Organizing Committee", "Speakers", "Judges"]
+  const categories: (SpeakerCategory | "All")[] = ["All", "Judges", "Speakers", "Organizing Committee"]
 
   const filteredPeople = allPeople.filter(person => {
     const matchesSearch =
@@ -108,13 +108,13 @@ export default function SpeakersPage() {
 
           {/* Show grouped view when "All" is selected, otherwise show filtered */}
           <div className="space-y-16">
-            {(selectedCategory === "All" || selectedCategory === "Organizing Committee") && organizingCommittee.length > 0 && (
+            {(selectedCategory === "All" || selectedCategory === "Judges") && judges.length > 0 && (
               <div className="space-y-6">
                 <Reveal>
-                  <h2 className="text-2xl font-bold">Organizing Committee</h2>
+                  <h2 className="text-2xl font-bold">Judges</h2>
                 </Reveal>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-                  {organizingCommittee
+                  {judges
                     .filter(p => p.name.toLowerCase().includes(searchQuery.toLowerCase()) || p.role.toLowerCase().includes(searchQuery.toLowerCase()) || p.company.toLowerCase().includes(searchQuery.toLowerCase()))
                     .map((person, i) => (
                       <PersonCard key={person.slug} person={person} index={i} />
@@ -138,13 +138,13 @@ export default function SpeakersPage() {
               </div>
             )}
 
-            {(selectedCategory === "All" || selectedCategory === "Judges") && judges.length > 0 && (
+            {(selectedCategory === "All" || selectedCategory === "Organizing Committee") && organizingCommittee.length > 0 && (
               <div className="space-y-6">
                 <Reveal>
-                  <h2 className="text-2xl font-bold">Judges</h2>
+                  <h2 className="text-2xl font-bold">Organizing Committee</h2>
                 </Reveal>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-                  {judges
+                  {organizingCommittee
                     .filter(p => p.name.toLowerCase().includes(searchQuery.toLowerCase()) || p.role.toLowerCase().includes(searchQuery.toLowerCase()) || p.company.toLowerCase().includes(searchQuery.toLowerCase()))
                     .map((person, i) => (
                       <PersonCard key={person.slug} person={person} index={i} />

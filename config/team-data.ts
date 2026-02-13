@@ -56,7 +56,7 @@ export const organizingCommittee: Person[] = [
         role: "Media & Creative Executive",
         company: "PurpleRain",
         hackathonRole: "Media & Creative Executive",
-        image: "/avatars/avatar3.svg",
+        image: "/avatars/aditya.jpeg",
         email: "aditya.exec0@gmail.com",
         contact: "+91 70797 62521",
         category: "Organizing Committee",
@@ -72,6 +72,46 @@ export const organizingCommittee: Person[] = [
         contact: "+91 80505 31082",
         category: "Organizing Committee",
         bio: "Sharvesh is a student at PES University who manages all participant outreach and serves as the ground manager for round 2 of the hackathon, ensuring a seamless experience for all attendees."
+    },
+    {
+        name: "Pratham Shetty",
+        slug: "pratham-shetty",
+        role: "AIML Student",
+        company: "MIT Manipal",
+        hackathonRole: "Sponsorship and Partnership Dept",
+        image: "/avatars/avatar1.svg",
+        category: "Organizing Committee",
+        bio: "Pratham Shetty is an AIML student passionate about technology and entrepreneurship. He takes active leadership roles in campus initiatives. He aims to build impactful solutions and grow consistently."
+    },
+    {
+        name: "Aarush Goyal",
+        slug: "aarush-goyal",
+        role: "Computer Science Student",
+        company: "MIT Manipal",
+        hackathonRole: "Sponsorship and Partnership Dept",
+        image: "/avatars/avatar2.svg",
+        category: "Organizing Committee",
+        bio: "Aarush Goyal is a Computer Science student at Manipal Institute of Technology (MIT), Manipal, with a strong interest in technology-driven startups, and problem-solving. He has experience in leadership, tech projects, and organizing large-scale initiatives."
+    },
+    {
+        name: "Tejas",
+        slug: "tejas",
+        role: "Commerce Student",
+        company: "MIT Manipal",
+        hackathonRole: "Sponsorship and Partnership Dept",
+        image: "/avatars/avatar4.svg",
+        category: "Organizing Committee",
+        bio: "Tejas is a commerce student combining a solid academic foundation with a deep interest in music and entrepreneurial ventures"
+    },
+    {
+        name: "Mahashwin",
+        slug: "mahashwin",
+        role: "Electrical and Electronics Engineering Student",
+        company: "MIT Manipal",
+        hackathonRole: "Sponsorship and Partnership Dept",
+        image: "/avatars/avatar5.svg",
+        category: "Organizing Committee",
+        bio: "Mahashwin is a student at MIT Manipal, Electrical and Electronics Engineering, and a Graphic designer."
     }
 ]
 
@@ -91,4 +131,4 @@ export const judges: Person[] = [
     }
 ]
 
-export const allPeople = [...organizingCommittee, ...speakers, ...judges]
+export const allPeople = [...judges, ...speakers, ...organizingCommittee]
