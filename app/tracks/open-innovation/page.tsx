@@ -20,7 +20,7 @@ export default function OpenInnovationPage() {
                             <div className="space-y-6">
                                 <h2 className="text-3xl font-bold italic tracking-tight">The Wildcard Track</h2>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    Have a revolutionary idea that doesn't fit into AI or Network Security? This is your home. Whether it's fintech security, humanitarian tech, or a new way of visualizing data—we value impact above all else.
+                                    Have a revolutionary idea that doesn't fit into AI, Web, or Mobile specifically? This is your home. Whether it's humanitarian tech, a new way of visualizing data, or cross-domain innovation—we value impact above all else.
                                 </p>
                             </div>
                             <div className="relative">

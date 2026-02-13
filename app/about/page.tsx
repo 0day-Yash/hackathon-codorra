@@ -25,14 +25,17 @@ import {
   Globe,
   Code,
   Zap,
+  Smartphone,
+  BrainCircuit,
+  Rocket,
 } from "lucide-react"
 
 export default function AboutPage() {
   const missionPoints = [
     {
-      icon: Shield,
-      title: "Cybersecurity Focus",
-      description: "Addressing the critical need for innovative security solutions in an increasingly digital world."
+      icon: Rocket,
+      title: "Tech Innovation",
+      description: "Addressing the critical need for innovation across AI, Web, Mobile, and Security in a digital-first world."
     },
     {
       icon: Users,
@@ -42,7 +45,7 @@ export default function AboutPage() {
     {
       icon: Lightbulb,
       title: "Innovation Catalyst",
-      description: "Fostering breakthrough ideas that can make a real impact in cybersecurity."
+      description: "Fostering breakthrough ideas that can make a real impact across multiple tech domains."
     },
     {
       icon: Globe,
@@ -78,7 +81,7 @@ export default function AboutPage() {
     {
       icon: Presentation,
       title: "Workshops & Talks",
-      description: "Expert-led sessions on cutting-edge cybersecurity topics and tools"
+      description: "Expert-led sessions on AI, Mobile development, Web performance, and Security"
     },
     {
       icon: Users,
@@ -93,7 +96,7 @@ export default function AboutPage() {
     {
       icon: Pizza,
       title: "Community Events",
-      description: "Food, coffee, swag, and celebration of the cybersecurity community"
+      description: "Food, coffee, swag, and celebration of the global builder community"
     }
   ]
 
@@ -112,7 +115,7 @@ export default function AboutPage() {
     },
     {
       title: "Real-World Impact",
-      description: "Cybersecurity solutions directly protect businesses, governments, and individuals from digital threats."
+      description: "Solutions that directly improve lives, protect systems, and push the boundaries of technology."
     }
   ]
 
@@ -121,14 +124,14 @@ export default function AboutPage() {
       <Navbar />
       <PageHeader
         title="About CODORRA"
-        description="A two-phase cybersecurity hackathon bringing together innovators, builders, and security experts to create solutions that matter."
+        description="A two-phase Mobile, AI, Web, and Cybersecurity hackathon bringing together innovators and builders to create solutions that matter."
       />
 
       <PageSection>
         <SectionHeader
           eyebrow="Our Mission"
-          title="Why Cybersecurity?"
-          desc="Cybersecurity isn't just about protecting data—it's about safeguarding our digital future."
+          title="Why This Hackathon?"
+          desc="We believe in the power of multidisciplinary innovation to build a better digital future."
           className="cursor-target"
         />
         <CardGrid cols={4}>

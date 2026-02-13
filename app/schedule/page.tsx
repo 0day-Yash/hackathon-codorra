@@ -39,7 +39,7 @@ export default function SchedulePage() {
         {
           time: "10:00 AM - 12:00 PM",
           title: "Sponsor Workshops",
-          description: "TechCorp Security: Advanced Threat Detection, SecureVentures: Startup Pitch Session",
+          description: "Tech Innovation: Scalable Architectures, Startup Pitch Session: AI & Mobile Ventures",
           location: "Main Hall",
           type: "workshop",
           icon: Mic,
@@ -81,7 +81,7 @@ export default function SchedulePage() {
         {
           time: "10:00 AM - 11:00 AM",
           title: "Opening Keynote",
-          description: "Keynote address by industry leaders on cybersecurity trends and opportunities",
+          description: "Keynote address by industry leaders on tech trends across AI, Mobile, and Web Development",
           location: "Main Stage",
           type: "keynote",
           icon: Mic,
@@ -117,7 +117,7 @@ export default function SchedulePage() {
         {
           time: "3:00 PM - 4:00 PM",
           title: "Technical Workshop",
-          description: "Cybersecurity tools and frameworks introduction",
+          description: "Full-stack development tools and frameworks introduction",
           location: "Workshop Room A",
           type: "workshop",
           icon: Laptop,
@@ -158,8 +158,8 @@ export default function SchedulePage() {
         },
         {
           time: "10:00 AM - 11:00 AM",
-          title: "AI Security Workshop",
-          description: "Building secure AI systems and detecting adversarial attacks",
+          title: "AI & Mobile Workshop",
+          description: "Building scalable AI systems and cross-platform mobile experiences",
           location: "Workshop Room B",
           type: "workshop",
           icon: Laptop,
@@ -176,8 +176,8 @@ export default function SchedulePage() {
         },
         {
           time: "2:00 PM - 3:00 PM",
-          title: "Fintech Security Panel",
-          description: "Industry experts discuss financial security challenges",
+          title: "Industry Innovation Panel",
+          description: "Industry experts discuss the future of AI, Mobile, and Web tech stack",
           location: "Main Stage",
           type: "panel",
           icon: Mic,
