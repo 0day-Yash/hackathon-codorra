@@ -79,7 +79,7 @@ export const organizingCommittee: Person[] = [
         role: "AIML Student",
         company: "MIT Manipal",
         hackathonRole: "Sponsorship and Partnership Dept",
-        image: "/avatars/avatar1.svg",
+        image: "/avatars/pratham.jpeg",
         category: "Organizing Committee",
         bio: "Pratham Shetty is an AIML student passionate about technology and entrepreneurship. He takes active leadership roles in campus initiatives. He aims to build impactful solutions and grow consistently."
     },
@@ -89,7 +89,7 @@ export const organizingCommittee: Person[] = [
         role: "Computer Science Student",
         company: "MIT Manipal",
         hackathonRole: "Sponsorship and Partnership Dept",
-        image: "/avatars/avatar2.svg",
+        image: "/avatars/aarush.jpeg",
         category: "Organizing Committee",
         bio: "Aarush Goyal is a Computer Science student at Manipal Institute of Technology (MIT), Manipal, with a strong interest in technology-driven startups, and problem-solving. He has experience in leadership, tech projects, and organizing large-scale initiatives."
     },
@@ -99,7 +99,7 @@ export const organizingCommittee: Person[] = [
         role: "Commerce Student",
         company: "MIT Manipal",
         hackathonRole: "Sponsorship and Partnership Dept",
-        image: "/avatars/avatar4.svg",
+        image: "/avatars/tejas.jpeg",
         category: "Organizing Committee",
         bio: "Tejas is a commerce student combining a solid academic foundation with a deep interest in music and entrepreneurial ventures"
     },
@@ -109,7 +109,7 @@ export const organizingCommittee: Person[] = [
         role: "Electrical and Electronics Engineering Student",
         company: "MIT Manipal",
         hackathonRole: "Sponsorship and Partnership Dept",
-        image: "/avatars/avatar5.svg",
+        image: "/avatars/mahi.jpeg",
         category: "Organizing Committee",
         bio: "Mahashwin is a student at MIT Manipal, Electrical and Electronics Engineering, and a Graphic designer."
     }
