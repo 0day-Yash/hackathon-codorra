@@ -6,31 +6,36 @@ import { Container } from "@/components/page-layout"
 
 export function Navbar() {
   return (
-    <header className="sticky top-3 z-50">
+    <header className="fixed top-0 z-50 w-full border-b border-white/5 bg-black/50 backdrop-blur-md">
       <Container>
-        <div className="mx-auto flex h-14 items-center justify-between rounded-lg border border-white/10 bg-background/70 px-4 shadow-sm backdrop-blur-xl">
-          <a href="/" className="flex items-center gap-2 font-semibold tracking-tight text-foreground/90 group">
-            <img src="/CODORRA.png" alt="CODORRA Logo" className="h-6 w-auto brightness-200 group-hover:brightness-100 transition-all" />
-            <span className="text-sm md:text-[15px] italic font-bold">CODORRA · 2026</span>
+        <div className="flex h-16 items-center justify-between">
+          <a href="/" className="flex items-center gap-2 group transition-opacity hover:opacity-80">
+            <img src="/CODORRA.png" alt="CODORRA Logo" className="h-5 w-auto" />
+            <span className="text-sm font-bold tracking-tighter uppercase">Codorra</span>
           </a>
-          <nav className="hidden gap-1.5 md:flex text-[13px]">
-            <a href="/about" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">About</a>
-            <a href="/apply" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">Apply</a>
-            <a href="/speakers" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">Speakers</a>
-            <a href="/sponsors" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">Sponsors</a>
-            <a href="/schedule" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">Schedule</a>
-            <a href="/faq" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">FAQ</a>
-            <a href="/contact" className="px-3 py-1.5 rounded-full hover:bg-white/10 text-foreground/80 hover:text-foreground transition-colors">Contact</a>
+
+          <nav className="hidden md:flex items-center gap-8">
+            <a href="/about" className="text-sm font-medium text-muted-foreground hover:text-white transition-colors">About</a>
+            <a href="/speakers" className="text-sm font-medium text-muted-foreground hover:text-white transition-colors">Speakers</a>
+            <a href="/sponsors" className="text-sm font-medium text-muted-foreground hover:text-white transition-colors">Sponsors</a>
+            <a href="/schedule" className="text-sm font-medium text-muted-foreground hover:text-white transition-colors">Schedule</a>
+            <a href="/faq" className="text-sm font-medium text-muted-foreground hover:text-white transition-colors">FAQ</a>
           </nav>
-          <div className="flex items-center gap-2">
-            <span className="hidden md:inline-block h-6 w-px bg-white/10" />
+
+          <div className="flex items-center gap-4">
             <Button
               asChild
+              variant="outline"
               size="sm"
-              variant="secondary"
-              className="rounded-full h-10 px-5 border border-white/10 bg-white/5 hover:bg-white/10 text-foreground/90"
+              className="hidden md:inline-flex rounded-full border-white/10 bg-white/5 hover:bg-white/10 px-6 h-9 text-xs font-bold"
             >
-              <a href="/apply">Register Now</a>
+              <a href="https://codorra1.devpost.com/">Register</a>
+            </Button>
+            <Button variant="ghost" size="icon" className="md:hidden text-white">
+              <span className="sr-only">Menu</span>
+              <svg className="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
             </Button>
           </div>
         </div>
@@ -41,22 +46,23 @@ export function Navbar() {
 
 export function Footer() {
   return (
-    <footer className="py-12">
-      <Container className="flex flex-col items-center justify-between gap-4 text-sm text-muted-foreground md:flex-row">
-        <div>© {new Date().getFullYear()} CODORRA</div>
-        <div className="flex items-center gap-6">
-          <a href="/faq" className="hover:text-primary transition-colors">
-            FAQ
-          </a>
-          <a href="/sponsors" className="hover:text-primary transition-colors">
-            Sponsors
-          </a>
-          <a href="/schools" className="hover:text-primary transition-colors">
-            Schools
-          </a>
-          <a href="/contact" className="hover:text-primary transition-colors">
-            Contact
-          </a>
+    <footer className="border-t border-white/5 py-12 md:py-24 bg-black">
+      <Container>
+        <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
+          <div className="flex flex-col items-center md:items-start gap-4">
+            <a href="/" className="flex items-center gap-2 transition-opacity hover:opacity-80">
+              <img src="/CODORRA.png" alt="CODORRA" className="h-4 w-auto" />
+              <span className="text-xs font-bold tracking-widest uppercase">Codorra</span>
+            </a>
+            <p className="text-xs text-muted-foreground/60">
+              © {new Date().getFullYear()} Codorra. Built for the future of security.
+            </p>
+          </div>
+          <div className="flex items-center gap-8">
+            <a href="/faq" className="text-xs font-bold uppercase tracking-widest text-muted-foreground hover:text-white transition-colors">FAQ</a>
+            <a href="/sponsors" className="text-xs font-bold uppercase tracking-widest text-muted-foreground hover:text-white transition-colors">Partners</a>
+            <a href="/contact" className="text-xs font-bold uppercase tracking-widest text-muted-foreground hover:text-white transition-colors">Contact</a>
+          </div>
         </div>
       </Container>
     </footer>

@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Plus_Jakarta_Sans, Roboto_Mono } from "next/font/google"
+import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
@@ -40,18 +40,6 @@ export const metadata: Metadata = {
   },
 }
 
-const jakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-jakarta",
-})
-
-const robotoMono = Roboto_Mono({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-roboto-mono",
-})
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -59,18 +47,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${robotoMono.variable} ${jakarta.variable} ${GeistMono.variable} antialiased`} style={{ fontFamily: 'var(--font-roboto-mono), "Roboto Mono", monospace' }}>
-        {/* Top Aurora background */}
-        <div className="pointer-events-none fixed inset-x-0 top-0 z-0 h-[420px] md:h-[520px] overflow-hidden">
-          <div className="absolute inset-0 opacity-80 blur-xl">
+      <body className={`${GeistSans.variable} ${GeistMono.variable} font-sans antialiased`}>
+        {/* Top Aurora background - Refined for Vercel aesthetic */}
+        <div className="pointer-events-none fixed inset-x-0 top-0 z-0 h-[600px] overflow-hidden">
+          <div className="absolute inset-0 opacity-25 blur-3xl">
             <Aurora
-              colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
+              colorStops={["#000000", "#1a1a2e", "#7c3aed"]}
               blend={0.5}
-              amplitude={1.0}
-              speed={0.5}
+              amplitude={1.2}
+              speed={0.15}
             />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background" />
         </div>
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
