@@ -51,10 +51,10 @@ function Hero() {
       <div className="absolute inset-0 radial-mask" />
 
       <Container className="relative z-10 flex flex-col items-center text-center gap-8">
-        <div className="animate-in inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/5 px-4 py-1.5 text-xs text-accent backdrop-blur-md">
-          <Sparkles className="size-3.5 fill-current" />
+        <div className="animate-in inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs text-white/50 backdrop-blur-md">
+          <Sparkles className="size-3.5" />
           <span className="font-semibold tracking-wide">72-Hour Intensive</span>
-          <span className="h-3 w-px bg-accent/20" />
+          <span className="h-3 w-px bg-white/10" />
           <span className="text-white font-medium">Fully Online</span>
         </div>
 
@@ -107,12 +107,12 @@ function About() {
         <Reveal delay={100} className="lg:col-span-8">
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature) => (
-              <Card key={feature.k} className="glass border-white/5 hover:border-accent/20 p-6 flex flex-col gap-4 group transition-all">
-                <div className="p-2 w-fit rounded-lg bg-accent/5 text-accent/50 transition-colors group-hover:bg-accent/10 group-hover:text-accent">
+              <Card key={feature.k} className="glass border-white/5 hover:border-white/20 p-6 flex flex-col gap-4 group transition-all">
+                <div className="p-2 w-fit rounded-lg bg-white/5 text-white/40 transition-colors group-hover:bg-white/10 group-hover:text-white">
                   <feature.icon className="size-5" />
                 </div>
                 <div className="space-y-1">
-                  <h3 className="text-xs font-bold text-white/50 uppercase tracking-widest">{feature.k}</h3>
+                  <h3 className="text-xs font-bold text-white/30 uppercase tracking-widest">{feature.k}</h3>
                   <p className="text-lg font-bold text-white tracking-tight">{feature.v}</p>
                 </div>
               </Card>
@@ -134,7 +134,7 @@ function About() {
                   { icon: ShieldCheck, t: "Real-world impact" }
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-white/80">
-                    <item.icon className="size-4 text-accent/60" />
+                    <item.icon className="size-4 text-white/20" />
                     <span className="text-[15px] font-medium">{item.t}</span>
                   </li>
                 ))}
@@ -178,16 +178,16 @@ function Tracks() {
           {/* Featured: Open Innovation */}
           <Reveal className="md:col-span-2">
             <a href="https://codorra1.devpost.com/" target="_blank" className="block group">
-              <Card className="glass relative overflow-hidden p-8 md:p-12 border-white/5 hover:border-accent/20 transition-all">
-                <div className="absolute -top-24 -right-24 size-96 bg-accent/5 blur-[100px] pointer-events-none" />
+              <Card className="glass relative overflow-hidden p-8 md:p-12 border-white/5 hover:border-white/20 transition-all">
+                <div className="absolute -top-24 -right-24 size-96 bg-white/5 blur-[100px] pointer-events-none" />
                 <div className="flex flex-col md:flex-row gap-8 items-center relative z-10">
-                  <div className="bg-white text-black p-6 rounded-2xl shadow-xl group-hover:shadow-accent/5 transition-shadow">
+                  <div className="bg-white text-black p-6 rounded-2xl shadow-xl transition-transform group-hover:scale-105">
                     <openInnovation.icon className="size-10" />
                   </div>
                   <div className="space-y-4">
                     <h3 className="text-3xl md:text-5xl font-bold tracking-tighter text-white">{openInnovation.title}</h3>
                     <p className="text-lg text-white/70 leading-relaxed max-w-2xl font-medium">{openInnovation.desc}</p>
-                    <div className="flex items-center gap-2 text-white/90 font-bold uppercase tracking-widest text-xs group-hover:text-accent transition-colors">
+                    <div className="flex items-center gap-2 text-white/90 font-bold uppercase tracking-widest text-xs group-hover:text-white transition-colors">
                       <span>Register to participate</span>
                       <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                     </div>

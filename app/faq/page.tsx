@@ -107,8 +107,8 @@ export default function FAQPage() {
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {quickFacts.map((fact, i) => (
               <Reveal key={fact.title} delay={i * 100}>
-                <Card className="glass p-8 flex flex-col gap-4 border-primary/10 hover:border-primary/30 transition-all group">
-                  <div className="size-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                <Card className="glass p-8 flex flex-col gap-4 border-white/5 hover:border-white/20 transition-all group">
+                  <div className="size-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/40 group-hover:bg-white/10 group-hover:text-white transition-colors">
                     <fact.icon className="size-5" />
                   </div>
                   <div>
@@ -129,17 +129,17 @@ export default function FAQPage() {
               <Reveal key={category.title} delay={categoryIndex * 100}>
                 <div className="space-y-6">
                   <div className="flex items-center gap-3">
-                    <div className="size-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
+                    <div className="size-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/40">
                       <category.icon className="size-5" />
                     </div>
                     <h2 className="text-2xl font-bold tracking-tight text-white">{category.title}</h2>
                   </div>
 
-                  <div className="rounded-2xl border border-white/5 bg-black overflow-hidden shadow-2xl shadow-primary/5">
+                  <div className="rounded-2xl border border-white/5 bg-black overflow-hidden shadow-2xl">
                     <Accordion type="single" collapsible className="w-full">
                       {category.questions.map((faq, faqIndex) => (
                         <AccordionItem key={faqIndex} value={`item-${categoryIndex}-${faqIndex}`} className="border-white/5 last:border-0 px-6">
-                          <AccordionTrigger className="text-left font-semibold py-6 hover:no-underline hover:text-primary transition-colors text-white/90">
+                          <AccordionTrigger className="text-left font-semibold py-6 hover:no-underline hover:text-white transition-colors text-white/90">
                             {faq.q}
                           </AccordionTrigger>
                           <AccordionContent className="text-white/60 pb-6 leading-relaxed font-medium">
@@ -160,23 +160,23 @@ export default function FAQPage() {
         <Container>
           <div className="grid gap-6 md:grid-cols-2">
             <Reveal>
-              <Card className="glass p-10 flex flex-col gap-6 border-primary/10">
-                <div className="size-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center">
-                  <MessageSquare className="size-6 text-primary" />
+              <Card className="glass p-10 flex flex-col gap-6 border-white/10">
+                <div className="size-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
+                  <MessageSquare className="size-6 text-white/40" />
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold tracking-tight text-white">Contact Support</h3>
                   <p className="text-white/70 leading-relaxed font-medium">
-                    Have specific questions? Reach out to our support team for personalized assistance at <span className="text-primary">codorra@yahoo.com</span>
+                    Have specific questions? Reach out to our support team for personalized assistance at <span className="text-white/90">codorra@yahoo.com</span>
                   </p>
                 </div>
               </Card>
             </Reveal>
 
             <Reveal delay={100}>
-              <Card className="glass p-10 flex flex-col gap-6 border-primary/10">
-                <div className="size-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center">
-                  <Globe className="size-6 text-primary" />
+              <Card className="glass p-10 flex flex-col gap-6 border-white/10">
+                <div className="size-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
+                  <Globe className="size-6 text-white/40" />
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold tracking-tight text-white">Join Community</h3>
