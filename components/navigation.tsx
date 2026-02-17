@@ -45,13 +45,16 @@ export function Footer() {
       <Container className="flex flex-col items-center justify-between gap-4 text-sm text-muted-foreground md:flex-row">
         <div>© {new Date().getFullYear()} CODORRA</div>
         <div className="flex items-center gap-6">
-          <a href="/faq" className="hover:text-primary">
+          <a href="/faq" className="hover:text-primary transition-colors">
             FAQ
           </a>
-          <a href="/sponsors" className="hover:text-primary">
+          <a href="/sponsors" className="hover:text-primary transition-colors">
             Sponsors
           </a>
-          <a href="/contact" className="hover:text-primary">
+          <a href="/schools" className="hover:text-primary transition-colors">
+            Schools
+          </a>
+          <a href="/contact" className="hover:text-primary transition-colors">
             Contact
           </a>
         </div>

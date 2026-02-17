@@ -37,9 +37,11 @@ export default function ContactPage() {
     inquiryType: ""
   })
 
+  const [submitted, setSubmitted] = useState(false)
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
+    setSubmitted(true)
     console.log("Contact form submitted:", contactForm)
   }
 
@@ -52,18 +54,18 @@ export default function ContactPage() {
       action: "mailto:codorra@yahoo.com"
     },
     {
+      icon: ExternalLink,
+      title: "Devpost",
+      value: "Register now",
+      description: "Official hackathon registration platform",
+      action: "https://codorra1.devpost.com/"
+    },
+    {
       icon: MessageSquare,
       title: "Discord",
       value: "Join our community",
       description: "Real-time discussions and updates",
       action: "https://discord.gg/9QpwAmX4Ke"
-    },
-    {
-      icon: Globe,
-      title: "WhatsApp",
-      value: "Quick updates",
-      description: "Announcements and quick questions",
-      action: "https://wa.me/codorra"
     }
   ]
 
@@ -175,75 +177,89 @@ export default function ContactPage() {
                   <CardTitle className="italic font-bold">Send us a Message</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="name" className="text-xs uppercase tracking-widest text-muted-foreground">Full Name *</Label>
-                      <Input
-                        id="name"
-                        value={contactForm.name}
-                        onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
-                        placeholder="Your full name"
-                        className="bg-white/5 border-white/10 focus:border-white/20 transition-colors"
-                        required
-                      />
+                  {submitted ? (
+                    <div className="py-12 text-center space-y-4 animate-in fade-in zoom-in duration-500">
+                      <div className="bg-green-500/20 text-green-400 p-4 rounded-full w-fit mx-auto shadow-lg shadow-green-500/10">
+                        <CheckCircle className="size-12" />
+                      </div>
+                      <h4 className="text-2xl font-bold italic">Message Received</h4>
+                      <p className="text-muted-foreground max-w-xs mx-auto">Thank you for reaching out. Our team will get back to you within 24 hours.</p>
+                      <Button variant="outline" onClick={() => setSubmitted(false)} className="rounded-full mt-4 border-white/10">
+                        Send Another Message
+                      </Button>
                     </div>
+                  ) : (
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                      {/* ... existing form fields ... */}
+                      <div className="space-y-2">
+                        <Label htmlFor="name" className="text-xs uppercase tracking-widest text-muted-foreground">Full Name *</Label>
+                        <Input
+                          id="name"
+                          value={contactForm.name}
+                          onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
+                          placeholder="Your full name"
+                          className="bg-white/5 border-white/10 focus:border-white/20 transition-colors"
+                          required
+                        />
+                      </div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="email" className="text-xs uppercase tracking-widest text-muted-foreground">Email Address *</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        value={contactForm.email}
-                        onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
-                        placeholder="your.email@example.com"
-                        className="bg-white/5 border-white/10 focus:border-white/20 transition-colors"
-                        required
-                      />
-                    </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="email" className="text-xs uppercase tracking-widest text-muted-foreground">Email Address *</Label>
+                        <Input
+                          id="email"
+                          type="email"
+                          value={contactForm.email}
+                          onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
+                          placeholder="your.email@example.com"
+                          className="bg-white/5 border-white/10 focus:border-white/20 transition-colors"
+                          required
+                        />
+                      </div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="inquiryType" className="text-xs uppercase tracking-widest text-muted-foreground">Inquiry Type</Label>
-                      <Select value={contactForm.inquiryType} onValueChange={(value) => setContactForm({ ...contactForm, inquiryType: value })}>
-                        <SelectTrigger className="bg-white/5 border-white/10 focus:ring-0">
-                          <SelectValue placeholder="Select inquiry type" />
-                        </SelectTrigger>
-                        <SelectContent className="bg-black border-white/10">
-                          {inquiryTypes.map((type) => (
-                            <SelectItem key={type} value={type} className="focus:bg-white/10">{type}</SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="inquiryType" className="text-xs uppercase tracking-widest text-muted-foreground">Inquiry Type</Label>
+                        <Select value={contactForm.inquiryType} onValueChange={(value) => setContactForm({ ...contactForm, inquiryType: value })}>
+                          <SelectTrigger className="bg-white/5 border-white/10 focus:ring-0">
+                            <SelectValue placeholder="Select inquiry type" />
+                          </SelectTrigger>
+                          <SelectContent className="bg-black border-white/10">
+                            {inquiryTypes.map((type) => (
+                              <SelectItem key={type} value={type} className="focus:bg-white/10">{type}</SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      </div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="subject" className="text-xs uppercase tracking-widest text-muted-foreground">Subject *</Label>
-                      <Input
-                        id="subject"
-                        value={contactForm.subject}
-                        onChange={(e) => setContactForm({ ...contactForm, subject: e.target.value })}
-                        placeholder="Brief subject line"
-                        className="bg-white/5 border-white/10 focus:border-white/20 transition-colors"
-                        required
-                      />
-                    </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="subject" className="text-xs uppercase tracking-widest text-muted-foreground">Subject *</Label>
+                        <Input
+                          id="subject"
+                          value={contactForm.subject}
+                          onChange={(e) => setContactForm({ ...contactForm, subject: e.target.value })}
+                          placeholder="Brief subject line"
+                          className="bg-white/5 border-white/10 focus:border-white/20 transition-colors"
+                          required
+                        />
+                      </div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="message" className="text-xs uppercase tracking-widest text-muted-foreground">Message *</Label>
-                      <Textarea
-                        id="message"
-                        value={contactForm.message}
-                        onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
-                        placeholder="Tell us how we can help you..."
-                        className="bg-white/5 border-white/10 focus:border-white/20 transition-colors min-h-[150px]"
-                        required
-                      />
-                    </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="message" className="text-xs uppercase tracking-widest text-muted-foreground">Message *</Label>
+                        <Textarea
+                          id="message"
+                          value={contactForm.message}
+                          onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
+                          placeholder="Tell us how we can help you..."
+                          className="bg-white/5 border-white/10 focus:border-white/20 transition-colors min-h-[150px]"
+                          required
+                        />
+                      </div>
 
-                    <Button type="submit" className="w-full bg-brand-gradient hover:opacity-90 transition-opacity border-none h-11 text-white font-bold">
-                      Send Message
-                      <Send className="ml-2 size-4" />
-                    </Button>
-                  </form>
+                      <Button type="submit" className="w-full bg-brand-gradient hover:opacity-90 transition-opacity border-none h-11 text-white font-bold">
+                        Send Message
+                        <Send className="ml-2 size-4" />
+                      </Button>
+                    </form>
+                  )}
                 </CardContent>
               </Card>
             </Reveal>
@@ -283,13 +299,13 @@ export default function ContactPage() {
                   </CardHeader>
                   <CardContent className="space-y-3">
                     <p className="text-sm text-muted-foreground">
-                      <strong>Venue:</strong> Bengaluru, India
+                      <strong>Location:</strong> 100% Online
                     </p>
                     <p className="text-sm text-muted-foreground">
-                      <strong>Round 1:</strong> Online (May 22-31)
+                      <strong>Hackathon:</strong> May 29-31, 2026
                     </p>
                     <p className="text-sm text-muted-foreground">
-                      <strong>Round 2:</strong> Bengaluru (June 5-7)
+                      <strong>Format:</strong> 72h Continuous
                     </p>
                   </CardContent>
                 </Card>

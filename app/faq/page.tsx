@@ -22,8 +22,8 @@ import {
   Wifi,
   MessageSquare,
   Award,
-  Coffee,
-  Pizza,
+  Zap,
+  Activity,
 } from "lucide-react"
 
 export default function FAQPage() {
@@ -56,56 +56,44 @@ export default function FAQPage() {
       ]
     },
     {
-      title: "Venue & Facilities",
-      icon: MapPin,
-      color: "border border-white/10 bg-white/5 text-white/50",
-      questions: [
-        {
-          q: "Where is the hackathon venue located?",
-          a: "Round 1 is fully online. Round 2 Demo Day is in Bengaluru, India. The exact location will be shared with finalists closer to the event date."
-        },
-        {
-          q: "What facilities are available at the venue?",
-          a: "The venue provides 24/7 access, high-speed WiFi, backup 4G routers, air conditioning, security personnel, and dedicated spaces for hacking, workshops, and networking."
-        },
-        {
-          q: "Is the venue accessible for people with disabilities?",
-          a: "Yes, our venue is fully accessible with wheelchair ramps, accessible restrooms, and other necessary accommodations. Please let us know about any specific needs during registration."
-        },
-        {
-          q: "Can I leave and re-enter the venue?",
-          a: "Yes, you can leave and re-enter the venue at any time. However, we recommend staying for the full experience to maximize networking and learning opportunities."
-        },
-        {
-          q: "What about parking?",
-          a: "Limited parking is available at the venue. We recommend using public transport or ride-sharing services. Detailed parking information will be provided to registered participants."
-        }
-      ]
-    },
-    {
       title: "Online Participation",
       icon: Globe,
       color: "border border-white/10 bg-white/5 text-white/50",
       questions: [
         {
-          q: "How does online participation work?",
-          a: "Online participants have access to all workshops, sessions, and judging through live streaming. They can submit projects via Devpost and participate in virtual networking through Discord."
+          q: "How does the hackathon work?",
+          a: "Codorra 2026 is fully online. Participants have access to all workshops, sessions, and judging through live streaming. Projects are submitted via Devpost and communication happens on Discord."
         },
         {
-          q: "Do online participants get the same prizes?",
-          a: "Yes! Online participants are eligible for all prizes and there's a dedicated 'Best Online' category. Digital certificates and swag are shipped to online participants."
+          q: "Where is the venue?",
+          a: "There is no physical venue. The hackathon is 100% virtual, allowing anyone from across the globe to participate from the comfort of their home."
         },
         {
-          q: "What technology do I need for online participation?",
-          a: "You'll need a stable internet connection, a computer with development tools, and access to Discord for community interaction. All sessions are streamed on multiple platforms."
+          q: "What facilities do I need?",
+          a: "You'll need a stable internet connection, a computer with your development tools, and access to Discord for community interaction and support."
         },
         {
-          q: "Can online participants attend workshops?",
-          a: "Absolutely! All workshops and sessions are live-streamed and recorded. Online participants can ask questions through Discord and interact with speakers."
+          q: "Can I participate from any time zone?",
+          a: "Yes! While the main sessions are scheduled in IST (GMT+5:30), the 48-hour coding window allows teams to work according to their own local schedules."
+        }
+      ]
+    },
+    {
+      title: "Judging & Presentations",
+      icon: Award,
+      color: "border border-white/10 bg-white/5 text-white/50",
+      questions: [
+        {
+          q: "How do we present our projects?",
+          a: "Finalists will present their projects through live video calls during the closing ceremony on May 31. Presentations are limited to 3 minutes plus Q&A."
         },
         {
-          q: "How do online participants present their projects?",
-          a: "Online participants present their projects through video calls during Demo Day. The same judging criteria apply, and presentations are streamed live to the community."
+          q: "What are the judging criteria?",
+          a: "Projects are evaluated on innovation (30%), technical execution (30%), design/UX (20%), and real-world impact (20%)."
+        },
+        {
+          q: "Do we need a video demo?",
+          a: "Yes, a 2-minute video demo is required as part of the Devpost submission to help judges understand your project before the finals."
         }
       ]
     },
@@ -196,26 +184,26 @@ export default function FAQPage() {
     {
       icon: Clock,
       title: "Format",
-      value: "Two-Phase",
-      description: "Round 1: Online (Free) • Round 2: Demo Day"
+      value: "72-Hour Event",
+      description: "24h Sessions • 48h Coding Marathon"
     },
     {
       icon: Users,
       title: "Team Size",
       value: "2-4 Members",
-      description: "Optimal collaboration"
+      description: "Collaborative development"
     },
     {
-      icon: MapPin,
+      icon: Globe,
       title: "Location",
-      value: "Bengaluru + Online",
-      description: "Hybrid participation"
+      value: "100% Online",
+      description: "Participate from anywhere"
     },
     {
       icon: Trophy,
       title: "Prizes",
-      value: "₹2L+ Value",
-      description: "Cash, internships, credits"
+      value: "Value Packs",
+      description: "Cash, internships, & swag"
     }
   ]
 

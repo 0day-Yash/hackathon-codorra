@@ -19,16 +19,14 @@ import {
   BookOpen,
   ArrowRight,
   Building2,
-  Wifi,
   Users,
   GitBranch,
   Code,
   MessageSquare,
   ShieldCheck,
   Trophy,
-  Presentation,
-  Pizza,
-  Coffee,
+  Zap,
+  Activity,
   BadgeCheck,
   Shield,
   BrainCircuit,
@@ -36,6 +34,7 @@ import {
   Sparkles,
   Smartphone,
   Globe,
+  Monitor,
 } from "lucide-react"
 import Lightning from "@/components/lightning"
 
@@ -66,22 +65,22 @@ function Hero() {
           />
         </div>
         <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] md:text-xs text-foreground/70">
-          <MapPin className="size-3.5 opacity-70" />
-          <span>Bengaluru + Online</span>
+          <Globe className="size-3.5 opacity-70" />
+          <span>Fully Online</span>
           <span className="mx-1.5 h-1 w-1 rounded-full bg-foreground/30" />
           <Clock className="size-3.5 opacity-70" />
-          <span>Two-Phase Hackathon</span>
+          <span>48h Coding + 24h Sessions</span>
         </div>
         <h1 className="text-balance text-4xl font-extrabold tracking-tight md:text-6xl text-brand-gradient">CODORRA 2026</h1>
         <p className="text-pretty max-w-2xl text-muted-foreground text-lg">
-          Two-phase Mobile, AI, Web, and Cybersecurity hackathon. Teams of 2–4. Build practical solutions and showcase them at Demo Day.
+          A high-intensity 72-hour online hackathon: 48 hours for core coding and 24 hours for expert speaker sessions, workshops, and networking.
         </p>
         <div className="flex flex-wrap items-center gap-3">
-          <Button size="lg" variant="secondary" asChild className="rounded-full h-12 px-8 border-none bg-brand-gradient hover:opacity-90 text-white ring-glow min-w-[160px] font-bold">
-            <a href="/apply" className="inline-flex items-center justify-center">Apply Now <ArrowRight className="ml-2 size-4" /></a>
+          <Button size="lg" className="rounded-full h-14 px-8 border-none bg-brand-gradient hover:opacity-90 text-white shadow-2xl shadow-primary/20 min-w-[200px] font-black text-lg hover:scale-105 transition-all">
+            <a href="https://codorra1.devpost.com/" target="_blank" rel="noopener" className="inline-flex items-center justify-center">Register on Devpost <ArrowRight className="ml-2 size-5" /></a>
           </Button>
-          <Button size="lg" variant="ghost" asChild className="rounded-full h-12 px-8 text-foreground/85 hover:bg-white/10 min-w-[160px]">
-            <a href="/criteria" className="inline-flex items-center justify-center"><BookOpen className="mr-2 size-4" /> Judging Criteria</a>
+          <Button size="lg" variant="outline" className="rounded-full h-14 px-8 border-white/10 bg-white/5 hover:bg-white/10 min-w-[200px] font-bold text-lg hover:scale-105 transition-all">
+            <a href="https://discord.gg/9QpwAmX4Ke" target="_blank" rel="noopener" className="inline-flex items-center justify-center"><MessageSquare className="mr-2 size-5" /> Join Discord</a>
           </Button>
         </div>
       </Container>
@@ -97,12 +96,12 @@ function Hero() {
 
 function About() {
   const features = [
-    { icon: Building2, k: "Venue", v: "Bengaluru • 24/7 access (Round 2)" },
-    { icon: Wifi, k: "Infra", v: "Fiber + backup 4G routers" },
-    { icon: Users, k: "Team", v: "Teams of 2–4" },
-    { icon: GitBranch, k: "Submissions", v: "Devpost + GitHub links" },
-    { icon: MessageSquare, k: "Comms", v: "Discord + WhatsApp" },
-    { icon: ShieldCheck, k: "Theme", v: "Mobile, AI, Web & Security" },
+    { icon: Globe, k: "Location", v: "100% Online • Global Participation" },
+    { icon: Zap, k: "Digital Hub", v: "24/7 Discord • Remote Expert Support" },
+    { icon: Users, k: "Team", v: "Teams of 2–4 Builders" },
+    { icon: GitBranch, k: "Submissions", v: "Devpost + GitHub Workflow" },
+    { icon: MessageSquare, k: "Community", v: "Discord • Global Networking" },
+    { icon: ShieldCheck, k: "Focus", v: "Mobile, AI, Web & Security" },
   ]
   return (
     <section id="about" className="section relative border-b">
@@ -111,9 +110,9 @@ function About() {
       <Container className="grid items-start gap-12 lg:grid-cols-12">
         <Reveal className="lg:col-span-12">
           <SectionHeader
-            eyebrow="Two-phase format"
-            title="Round 1: Online • Round 2: Demo Day"
-            desc="Round 1 is fully online and free. Submit via Devpost + GitHub. Finalists invited to Round 2 Demo Day in Bengaluru (or present virtually). Coordination on Discord + WhatsApp."
+            eyebrow="72-Hour Intensive"
+            title="48h Build • 24h Learning"
+            desc="Codorra 2026 is now fully online. Dive into 48 hours of non-stop building, complemented by 24 hours of curated speaker sessions and workshops. Submit via Devpost and pitch to global judges."
             className="cursor-target max-w-3xl mb-12"
           />
         </Reveal>
@@ -123,7 +122,7 @@ function About() {
             {features.map((s, idx) => (
               <Card key={s.k} className={cn(
                 "glass cursor-target border-white/5 hover:border-white/10 transition-colors",
-                idx === 0 || idx === 3 ? "sm:col-span-2" : ""
+                idx === 0 || idx === 3 || idx === 4 ? "sm:col-span-2" : ""
               )}>
                 <CardHeader className="pb-2 flex flex-row items-center gap-2">
                   <div className="p-2 rounded-lg bg-white/5">
@@ -162,9 +161,9 @@ function About() {
               <div className="pt-6 border-t border-white/5 space-y-4">
                 <div className="flex items-center gap-3 text-xs font-mono uppercase tracking-widest text-muted-foreground/50">
                   <BadgeCheck className="size-4" />
-                  Venue & Perks
+                  Digital Experience
                 </div>
-                <p className="text-xs leading-relaxed">24/7 Access • High-speed WiFi • Pizza & Coffee on tap • Swag & Certificates</p>
+                <p className="text-xs leading-relaxed">24/7 Virtual Support • International Community • Digital Swag • Winner Certificates</p>
               </div>
             </CardContent>
           </Card>
@@ -206,7 +205,7 @@ function Tracks() {
             <a href="/tracks/open-innovation" className="block group">
               <Card className="glass cursor-target border-brand-gradient/30 bg-brand-gradient/5 group-hover:bg-brand-gradient/10 transition-all p-6 md:p-12 relative overflow-hidden rounded-[2rem]">
                 <div className="absolute -right-20 -top-20 opacity-[0.03] group-hover:opacity-[0.05] transition-opacity">
-                  <openInnovation.icon className="size-[500px]" />
+                  <Monitor className="size-[500px]" />
                 </div>
                 <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-12">
                   <div className="bg-brand-gradient text-white rounded-3xl p-6 md:p-8 shadow-2xl shadow-primary/20 group-hover:scale-105 transition-transform shrink-0">
@@ -394,8 +393,8 @@ function FAQ() {
   const faqs = [
     { q: "Who can participate?", a: "Open to students, professionals, and independent builders. Team size is 2–4." },
     { q: "What's the theme?", a: "Broad focus on Mobile, AI, Web, and Cybersecurity; open innovation is highly encouraged." },
-    { q: "Where will it happen?", a: "Round 1: Fully online. Round 2: Bengaluru venue (finalists only) with hybrid option." },
-    { q: "How are submissions handled?", a: "Round 1: Devpost + GitHub links (mandatory). Finalists present at Round 2 Demo Day." },
+    { q: "Where will it happen?", a: "The hackathon is 100% online. You can participate from anywhere in the world." },
+    { q: "How are submissions handled?", a: "Submit your project through Devpost with a GitHub link and a video demo. Finalists will present live in the closing ceremony." },
     { q: "Judging criteria?", a: "Idea quality & relevance, technical execution & code quality, presentation clarity, real-world applicability & impact." },
     { q: "Fees?", a: "The hackathon is completely free for everyone. There are no registration or participation fees for any round." },
   ]
@@ -441,7 +440,7 @@ function RegisterCTA() {
           <h2 className="mt-4 text-4xl font-bold md:text-5xl">Ready to register?</h2>
 
           <p className="mx-auto mt-4 max-w-[540px] text-base text-muted-foreground">
-            Round 1 is completely free. Assemble your 2–4 person team and submit via Devpost.
+            Codorra is free for all. Assemble your 2–4 person team and register now to secure your spot for the speakers and coding marathon.
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">

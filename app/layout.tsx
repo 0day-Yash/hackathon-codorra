@@ -8,9 +8,9 @@ import Aurora from "@/components/aurora"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "CODORRA 2026 | India's Premier Cybersecurity Hackathon",
-  description: "Join 500+ builders for a 48-hour cybersecurity-focused hackathon in Bengaluru + Online. Solve AI, Network, and Infrastructure security challenges. win prizes and internships.",
-  keywords: ["hackathon", "cybersecurity", "AI security", "Bengaluru tech events", "coding competition", "CODORRA", "security builders"],
+  title: "CODORRA 2026 | Global Cybersecurity & AI Hackathon",
+  description: "Join 1000+ builders worldwide for a 72-hour international intensive. 48h Coding + 24h expert learning. Fully Online, Global Participation.",
+  keywords: ["international hackathon", "cybersecurity", "AI security", "global tech event", "coding competition", "CODORRA", "security builders", "online hackathon 2026"],
   authors: [{ name: "CODORRA Team" }],
   openGraph: {
     title: "CODORRA 2026 | Cybersecurity Hackathon",
