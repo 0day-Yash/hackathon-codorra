@@ -139,17 +139,36 @@ export default function SpeakersPage() {
             )}
 
             {(selectedCategory === "All" || selectedCategory === "Organizing Committee") && organizingCommittee.length > 0 && (
-              <div className="space-y-6">
+              <div className="space-y-12 pt-8">
                 <Reveal>
-                  <h2 className="text-2xl font-bold">Organizing Committee</h2>
+                  <div className="flex items-center gap-4 mb-12">
+                    <div className="h-px flex-1 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+                    <div className="px-6 py-2 rounded-full border border-white/5 bg-white/5 backdrop-blur-sm">
+                      <h2 className="text-2xl font-bold tracking-tight">Organizing Committee</h2>
+                    </div>
+                    <div className="h-px flex-1 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+                  </div>
                 </Reveal>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-                  {organizingCommittee
-                    .filter(p => p.name.toLowerCase().includes(searchQuery.toLowerCase()) || p.role.toLowerCase().includes(searchQuery.toLowerCase()) || p.company.toLowerCase().includes(searchQuery.toLowerCase()))
-                    .map((person, i) => (
-                      <PersonCard key={person.slug} person={person} index={i} />
-                    ))}
-                </div>
+
+                {/* Group by Department */}
+                {Array.from(new Set(organizingCommittee.map(p => p.department).filter(Boolean))).map((dept) => (
+                  <div key={dept} className="space-y-8">
+                    <Reveal>
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-6 bg-primary/60 rounded-full" />
+                        <h3 className="text-xl font-semibold text-foreground/90">{dept}</h3>
+                      </div>
+                    </Reveal>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                      {organizingCommittee
+                        .filter(p => p.department === dept)
+                        .filter(p => p.name.toLowerCase().includes(searchQuery.toLowerCase()) || p.role.toLowerCase().includes(searchQuery.toLowerCase()) || p.company.toLowerCase().includes(searchQuery.toLowerCase()))
+                        .map((person, i) => (
+                          <PersonCard key={person.slug} person={person} index={i} />
+                        ))}
+                    </div>
+                  </div>
+                ))}
               </div>
             )}
           </div>

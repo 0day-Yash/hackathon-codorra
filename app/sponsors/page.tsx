@@ -29,7 +29,7 @@ export default function SponsorsPage() {
     },
     {
       name: "BrowserOS",
-      tier: "Silver",
+      tier: "Gold",
       logo: "/browserOS.svg",
       bio: "BrowserOS is an open-source, AI-native browser designed for the future of web automation. It allows users to build AI agents that automate tedious browser tasks using plain English, all while running locally for maximum privacy.",
       website: "https://browseros.com/",

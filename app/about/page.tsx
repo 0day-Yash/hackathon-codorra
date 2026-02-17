@@ -1,6 +1,7 @@
 "use client"
 
 import type React from "react"
+import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { PageHeader, PageSection, TwoColumnLayout, CardGrid, Container } from "@/components/page-layout"
@@ -16,9 +17,6 @@ import {
   Wifi,
   MessageSquare,
   Trophy,
-  Presentation,
-  Pizza,
-  Coffee,
   BadgeCheck,
   Target,
   Lightbulb,
@@ -28,6 +26,8 @@ import {
   Smartphone,
   BrainCircuit,
   Rocket,
+  Mic,
+  Video,
 } from "lucide-react"
 
 export default function AboutPage() {
@@ -49,21 +49,21 @@ export default function AboutPage() {
     },
     {
       icon: Globe,
-      title: "Global Reach",
-      description: "Supporting both in-person and online participation to reach a diverse global audience."
+      title: "100% Online",
+      description: "A fully digital-first approach allowing global participation and building without borders."
     }
   ]
 
   const hackathonStructure = [
     {
       icon: Clock,
-      title: "Two-Phase Format",
-      description: "Round 1: Online submissions (May 22-31). Round 2: Demo Day in Bengaluru (June 5-7)"
+      title: "72-Hour Intensive",
+      description: "May 29-31, 2026: 48 hours for core coding and 24 hours for learning sessions."
     },
     {
-      icon: Building2,
-      title: "Hybrid Format",
-      description: "Bengaluru venue + online track for maximum accessibility and participation"
+      icon: Globe,
+      title: "Digital Venue",
+      description: "Participate from anywhere in the world via our live-streamed platform and Discord."
     },
     {
       icon: Users,
@@ -79,7 +79,7 @@ export default function AboutPage() {
 
   const whatToExpect = [
     {
-      icon: Presentation,
+      icon: Video,
       title: "Workshops & Talks",
       description: "Expert-led sessions on AI, Mobile development, Web performance, and Security"
     },
@@ -94,9 +94,9 @@ export default function AboutPage() {
       description: "Present your solutions to judges and showcase your innovation"
     },
     {
-      icon: Pizza,
-      title: "Community Events",
-      description: "Food, coffee, swag, and celebration of the global builder community"
+      icon: Zap,
+      title: "Real-time Support",
+      description: "Get instant technical help and project guidance from our mentors on Discord."
     }
   ]
 
@@ -124,7 +124,7 @@ export default function AboutPage() {
       <Navbar />
       <PageHeader
         title="About CODORRA"
-        description="A two-phase Mobile, AI, Web, and Cybersecurity hackathon bringing together innovators and builders to create solutions that matter."
+        description="A high-intensity 72-hour online hackathon focusing on Mobile, AI, Web, and Cybersecurity. 48 hours to build, 24 hours to learn."
       />
 
       <PageSection>
@@ -180,7 +180,7 @@ export default function AboutPage() {
         <SectionHeader
           eyebrow="Event Structure"
           title="Hackathon Format"
-          desc="Designed for maximum impact and accessibility across different participation modes."
+          desc="A comprehensive 72-hour digital journey designed for global impact and accessibility."
           className="cursor-target"
         />
         <TwoColumnLayout
@@ -234,39 +234,35 @@ export default function AboutPage() {
       <PageSection>
         <SectionHeader
           eyebrow="Participation"
-          title="In-Person vs Online"
-          desc="Choose your preferred participation mode while maintaining the same high-quality experience."
+          title="Build • Learn • Lead"
+          desc="Experience a unified digital journey designed for maximum impact and growth."
           className="cursor-target"
         />
         <TwoColumnLayout
           left={
             <Card className="glass border-white/10 h-full flex flex-col group">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Building2 className="size-5 text-gradient font-bold" />
-                  Round 2: In-Person (Bengaluru)
+                <CardTitle className="flex items-center gap-2 italic">
+                  <Shield className="size-5 text-brand-gradient" />
+                  48-Hour Coding Marathon
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-3 flex-grow">
                 <div className="flex items-start gap-2 text-xs text-muted-foreground">
                   <div className="mt-1.5 size-1.5 rounded-full bg-brand-gradient flex-shrink-0" />
-                  <span className="group-hover:text-foreground transition-colors">24/7 venue access with security</span>
+                  <span className="group-hover:text-foreground transition-colors">Non-stop building window</span>
                 </div>
                 <div className="flex items-start gap-2 text-xs text-muted-foreground">
                   <div className="mt-1.5 size-1.5 rounded-full bg-brand-gradient flex-shrink-0" />
-                  <span className="group-hover:text-foreground transition-colors">Food and coffee provided</span>
+                  <span className="group-hover:text-foreground transition-colors">Technical mentor support on Discord</span>
                 </div>
                 <div className="flex items-start gap-2 text-xs text-muted-foreground">
                   <div className="mt-1.5 size-1.5 rounded-full bg-brand-gradient flex-shrink-0" />
-                  <span className="group-hover:text-foreground transition-colors">Direct networking and mentorship</span>
+                  <span className="group-hover:text-foreground transition-colors">Multiple tech tracks for specialized focus</span>
                 </div>
                 <div className="flex items-start gap-2 text-xs text-muted-foreground">
                   <div className="mt-1.5 size-1.5 rounded-full bg-brand-gradient flex-shrink-0" />
-                  <span className="group-hover:text-foreground transition-colors">High-speed internet and backup 4G</span>
-                </div>
-                <div className="flex items-start gap-2 text-xs text-muted-foreground">
-                  <div className="mt-1.5 size-1.5 rounded-full bg-brand-gradient flex-shrink-0" />
-                  <span className="group-hover:text-foreground transition-colors">Physical swag and certificates</span>
+                  <span className="group-hover:text-foreground transition-colors">Devpost + GitHub submission workflow</span>
                 </div>
               </CardContent>
             </Card>
@@ -274,31 +270,27 @@ export default function AboutPage() {
           right={
             <Card className="glass border-white/10 h-full flex flex-col group">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Globe className="size-5 text-gradient font-bold" />
-                  Round 1: Online (Free)
+                <CardTitle className="flex items-center gap-2 italic">
+                  <Mic className="size-5 text-brand-gradient" />
+                  24-Hour Learning & Growth
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-3 flex-grow">
                 <div className="flex items-start gap-2 text-xs text-muted-foreground">
                   <div className="bg-brand-gradient size-4 rounded-full mt-0.5 shrink-0 border border-white/10" />
-                  <span className="group-hover:text-foreground transition-colors">Round 1 is completely free for all participants</span>
+                  <span className="group-hover:text-foreground transition-colors">Expert-led keynotes and tech talks</span>
                 </div>
                 <div className="flex items-start gap-2 text-xs text-muted-foreground">
                   <div className="mt-1.5 size-1.5 rounded-full bg-brand-gradient flex-shrink-0" />
-                  <span className="group-hover:text-foreground transition-colors">Discord community and support</span>
+                  <span className="group-hover:text-foreground transition-colors">Hands-on workshops with industry partners</span>
                 </div>
                 <div className="flex items-start gap-2 text-xs text-muted-foreground">
                   <div className="mt-1.5 size-1.5 rounded-full bg-brand-gradient flex-shrink-0" />
-                  <span className="group-hover:text-foreground transition-colors">Virtual workshops and sessions</span>
+                  <span className="group-hover:text-foreground transition-colors">Virtual networking and community meetups</span>
                 </div>
                 <div className="flex items-start gap-2 text-xs text-muted-foreground">
                   <div className="mt-1.5 size-1.5 rounded-full bg-brand-gradient flex-shrink-0" />
-                  <span className="group-hover:text-foreground transition-colors">Digital certificates and swag shipping</span>
-                </div>
-                <div className="flex items-start gap-2 text-xs text-muted-foreground">
-                  <div className="mt-1.5 size-1.5 rounded-full bg-brand-gradient flex-shrink-0" />
-                  <span className="group-hover:text-foreground transition-colors">Virtual demo option available for finalists in Round 2</span>
+                  <span className="group-hover:text-foreground transition-colors">Post-event mentorship opportunities</span>
                 </div>
               </CardContent>
             </Card>
@@ -306,7 +298,25 @@ export default function AboutPage() {
         />
       </PageSection>
 
-      <div className="absolute right-6 top-10">
+      <PageSection>
+        <div className="flex flex-col items-center gap-8 text-center max-w-2xl mx-auto">
+          <SectionHeader
+            eyebrow="Secure your spot"
+            title="Join the Global Movement"
+            desc="Registration is free and open to students and professionals worldwide. All forms on this site are for demonstration; please use the official links below."
+          />
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <Button asChild size="lg" className="rounded-full bg-brand-gradient border-none px-8 h-14 text-white font-black text-lg shadow-2xl shadow-primary/20 hover:scale-105 transition-all">
+              <a href="https://codorra1.devpost.com/" target="_blank" rel="noopener">Register on Devpost</a>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="rounded-full border-white/10 bg-white/5 hover:bg-white/10 px-8 h-14 font-bold text-lg hover:scale-105 transition-all">
+              <a href="https://discord.gg/9QpwAmX4Ke" target="_blank" rel="noopener">Join Discord</a>
+            </Button>
+          </div>
+        </div>
+      </PageSection>
+
+      <div className="absolute right-6 top-10 pointer-events-none">
         <OrnamentRings className="h-64 w-64" />
       </div>
       <Footer />
