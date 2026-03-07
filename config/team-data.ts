@@ -158,6 +158,8 @@ export const judges: Person[] = [
         image: "/avatars/Prasenjit.png",
         linkedin: "https://www.linkedin.com/in/prasenjit-sinha-b6395759/",
         category: "Judges",
+        email: "prasenjit.s@gusto.com",
+        contact: "+1 650-000-0000",
         experience: "17+ years in iOS/macOS engineering",
         bio: "Lead software iOS/MacOS engineer and researcher specializing in mobile platform architecture, application performance engineering, and concurrency-safe software design. 17+ years of experience working at Apple, BlueJeans by Verizon, and Gusto."
     },
@@ -168,7 +170,31 @@ export const judges: Person[] = [
         company: "BrowserOS",
         image: "/avatars/nikhil.png",
         category: "Judges",
+        email: "nikhil@browseros.com",
+        contact: "+1 415-000-0000",
         bio: "Nikhil Sonti is the Co-Founder & CEO of BrowserOS and Co-Founder of Felafax (YC S24). A seasoned systems engineer, he developed core infrastructure for Instagram Reels and Facebook Feed Ranking at Meta, and led engineering initiatives at Microsoft. He specializes in distributed systems, ML infrastructure, and AI-native automation, with a strong focus on open-source impact and hardware efficiency."
+    },
+    {
+        name: "Manisha Konda",
+        slug: "manisha-konda",
+        role: "Senior Analyst",
+        company: "Walgreens",
+        image: "/avatars/manisha.jpg",
+        category: "Judges",
+        email: "manisha.k@walgreens.com",
+        contact: "+1 312-900-3904",
+        bio: "Manisha Konda is a Senior Analyst at Walgreens with over five years of experience in data analytics, business intelligence, and data-driven decision-making. She specializes in SQL, Python, Power BI, and machine learning, with a strong focus on building scalable analytics solutions and automated data pipelines. Throughout her career, she has worked across retail, banking, and enterprise environments to develop predictive models, optimize reporting systems, and translate complex data into actionable insights. Manisha is passionate about leveraging data and technology to solve real-world problems and enjoys mentoring and evaluating innovative technology solutions developed by emerging builders and students."
+    },
+    {
+        name: "Kamalakar Reddy Singi",
+        slug: "kamalakar-reddy-singi",
+        role: "Senior Software Engineer",
+        company: "Abbott",
+        image: "/avatars/avatar1.svg",
+        category: "Judges",
+        email: "kamalakar.rs@abbott.com",
+        contact: "+1 000-000-0000",
+        bio: "Kamalakar Reddy Singi is a Senior Software Engineer at Abbott with an extensive background in software systems, architecture design, and applied computing. He specializes in evaluating complex technical projects across domains including software architecture, system integration, and performance optimization. Kamalakar is an active contributor to the tech community, having served as a judge in multiple STEM and technology competitions, helping mentor and evaluate the next generation of builders."
     }
 ]
 

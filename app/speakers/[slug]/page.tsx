@@ -31,6 +31,27 @@ export default function PersonProfilePage() {
 
     const person = allPeople.find((p) => p.slug === slug)
 
+    const isJudge = person?.category === "Judges"
+
+    const maskEmail = (email: string) => {
+        const [user, domain] = email.split('@')
+        if (user.length <= 2) return `**@${domain}`
+        return `${user.slice(0, 1)}******@${domain}`
+    }
+
+    const maskPhone = (phone: string) => {
+        // Hiding 6 digits - usually the middle or end
+        const cleanPhone = phone.replace(/\s/g, '')
+        if (cleanPhone.length > 8) {
+            return `${phone.slice(0, 4)}******${phone.slice(-2)}`
+        }
+        return "********"
+    }
+
+    const getRevealUrl = (type: string) => {
+        return `/reveal?name=${encodeURIComponent(person?.name || "")}&slug=${person?.slug}&type=${type}`
+    }
+
     if (!person) {
         return (
             <main>
@@ -115,7 +136,7 @@ export default function PersonProfilePage() {
                             </Reveal>
 
                             <Reveal delay={300}>
-                                <div className="p-6 rounded-2xl border border-white/5 bg-white/5 backdrop-blur-sm space-y-4">
+                                <div className="group p-6 rounded-2xl border border-white/5 bg-white/5 backdrop-blur-sm space-y-4 transition-all duration-300 hover:border-white/10">
                                     <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Quick Info</h4>
                                     <div className="space-y-3">
                                         {person.hackathonRole && (
@@ -154,7 +175,16 @@ export default function PersonProfilePage() {
                                                 </div>
                                                 <div>
                                                     <p className="font-medium">Email</p>
-                                                    <p className="text-muted-foreground text-[10px] sm:text-xs break-all">{person.email}</p>
+                                                    <div className="flex flex-col">
+                                                        <p className={`text-muted-foreground text-[10px] sm:text-xs break-all ${isJudge ? "blur-[1.5px] select-none group-hover:blur-0 transition-all duration-300" : ""}`}>
+                                                            {isJudge ? maskEmail(person.email) : person.email}
+                                                        </p>
+                                                        {isJudge && (
+                                                            <Link href={getRevealUrl("Email")} className="text-[10px] text-primary hover:underline mt-1 font-medium">
+                                                                Reveal Email
+                                                            </Link>
+                                                        )}
+                                                    </div>
                                                 </div>
                                             </div>
                                         )}
@@ -165,7 +195,16 @@ export default function PersonProfilePage() {
                                                 </div>
                                                 <div>
                                                     <p className="font-medium">Contact</p>
-                                                    <p className="text-muted-foreground text-xs">{person.contact}</p>
+                                                    <div className="flex flex-col">
+                                                        <p className={`text-muted-foreground text-xs ${isJudge ? "blur-[1.5px] select-none group-hover:blur-0 transition-all duration-300" : ""}`}>
+                                                            {isJudge ? maskPhone(person.contact) : person.contact}
+                                                        </p>
+                                                        {isJudge && (
+                                                            <Link href={getRevealUrl("Phone")} className="text-[10px] text-primary hover:underline mt-1 font-medium">
+                                                                Reveal Contact
+                                                            </Link>
+                                                        )}
+                                                    </div>
                                                 </div>
                                             </div>
                                         )}

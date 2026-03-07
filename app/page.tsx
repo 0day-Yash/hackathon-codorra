@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import ScheduleGrid from "@/components/schedule/schedule-grid"
+import { LogoMarquee } from "@/components/logo-marquee"
 import {
   MapPin,
   Clock,
@@ -353,6 +354,7 @@ export default function Page() {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
+      <LogoMarquee />
       <About />
       <Tracks />
       <Timeline />
