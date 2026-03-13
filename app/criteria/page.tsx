@@ -29,21 +29,19 @@ export default function CriteriaPage() {
   const criteria = [
     {
       icon: Lightbulb,
-      title: "Innovation",
-      percentage: 30,
+      title: "Problem & Idea Quality",
+      percentage: 20,
       color: "bg-primary/10 text-primary ring-primary/25",
-      description: "Idea quality and relevance to cybersecurity challenges",
+      description: "How strong and meaningful the core idea is.",
       details: [
-        "Novel approach to existing problems",
-        "Creative use of emerging technologies",
-        "Unique perspective on security challenges",
-        "Potential to influence industry practices"
+        "Is the problem real and relevant?",
+        "Is the solution novel or significantly better than existing solutions?",
+        "Does the team clearly explain why the problem matters?"
       ],
       examples: [
-        "Using AI/ML in unexpected ways for threat detection",
-        "Novel cryptographic approaches",
-        "Creative social engineering prevention methods",
-        "Innovative user experience for security tools"
+        "1–3: Generic idea, unclear problem",
+        "4–7: Reasonable idea but common",
+        "8–10: Unique or deeply relevant concept"
       ]
     },
     {
@@ -51,56 +49,87 @@ export default function CriteriaPage() {
       title: "Technical Execution",
       percentage: 30,
       color: "bg-accent/10 text-accent ring-accent/25",
-      description: "Technical execution and code quality",
+      description: "Working prototype, code quality, and technical difficulty.",
       details: [
+        "Working prototype",
         "Code quality and architecture",
-        "Technical feasibility and scalability",
-        "Security best practices implementation",
-        "Performance and efficiency"
+        "Security practices",
+        "Technical difficulty",
+        "Effective use of frameworks / APIs"
       ],
       examples: [
-        "Clean, well-documented code",
-        "Proper error handling and edge cases",
-        "Efficient algorithms and data structures",
-        "Secure coding practices"
+        "1–3: Barely functional or mostly theoretical",
+        "4–7: Working prototype with moderate complexity",
+        "8–10: Robust, technically impressive implementation"
+      ]
+    },
+    {
+      icon: Target,
+      title: "Real-World Impact",
+      percentage: 20,
+      color: "bg-primary/10 text-primary ring-primary/25",
+      description: "Deployable solutions and practical tools.",
+      details: [
+        "Can this realistically be used in production?",
+        "Does it solve a real-world security / AI / web problem?",
+        "Is it scalable?"
+      ],
+      examples: [
+        "1–3: Mostly conceptual",
+        "4–7: Could be useful with improvements",
+        "8–10: Immediately valuable or highly scalable"
       ]
     },
     {
       icon: Palette,
-      title: "Design/UX",
-      percentage: 20,
-      color: "bg-primary/10 text-primary ring-primary/25",
-      description: "Presentation clarity",
+      title: "Innovation & Creativity",
+      percentage: 15,
+      color: "bg-accent/10 text-accent ring-accent/25",
+      description: "How original the solution is.",
       details: [
-        "User interface design quality",
-        "User experience and usability",
-        "Accessibility considerations",
-        "Visual design and branding"
+        "New approach to a known problem",
+        "Clever technical design",
+        "Creative use of technology"
       ],
       examples: [
-        "Intuitive user interface",
-        "Clear user flows and interactions",
-        "Responsive design across devices",
-        "Accessible design principles"
+        "1–3: Common or obvious",
+        "4–7: Some creativity",
+        "8–10: Truly innovative"
       ]
     },
     {
-      icon: TrendingUp,
-      title: "Business Value",
-      percentage: 20,
-      color: "bg-accent/10 text-accent ring-accent/25",
-      description: "Real-world applicability and impact",
+      icon: Users,
+      title: "Demo & Presentation",
+      percentage: 10,
+      color: "bg-primary/10 text-primary ring-primary/25",
+      description: "How well the team explains their project.",
       details: [
-        "Market need and problem validation",
-        "Commercial viability and scalability",
-        "Real-world impact potential",
-        "Business model and monetization"
+        "Clarity of explanation",
+        "Demo quality",
+        "Ability to answer technical questions"
       ],
       examples: [
-        "Clear target market identification",
-        "Validated problem-solution fit",
-        "Scalable business model",
-        "Measurable impact metrics"
+        "1–3: Confusing demo",
+        "4–7: Clear but basic",
+        "8–10: Excellent explanation and live demo"
+      ]
+    },
+    {
+      icon: FileText,
+      title: "Documentation & Open Source",
+      percentage: 5,
+      color: "bg-accent/10 text-accent ring-accent/25",
+      description: "GitHub + Devpost submission quality.",
+      details: [
+        "Clear README",
+        "Setup instructions",
+        "Code documentation",
+        "GitHub structure"
+      ],
+      examples: [
+        "1–3: Minimal documentation",
+        "4–7: Acceptable documentation",
+        "8–10: Professional open-source quality"
       ]
     }
   ]
@@ -134,39 +163,39 @@ export default function CriteriaPage() {
 
   const whatJudgesLookFor = [
     {
-      category: "Technical Excellence",
+      category: "Technical Depth",
       items: [
-        "Clean, maintainable code",
-        "Proper security practices",
-        "Scalable architecture",
-        "Performance optimization"
+        "Working and functional prototype",
+        "Clean, well-architected codebase",
+        "Implementation of security best practices",
+        "Effective use of modern frameworks and APIs"
       ]
     },
     {
-      category: "Innovation Factor",
+      category: "Problem Relevance",
       items: [
-        "Novel problem-solving approach",
-        "Creative use of technology",
-        "Unique market positioning",
-        "Potential for industry impact"
+        "Addressing real-world security challenges",
+        "Clear explanation of why the problem matters",
+        "Novelty of the proposed solution",
+        "Significantly better than existing alternatives"
       ]
     },
     {
-      category: "User Experience",
+      category: "Practicality & Impact",
       items: [
-        "Intuitive interface design",
-        "Clear user workflows",
-        "Accessibility compliance",
-        "Mobile responsiveness"
+        "Realistic production implementation",
+        "Scalable architecture and design",
+        "Immediate value to the security community",
+        "Practicality over mere gimmicks"
       ]
     },
     {
-      category: "Business Potential",
+      category: "Presentation Quality",
       items: [
-        "Clear value proposition",
-        "Market validation",
-        "Scalable business model",
-        "Competitive advantage"
+        "Clarity and confidence in explanation",
+        "High-quality, stable live demo",
+        "Ability to handle technical deep-dives",
+        "Professional documentation and README"
       ]
     }
   ]
@@ -195,7 +224,7 @@ export default function CriteriaPage() {
   ]
 
   return (
-    <main>
+    <main className="min-h-screen">
       <Navbar />
       <PageHeader 
         title="Judging Criteria"
@@ -425,7 +454,25 @@ export default function CriteriaPage() {
         />
       </PageSection>
 
-      <div className="absolute right-6 top-10">
+      <PageSection>
+        <div className="flex flex-col items-center gap-8 text-center max-w-2xl mx-auto">
+          <SectionHeader
+            eyebrow="Secure your spot"
+            title="Join the Global Movement"
+            desc="Registration is free and open to builders worldwide. Join 1000+ others in the ultimate security marathon."
+          />
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <Button asChild size="lg" className="rounded-full bg-brand-gradient border-none px-8 h-14 text-white font-black text-lg shadow-2xl shadow-primary/20 hover:scale-105 transition-all">
+              <a href="https://codorra1.devpost.com/" target="_blank" rel="noopener">Register on Devpost</a>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="rounded-full border-white/10 bg-white/5 hover:bg-white/10 px-8 h-14 font-bold text-lg hover:scale-105 transition-all">
+              <a href="https://discord.gg/9QpwAmX4Ke" target="_blank" rel="noopener">Join Discord</a>
+            </Button>
+          </div>
+        </div>
+      </PageSection>
+
+      <div className="absolute right-6 top-10 pointer-events-none">
         <OrnamentRings className="h-64 w-64" />
       </div>
       <Footer />

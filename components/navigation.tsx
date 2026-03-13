@@ -19,6 +19,7 @@ export function Navbar() {
             <a href="/speakers" className="text-sm font-medium text-muted-foreground hover:text-white transition-colors">Speakers</a>
             <a href="/sponsors" className="text-sm font-medium text-muted-foreground hover:text-white transition-colors">Sponsors</a>
             <a href="/schedule" className="text-sm font-medium text-muted-foreground hover:text-white transition-colors">Schedule</a>
+            <a href="/criteria" className="text-sm font-medium text-muted-foreground hover:text-white transition-colors">Criteria</a>
             <a href="/faq" className="text-sm font-medium text-muted-foreground hover:text-white transition-colors">FAQ</a>
           </nav>
 
@@ -61,6 +62,7 @@ export function Footer() {
           <div className="flex items-center gap-8">
             <a href="/faq" className="text-xs font-bold uppercase tracking-widest text-muted-foreground hover:text-white transition-colors">FAQ</a>
             <a href="/sponsors" className="text-xs font-bold uppercase tracking-widest text-muted-foreground hover:text-white transition-colors">Partners</a>
+            <a href="/criteria" className="text-xs font-bold uppercase tracking-widest text-muted-foreground hover:text-white transition-colors">Criteria</a>
             <a href="/contact" className="text-xs font-bold uppercase tracking-widest text-muted-foreground hover:text-white transition-colors">Contact</a>
           </div>
         </div>
