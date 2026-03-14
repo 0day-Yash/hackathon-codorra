@@ -75,12 +75,6 @@ export default function ContactPage() {
       role: "Lead Organizer",
       email: "yash@codorra.dev",
       bio: "Leading the global strategy and overall direction of CODORRA 2026."
-    },
-    {
-      name: "Jonathan Jaladi",
-      role: "Operations Lead",
-      email: "jonathan@codorra.dev",
-      bio: "Managing core operations and ensuring a seamless experience for all participants."
     }
   ]
 

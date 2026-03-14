@@ -30,18 +30,7 @@ export const organizingCommittee: Person[] = [
         department: "Core Leadership",
         bio: "Founder and CEO of PurpleRain TechSafe, leading innovation in the cybersecurity space. At CODORRA, Yash serves as the Co-founder and Lead Speaker, overseeing the vision and execution of the hackathon."
     },
-    {
-        name: "Jonathan Jaladi",
-        slug: "jonathan-jaladi",
-        role: "Head of Marketing",
-        company: "PurpleRain TechSafe",
-        hackathonRole: "Co-founder",
-        image: "/avatars/jonathan.png",
-        linkedin: "https://www.linkedin.com/in/jonathan-jaladi-173165216/",
-        category: "Organizing Committee",
-        department: "Core Leadership",
-        bio: "Marketing strategist with a focus on building impactful tech brands. Jonathan is a Co-founder of CODORRA, responsible for the marketing campaigns and strategic outreach."
-    },
+
     {
         name: "Jenin Sutradhar",
         slug: "jenin-sutradhar",
@@ -67,18 +56,7 @@ export const organizingCommittee: Person[] = [
         department: "Marketing & Social Media",
         bio: "I'm Aditya Shaurya, a 15-year-old currently working with PurpleRain as a Media & Creative Executive, sharing my ideas and thoughts. While still figuring things out, I am following my passions for chess and amateur astrophotography."
     },
-    {
-        name: "Sharvesh",
-        slug: "sharvesh",
-        role: "Student",
-        company: "PES University",
-        hackathonRole: "Participant Outreach & Ground Coordinator",
-        image: "/avatars/Sharvesh.jpeg",
-        contact: "+91 80505 31082",
-        category: "Organizing Committee",
-        department: "Core Leadership",
-        bio: "Sharvesh is a student at PES University who manages all participant outreach and serves as the ground manager for round 2 of the hackathon, ensuring a seamless experience for all attendees."
-    },
+
     {
         name: "Pratham Shetty",
         slug: "pratham-shetty",

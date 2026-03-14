@@ -64,7 +64,6 @@ Projects are evaluated based on:
 ## 🧑‍💻 The Team
 
 - **Yash Kulkarni**: Lead Organizer
-- **Jonathan Jaladi**: Operations Lead
 
 ---
 
