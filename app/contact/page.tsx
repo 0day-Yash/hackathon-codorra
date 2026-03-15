@@ -75,6 +75,12 @@ export default function ContactPage() {
       role: "Lead Organizer",
       email: "yash@codorra.dev",
       bio: "Leading the global strategy and overall direction of CODORRA 2026."
+    },
+    {
+      name: "Tanishka",
+      role: "Organizer",
+      email: "tanishka@codorra.dev",
+      bio: "Being the CMO at FluidCrafts, Tanishka leads strategic brand development and creative growth, bridging the gap between technical solutions and market impact"
     }
   ]
 

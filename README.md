@@ -64,6 +64,7 @@ Projects are evaluated based on:
 ## 🧑‍💻 The Team
 
 - **Yash Kulkarni**: Lead Organizer
+- **Tanishka**: Organizer
 
 ---
 

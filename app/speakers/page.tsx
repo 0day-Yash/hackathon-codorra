@@ -196,11 +196,11 @@ export default function SpeakersPage() {
 
 function PersonCard({ person, index }: { person: Person; index: number }) {
   return (
-    <Reveal delay={index * 30}>
-      <Link href={`/speakers/${person.slug}`}>
-        <Card className="group overflow-hidden border border-border/50 bg-gradient-to-br from-card/90 via-card/80 to-card/70 backdrop-blur-md hover:border-accent/40 hover:shadow-xl hover:shadow-accent/10 hover:-translate-y-1 transition-all duration-300">
-          <CardContent className="p-0">
-            <div className="relative w-full aspect-square p-6">
+    <Reveal delay={index * 30} className="h-full">
+      <Link href={`/speakers/${person.slug}`} className="h-full block">
+        <Card className="h-full flex flex-col group overflow-hidden border border-border/50 bg-gradient-to-br from-card/90 via-card/80 to-card/70 backdrop-blur-md hover:border-accent/40 hover:shadow-xl hover:shadow-accent/10 hover:-translate-y-1 transition-all duration-300">
+          <CardContent className="p-0 flex flex-col h-full flex-grow">
+            <div className="relative w-full aspect-square p-6 flex-shrink-0">
               <Avatar className="w-full h-full rounded-2xl border border-white/10 shadow-inner overflow-hidden">
                 <AvatarImage
                   src={person.image}
@@ -234,11 +234,11 @@ function PersonCard({ person, index }: { person: Person; index: number }) {
               </div>
             </div>
 
-            <div className="p-6 pt-0 space-y-1">
+            <div className="p-6 pt-0 space-y-1 flex-grow flex flex-col justify-start">
               <h3 className="font-semibold text-lg leading-tight group-hover:text-primary transition-colors">
                 {person.name}
               </h3>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-muted-foreground line-clamp-2">
                 {(person.category === "Organizing Committee" && person.hackathonRole)
                   ? (
                     <span className="text-primary/90 font-medium">{person.hackathonRole}</span>

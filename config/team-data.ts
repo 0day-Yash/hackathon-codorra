@@ -30,7 +30,17 @@ export const organizingCommittee: Person[] = [
         department: "Core Leadership",
         bio: "Founder and CEO of PurpleRain TechSafe, leading innovation in the cybersecurity space. At CODORRA, Yash serves as the Co-founder and Lead Speaker, overseeing the vision and execution of the hackathon."
     },
-
+    {
+        name: "Tanishka",
+        slug: "tanishka",
+        role: "CMO",
+        company: "FluidCrafts",
+        hackathonRole: "Organizer & Speaker",
+        image: "/avatars/tanishka.jpeg",
+        category: "Organizing Committee",
+        department: "Core Leadership",
+        bio: "Being the CMO at FluidCrafts, Tanishka leads strategic brand development and creative growth, bridging the gap between technical solutions and market impact"
+    },
     {
         name: "Jenin Sutradhar",
         slug: "jenin-sutradhar",
