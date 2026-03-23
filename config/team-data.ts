@@ -163,26 +163,15 @@ export const judges: Person[] = [
         bio: "Nikhil Sonti is the Co-Founder & CEO of BrowserOS and Co-Founder of Felafax (YC S24). A seasoned systems engineer, he developed core infrastructure for Instagram Reels and Facebook Feed Ranking at Meta, and led engineering initiatives at Microsoft. He specializes in distributed systems, ML infrastructure, and AI-native automation, with a strong focus on open-source impact and hardware efficiency."
     },
     {
-        name: "Manisha Konda",
-        slug: "manisha-konda",
-        role: "Senior Analyst",
-        company: "Walgreens",
-        image: "/avatars/manisha.jpg",
+        name: "Danil Matrosov",
+        slug: "danil-matrosov",
+        role: "CEO and Founder",
+        company: "Parkout and Octery",
+        image: "/avatars/danil.jpg",
         category: "Judges",
-        email: "manisha.k@walgreens.com",
-        contact: "+1 312-900-3904",
-        bio: "Manisha Konda is a Senior Analyst at Walgreens with over five years of experience in data analytics, business intelligence, and data-driven decision-making. She specializes in SQL, Python, Power BI, and machine learning, with a strong focus on building scalable analytics solutions and automated data pipelines. Throughout her career, she has worked across retail, banking, and enterprise environments to develop predictive models, optimize reporting systems, and translate complex data into actionable insights. Manisha is passionate about leveraging data and technology to solve real-world problems and enjoys mentoring and evaluating innovative technology solutions developed by emerging builders and students."
-    },
-    {
-        name: "Kamalakar Reddy Singi",
-        slug: "kamalakar-reddy-singi",
-        role: "Senior Software Engineer",
-        company: "Abbott",
-        image: "/avatars/avatar1.svg",
-        category: "Judges",
-        email: "kamalakar.rs@abbott.com",
-        contact: "+1 000-000-0000",
-        bio: "Kamalakar Reddy Singi is a Senior Software Engineer at Abbott with an extensive background in software systems, architecture design, and applied computing. He specializes in evaluating complex technical projects across domains including software architecture, system integration, and performance optimization. Kamalakar is an active contributor to the tech community, having served as a judge in multiple STEM and technology competitions, helping mentor and evaluate the next generation of builders."
+        email: "matrosovdani@gmail.com",
+        contact: "79181301909",
+        bio: "Danil Matrosov is a software engineer and startup founder specializing in AI-driven systems and high-load backend architecture. He is the Founder & CEO of ParkOut, an AI platform that predicts parking availability using real-time data and machine learning, and the Founder of Octery, an AI intake automation system for service businesses. Previously, he worked as a backend engineer on large-scale fintech systems, designing distributed microservices and optimizing high-throughput infrastructure. His expertise includes AI systems, data-driven platforms, and scalable backend architecture, with a focus on building production-ready products."
     }
 ]
 
