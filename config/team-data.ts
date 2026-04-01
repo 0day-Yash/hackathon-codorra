@@ -132,6 +132,17 @@ export const organizingCommittee: Person[] = [
         category: "Organizing Committee",
         department: "Marketing & Social Media",
         bio: "Aastha leads the social media initiatives at CODORRA, managing content strategy, digital engagement, and online brand presence. She focuses on creating impactful campaigns and building strong audience connections across platforms."
+    },
+    {
+        name: "Srinidhi",
+        slug: "srinidhi",
+        role: "Event Coordinator",
+        company: "Manipal Institute of Technology",
+        hackathonRole: "Event Coordinator",
+        image: "/avatars/srinidhi.jpeg",
+        category: "Organizing Committee",
+        department: "Core Leadership",
+        bio: "Undergraduate at Manipal Institute of Technology studying Financial Technology. Interested in how data, technology, and finance combine to drive real-world decisions, and enjoys solving analytical and practical problems."
     }
 ]
 
