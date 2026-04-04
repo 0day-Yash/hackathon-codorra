@@ -12,7 +12,7 @@
 
 - **Dates**: October 26-27, 2026
 - **Format**: Two-Phase Hybrid Hackathon
-  - **Phase 1 (Online)**: Open to all teams globally. Submit via Devpost.
+  - **Phase 1 (Online)**: Open to all teams globally. Submit via Unstop.
   - **Phase 2 (Demo Day)**: Finalists invited to Bengaluru for in-person pitches and demos. Hybrid options available for international teams.
 - **Location**: Bengaluru, India + Online
 - **Team Size**: 2–4 members

@@ -50,7 +50,7 @@
 
 ### **4\. Tech & Submissions**
 
-* **Platform:** Devpost \+ GitHub links.
+* **Platform:** Unstop \+ GitHub links.
 
 * **Finale:** Demo Day required (live or simulated/pitch deck).
 

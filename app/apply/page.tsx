@@ -14,7 +14,7 @@ export default function ApplyPage() {
       <Navbar />
       <PageHeader
         title="Apply to CODORRA"
-        description="Register your team on Devpost to participate in the hackathon."
+        description="Register your team on Unstop to participate in the hackathon."
       />
 
       <PageSection>
@@ -26,12 +26,12 @@ export default function ApplyPage() {
                   <div className="space-y-2">
                     <h2 className="text-2xl font-bold">Ready to register?</h2>
                     <p className="text-muted-foreground">
-                      Join us on Devpost and start building the next big security solution.
+                      Join us on Unstop and start building the next big security solution.
                     </p>
                   </div>
                   <Button asChild size="lg" className="rounded-full bg-brand-gradient hover:opacity-90 border-none h-11 px-8 text-white font-bold">
                     <a href="https://unstop.com/hackathons/hackathon-2026-codorra-1669522" target="_blank" rel="noopener" className="flex items-center gap-2">
-                      Register on Devpost
+                      Register on Unstop
                       <ExternalLink className="size-4" />
                     </a>
                   </Button>

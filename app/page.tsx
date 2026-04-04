@@ -70,7 +70,7 @@ function Hero() {
         <div className="animate-in [animation-delay:600ms] flex flex-wrap items-center justify-center gap-4">
           <Button size="lg" className="rounded-full h-12 px-10 bg-white text-black hover:bg-zinc-200 transition-all font-semibold shadow-xl shadow-white/5">
             <a href="https://unstop.com/hackathons/hackathon-2026-codorra-1669522" target="_blank" rel="noopener" className="inline-flex items-center">
-              Register on Devpost <ArrowRight className="ml-2 size-4" />
+              Register on Unstop <ArrowRight className="ml-2 size-4" />
             </a>
           </Button>
           <Button size="lg" variant="outline" className="rounded-full h-12 px-10 border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-md transition-all font-semibold">
@@ -89,7 +89,7 @@ function About() {
     { icon: Globe, k: "Location", v: "100% Online • Global" },
     { icon: Zap, k: "Digital Hub", v: "24/7 Discord Support" },
     { icon: Users, k: "Team", v: "Teams of 2–4 Builders" },
-    { icon: GitBranch, k: "Submissions", v: "Devpost + GitHub" },
+    { icon: GitBranch, k: "Submissions", v: "Unstop + GitHub" },
     { icon: MessageSquare, k: "Community", v: "Global Networking" },
     { icon: ShieldCheck, k: "Tracks", v: "AI, Web & Security" },
   ]
@@ -290,7 +290,7 @@ function FAQ() {
     { q: "Who can participate?", a: "Open to students, professionals, and independent builders. Team size is 2–4." },
     { q: "What's the theme?", a: "Broad focus on Mobile, AI, Web, and Cybersecurity; open innovation is highly encouraged." },
     { q: "Where will it happen?", a: "The hackathon is 100% online. You can participate from anywhere in the world." },
-    { q: "How are submissions handled?", a: "Submit your project through Devpost with a GitHub link and a video demo." },
+    { q: "How are submissions handled?", a: "Submit your project through Unstop with a GitHub link and a video demo." },
     { q: "Judging criteria?", a: "Idea quality, technical execution, presentation, and impact." },
     { q: "Fees?", a: "The hackathon is completely free for everyone. No hidden costs." },
   ]
@@ -336,7 +336,7 @@ function RegisterCTA() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <Button size="lg" className="rounded-full h-12 px-10 bg-white text-black hover:bg-zinc-200 transition-all font-semibold shadow-xl shadow-white/10 w-full sm:w-auto">
-                <a href="https://unstop.com/hackathons/hackathon-2026-codorra-1669522" target="_blank" rel="noopener">Register on Devpost</a>
+                <a href="https://unstop.com/hackathons/hackathon-2026-codorra-1669522" target="_blank" rel="noopener">Register on Unstop</a>
               </Button>
               <Button size="lg" variant="outline" className="rounded-full h-12 px-10 border-white/10 bg-white/5 hover:bg-white/10 transition-all font-semibold w-full sm:w-auto">
                 <a href="https://discord.gg/9QpwAmX4Ke" target="_blank" rel="noopener">Join community</a>

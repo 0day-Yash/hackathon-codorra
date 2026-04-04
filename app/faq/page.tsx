@@ -38,7 +38,7 @@ export default function FAQPage() {
         },
         {
           q: "How do I register for the hackathon?",
-          a: "You can register through our Devpost page or by filling out the application form on our website."
+          a: "You can register through our Unstop page or by filling out the application form on our website."
         },
         {
           q: "What is the registration fee?",

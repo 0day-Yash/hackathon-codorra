@@ -14,7 +14,7 @@ Fully online
 
 Free participation for everyone
 
-Submissions via Devpost + GitHub only
+Submissions via Unstop + GitHub only
 
 🔹 Round 2 — Offline Demo Day (Finalists Only)
 
@@ -38,7 +38,7 @@ Teams work remotely during the submission window and submit their projects onlin
 
 Submission Platform:
 
-Devpost (mandatory)
+Unstop (mandatory)
 
 GitHub repository (mandatory)
 
@@ -108,7 +108,7 @@ Slides alone will not save you.
 
 All teams must submit:
 
-1️⃣ Devpost Submission
+1️⃣ Unstop Submission
 
 Project title & short description (2–3 sentences)
 
@@ -120,7 +120,7 @@ Optional: live demo or video
 
 Team member names & roles
 
-Devpost: https://unstop.com/hackathons/hackathon-2026-codorra-1669522
+Unstop: https://unstop.com/hackathons/hackathon-2026-codorra-1669522
 
 2️⃣ GitHub Repository
 
@@ -177,7 +177,7 @@ Discord: https://discord.gg/9QpwAmX4Ke
 
 Email: codorra@yahoo.com
 
-Devpost: https://unstop.com/hackathons/hackathon-2026-codorra-1669522
+Unstop: https://unstop.com/hackathons/hackathon-2026-codorra-1669522
 
 🤝 Sponsorship
 
@@ -192,7 +192,7 @@ Codorra requires a minimal, square logo
 
 Website must be fully responsive (current mobile view is cooked and overflow exists)
 
-No separate “apply as participant” flow — Devpost only
+No separate "apply as participant" flow — Unstop only
 
 🧠 Final Summary
 

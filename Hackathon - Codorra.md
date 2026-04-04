@@ -60,9 +60,9 @@ Depends
 
 ### **4\. Tech & Submissions**
 
-* What platform are we using for submissions (Devpost, in-house portal, GitHub links)?
+* What platform are we using for submissions (Unstop, in-house portal, GitHub links)?
 
-Devpost \+ github
+Unstop \+ github
 
 * Do we want live *demo day pitches* at the end, or just video submissions?
 
