@@ -215,7 +215,7 @@ export const judges: Person[] = [
         slug: "nanda-lal-das",
         role: "Full-stack Engineer",
         company: "Cyber Peak IT Solutions",
-        image: "/avatars/avatar1.svg",
+        image: "/avatars/nanda.jpeg",
         category: "Judges",
         email: "tikludas01@gmail.com",
         contact: "+91 7044992445",
