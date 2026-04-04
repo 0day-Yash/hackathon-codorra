@@ -30,7 +30,7 @@ export function Navbar() {
               size="sm"
               className="hidden md:inline-flex rounded-full border-white/10 bg-white/5 hover:bg-white/10 px-6 h-9 text-xs font-bold"
             >
-              <a href="https://codorra1.devpost.com/">Register</a>
+              <a href="https://unstop.com/hackathons/hackathon-2026-codorra-1669522">Register</a>
             </Button>
             <Button variant="ghost" size="icon" className="md:hidden text-white">
               <span className="sr-only">Menu</span>

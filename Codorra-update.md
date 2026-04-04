@@ -120,7 +120,7 @@ Optional: live demo or video
 
 Team member names & roles
 
-Devpost: https://codorra1.devpost.com/
+Devpost: https://unstop.com/hackathons/hackathon-2026-codorra-1669522
 
 2️⃣ GitHub Repository
 
@@ -177,7 +177,7 @@ Discord: https://discord.gg/9QpwAmX4Ke
 
 Email: codorra@yahoo.com
 
-Devpost: https://codorra1.devpost.com/
+Devpost: https://unstop.com/hackathons/hackathon-2026-codorra-1669522
 
 🤝 Sponsorship
 

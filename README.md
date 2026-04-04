@@ -2,7 +2,7 @@
 
 [![Site](https://img.shields.io/badge/Website-codorra.purplerain.tech-blueviolet)](https://codorra.purplerain.tech)
 [![Alternative](https://img.shields.io/badge/Alternative-codorra.yashk.app-blue)](https://codorra.yashk.app)
-[![Devpost](https://img.shields.io/badge/Devpost-CODORRA-blue)](https://codorra1.devpost.com/)
+[![Unstop](https://img.shields.io/badge/Unstop-CODORRA-blue)](https://unstop.com/hackathons/hackathon-2026-codorra-1669522)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Us-7289da)](https://discord.gg/codorra)
 
 **CODORRA** is a 48-hour cybersecurity-focused hackathon designed for builders, researchers, and innovators. Whether you're hardening infrastructure or building defensive AI, CODORRA is the arena to prove your skills.

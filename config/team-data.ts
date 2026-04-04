@@ -41,6 +41,7 @@ export const organizingCommittee: Person[] = [
         department: "Core Leadership",
         bio: "Being the CMO at FluidCrafts, Tanishka leads strategic brand development and creative growth, bridging the gap between technical solutions and market impact"
     },
+    /*
     {
         name: "Jenin Sutradhar",
         slug: "jenin-sutradhar",
@@ -53,6 +54,7 @@ export const organizingCommittee: Person[] = [
         department: "Core Leadership",
         bio: "Architecting secure and scalable platforms as the CTO of PurpleRain TechSafe. For CODORRA, Jenin manages the technical infrastructure, judging platforms, and developer experience."
     },
+    */
     {
         name: "Aditya Shaurya",
         slug: "aditya-shaurya",
@@ -123,6 +125,17 @@ export const organizingCommittee: Person[] = [
         bio: "Sonali works in the domain of marketing and management, focusing on strategy, branding, and team coordination at CODORRA. She contributes to planning, communication, and execution to ensure impactful initiatives and structured growth."
     },
     {
+        name: "Nikita",
+        slug: "nikita",
+        role: "Marketing Lead",
+        company: "CODORRA",
+        hackathonRole: "Event Marketing & Social Media",
+        image: "/avatars/nikita.jpeg",
+        category: "Organizing Committee",
+        department: "Marketing & Social Media",
+        bio: "Hi, I’m Nikita. I’m into marketing, creativity and brand storytelling and I love mixing business, ideas, and a little bit of chaos to create things people genuinely connect with. She is handling event marketing and social media."
+    },
+    {
         name: "Aastha",
         slug: "aastha",
         role: "Social Media Lead",
@@ -143,6 +156,19 @@ export const organizingCommittee: Person[] = [
         category: "Organizing Committee",
         department: "Core Leadership",
         bio: "Undergraduate at Manipal Institute of Technology studying Financial Technology. Interested in how data, technology, and finance combine to drive real-world decisions, and enjoys solving analytical and practical problems."
+    },
+    {
+        name: "Hazim Hilal",
+        slug: "hazim-hilal",
+        role: "Technical Support Lead",
+        company: "CODORRA",
+        hackathonRole: "Technical Support Lead",
+        image: "/avatars/hamid.jpeg",
+        category: "Organizing Committee",
+        department: "Operations",
+        email: "hazimbhat2004@gmail.com",
+        contact: "+91 70512 57198",
+        bio: "I’m Hazim, a 21-year-old Bachelor of Technology student currently working as a Customer Success Team Lead. I am a passionate CSM, who loves to work and continuously strive to grow both personally and professionally. I have a strong interest in emerging technologies and love exploring electronic gadgets. About the hobbies, I enjoy playing games and watching cricket. I’m most of times curious, and always looking to improve my skills and learn something new."
     }
 ]
 
@@ -183,6 +209,17 @@ export const judges: Person[] = [
         email: "matrosovdani@gmail.com",
         contact: "79181301909",
         bio: "Danil Matrosov is a software engineer and startup founder specializing in AI-driven systems and high-load backend architecture. He is the Founder & CEO of ParkOut, an AI platform that predicts parking availability using real-time data and machine learning, and the Founder of Octery, an AI intake automation system for service businesses. Previously, he worked as a backend engineer on large-scale fintech systems, designing distributed microservices and optimizing high-throughput infrastructure. His expertise includes AI systems, data-driven platforms, and scalable backend architecture, with a focus on building production-ready products."
+    },
+    {
+        name: "Nanda Lal Das",
+        slug: "nanda-lal-das",
+        role: "Full-stack Engineer",
+        company: "Cyber Peak IT Solutions",
+        image: "/avatars/avatar1.svg",
+        category: "Judges",
+        email: "tikludas01@gmail.com",
+        contact: "+91 7044992445",
+        bio: "I build things, ship them, and make them matter. Won MSME Hackathon 4.0 & walked away with ₹5 lakh in funding for a tech-driven solution. I’m a full-stack engineer comfortable across the entire spectrum. I don’t just write code, I take it to production. At Cyber Peak IT Solutions, I built modules of a live Project Management System from scratch, replacing spreadsheet workflows with real software. At Dev Launchers, I maintained shared components in a monorepo used by engineers worldwide. Outside of code, I founded MetaMorph Hackathon built it from zero to 3,000+ registrations across India."
     }
 ]
 

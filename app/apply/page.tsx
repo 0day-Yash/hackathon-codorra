@@ -30,7 +30,7 @@ export default function ApplyPage() {
                     </p>
                   </div>
                   <Button asChild size="lg" className="rounded-full bg-brand-gradient hover:opacity-90 border-none h-11 px-8 text-white font-bold">
-                    <a href="https://codorra1.devpost.com/" target="_blank" rel="noopener" className="flex items-center gap-2">
+                    <a href="https://unstop.com/hackathons/hackathon-2026-codorra-1669522" target="_blank" rel="noopener" className="flex items-center gap-2">
                       Register on Devpost
                       <ExternalLink className="size-4" />
                     </a>

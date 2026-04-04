@@ -307,7 +307,7 @@ export default function AboutPage() {
           />
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Button asChild size="lg" className="rounded-full bg-brand-gradient border-none px-8 h-14 text-white font-black text-lg shadow-2xl shadow-primary/20 hover:scale-105 transition-all">
-              <a href="https://codorra1.devpost.com/" target="_blank" rel="noopener">Register on Devpost</a>
+              <a href="https://unstop.com/hackathons/hackathon-2026-codorra-1669522" target="_blank" rel="noopener">Register on Devpost</a>
             </Button>
             <Button asChild size="lg" variant="outline" className="rounded-full border-white/10 bg-white/5 hover:bg-white/10 px-8 h-14 font-bold text-lg hover:scale-105 transition-all">
               <a href="https://discord.gg/9QpwAmX4Ke" target="_blank" rel="noopener">Join Discord</a>

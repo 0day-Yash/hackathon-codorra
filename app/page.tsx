@@ -69,7 +69,7 @@ function Hero() {
 
         <div className="animate-in [animation-delay:600ms] flex flex-wrap items-center justify-center gap-4">
           <Button size="lg" className="rounded-full h-12 px-10 bg-white text-black hover:bg-zinc-200 transition-all font-semibold shadow-xl shadow-white/5">
-            <a href="https://codorra1.devpost.com/" target="_blank" rel="noopener" className="inline-flex items-center">
+            <a href="https://unstop.com/hackathons/hackathon-2026-codorra-1669522" target="_blank" rel="noopener" className="inline-flex items-center">
               Register on Devpost <ArrowRight className="ml-2 size-4" />
             </a>
           </Button>
@@ -178,7 +178,7 @@ function Tracks() {
         <div className="grid gap-6 md:grid-cols-2">
           {/* Featured: Open Innovation */}
           <Reveal className="md:col-span-2">
-            <a href="https://codorra1.devpost.com/" target="_blank" className="block group">
+            <a href="https://unstop.com/hackathons/hackathon-2026-codorra-1669522" target="_blank" className="block group">
               <Card className="glass relative overflow-hidden p-8 md:p-12 border-white/5 hover:border-white/20 transition-all">
                 <div className="absolute -top-24 -right-24 size-96 bg-white/5 blur-[100px] pointer-events-none" />
                 <div className="flex flex-col md:flex-row gap-8 items-center relative z-10">
@@ -336,7 +336,7 @@ function RegisterCTA() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <Button size="lg" className="rounded-full h-12 px-10 bg-white text-black hover:bg-zinc-200 transition-all font-semibold shadow-xl shadow-white/10 w-full sm:w-auto">
-                <a href="https://codorra1.devpost.com/" target="_blank" rel="noopener">Register on Devpost</a>
+                <a href="https://unstop.com/hackathons/hackathon-2026-codorra-1669522" target="_blank" rel="noopener">Register on Devpost</a>
               </Button>
               <Button size="lg" variant="outline" className="rounded-full h-12 px-10 border-white/10 bg-white/5 hover:bg-white/10 transition-all font-semibold w-full sm:w-auto">
                 <a href="https://discord.gg/9QpwAmX4Ke" target="_blank" rel="noopener">Join community</a>

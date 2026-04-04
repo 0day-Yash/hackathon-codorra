@@ -58,7 +58,7 @@ export default function ContactPage() {
       title: "Devpost",
       value: "Register now",
       description: "Official hackathon registration platform",
-      action: "https://codorra1.devpost.com/"
+      action: "https://unstop.com/hackathons/hackathon-2026-codorra-1669522"
     },
     {
       icon: MessageSquare,
