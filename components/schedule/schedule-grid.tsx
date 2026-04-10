@@ -4,9 +4,9 @@ import TimeAxis from "./time-axis"
 import Swimlane from "./swimlane"
 import { MOCK_EVENTS, DAYS } from "./schedule-data"
 
-const PIXELS_PER_MINUTE = 1.5
+const PIXELS_PER_MINUTE = 2
 const START_HOUR = 9
-const END_HOUR = 21
+const END_HOUR = 24
 const SWIMLANE_WIDTH = 320
 const TIME_COL_WIDTH = 80 // w-20
 
