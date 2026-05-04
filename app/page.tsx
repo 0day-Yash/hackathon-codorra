@@ -1,8 +1,6 @@
 "use client"
 
 import type React from "react"
-import TextPressure from "@/components/text-pressure"
-import TargetCursor from "@/components/target-cursor"
 
 import { Navbar, Footer } from "@/components/navigation"
 import { cn } from "@/lib/utils"
@@ -37,7 +35,6 @@ import {
   Globe,
   Monitor,
 } from "lucide-react"
-import Lightning from "@/components/lightning"
 
 function Container({ className, children }: { className?: string; children: React.ReactNode }) {
   return <div className={cn("mx-auto w-full max-w-7xl px-4", className)}>{children}</div>
