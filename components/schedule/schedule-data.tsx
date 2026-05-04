@@ -10,6 +10,7 @@ export interface Event {
   day: 0 | 1 | 2 // 0 = Friday, 1 = Saturday, 2 = Sunday
   startTime: TimeSlot
   endTime: TimeSlot
+  slug?: string
 }
 
 export interface Day {
@@ -51,51 +52,57 @@ export const MOCK_EVENTS: Event[] = [
   },
   {
     id: "f3",
-    title: "Speaker Session 1 — AI & the Threat Landscape",
+    title: "Defensive AI in Regulated Industries: Production NLP and OCR at Scale",
     description: "30 min speaker session.",
     day: 0,
     startTime: { hour: 14, minute: 0 },
     endTime: { hour: 14, minute: 30 },
+    slug: "speaker-session-1"
   },
   {
     id: "f4",
-    title: "Speaker Session 2 — Web3 & Decentralised Security",
+    title: "The Connected Vehicle Attack Surface: Cybersecurity in Software-Defined Vehicles",
     description: "30 min speaker session.",
     day: 0,
     startTime: { hour: 17, minute: 0 },
     endTime: { hour: 17, minute: 30 },
+    slug: "speaker-session-2"
   },
   {
     id: "f5",
-    title: "Speaker Session 3 — Cloud Infra & Scaling",
+    title: "Event-Driven at Scale: Hardening Java Microservices and Kafka on AWS",
     description: "30 min speaker session.",
     day: 0,
     startTime: { hour: 20, minute: 0 },
     endTime: { hour: 20, minute: 30 },
+    slug: "speaker-session-3"
   },
   {
     id: "f6",
-    title: "Speaker Session 4 — Open Source Security Tooling",
+    title: "Securing the Modern Data Stack: Governance and Access Control with Microsoft Fabric",
     description: "30 min speaker session.",
     day: 0,
     startTime: { hour: 23, minute: 0 },
     endTime: { hour: 23, minute: 30 },
+    slug: "speaker-session-4"
   },
   {
     id: "s1",
-    title: "Speaker Session 5 — LLMs & AI Security",
+    title: "AI in Medical Devices: Sensor Data, Digital Twins, and the Patient-Privacy Boundary",
     description: "30 min speaker session.",
     day: 1,
     startTime: { hour: 9, minute: 0 },
     endTime: { hour: 9, minute: 30 },
+    slug: "speaker-session-5"
   },
   {
     id: "s2",
-    title: "Speaker Session 6 — Threat Intelligence & AppSec",
+    title: "Enterprise CRM Under Attack: Securing Apex, LWC, and the Salesforce API Surface",
     description: "30 min speaker session.",
     day: 1,
     startTime: { hour: 13, minute: 0 },
     endTime: { hour: 13, minute: 30 },
+    slug: "speaker-session-6"
   },
   {
     id: "s3",

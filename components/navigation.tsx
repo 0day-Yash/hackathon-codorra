@@ -17,6 +17,7 @@ export function Navbar() {
           <nav className="hidden md:flex items-center gap-8">
             <a href="/about" className="text-sm font-medium text-muted-foreground hover:text-white transition-colors">About</a>
             <a href="/speakers" className="text-sm font-medium text-muted-foreground hover:text-white transition-colors">Speakers</a>
+            <a href="/prizes" className="text-sm font-medium text-muted-foreground hover:text-white transition-colors">Prizes</a>
             <a href="/sponsors" className="text-sm font-medium text-muted-foreground hover:text-white transition-colors">Sponsors</a>
             <a href="/schedule" className="text-sm font-medium text-muted-foreground hover:text-white transition-colors">Schedule</a>
             <a href="/criteria" className="text-sm font-medium text-muted-foreground hover:text-white transition-colors">Criteria</a>

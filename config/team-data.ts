@@ -172,7 +172,193 @@ export const organizingCommittee: Person[] = [
     }
 ]
 
-export const speakers: Person[] = []
+export const speakers: Person[] = [
+    {
+        name: "Arham Akheel",
+        slug: "arham-akheel",
+        role: "Senior Solutions Architect",
+        company: "Not specified",
+        image: "",
+        linkedin: "https://www.linkedin.com/in/sakheel/",
+        category: "Speakers",
+        experience: "13 years",
+        bio: "Expert in development and deployment of advanced artificial intelligence and machine learning algorithms leveraging enhanced techniques in optical character recognition and natural language processing, with specific application in critical industries such as healthcare, insurance, and education."
+    },
+    {
+        name: "Praween Kumar",
+        slug: "praween-kumar",
+        role: "System Architect",
+        company: "TBD",
+        image: "",
+        linkedin: "http://linkedin.com/in/praween-kumar-8b115624",
+        category: "Speakers",
+        experience: "18 years",
+        bio: "Expert in designing and delivering safety-critical embedded software for software-defined vehicles (SDV) and medical devices, with deep platform engineering across AAOS, AOSP, VHAL, HAL, CarService stack, and SoC bring-up — extending through VSS-based semantic abstraction, DDS/SOME/IP/J1939/ISOBUS protocol gateway design, and OEM-agnostic IVI platform development covering Android Auto, CarPlay, and multi-domain vehicle types (automotive, trucking, agriculture, mining). Brings hardware-grounded, real-time DSP and algorithm expertise — originally shaped by defense and space-grade signal processing for national research organizations — to SDV programs demanding ultra-reliable, low-latency software stacks that integrate complex ECU signal pipelines (DBC, ARXML, CAN-FD), connectivity, sensing, and HIL/SIL validation across automotive, medical, and radar systems."
+    },
+    {
+        name: "Venkata Lakshmi Narasimha Kishore Vadapalli",
+        slug: "kishore-vadapalli",
+        role: "Senior Software Engineer",
+        company: "PRO IT INC",
+        image: "",
+        linkedin: "https://www.linkedin.com/in/kishore-vadapalli-b1579014/",
+        category: "Speakers",
+        experience: "16 years",
+        bio: "Expert in development and deployment of cloud native distributed enterprise platforms that modernize mission critical systems across banking, healthcare, and insurance through scalable Java microservices, event driven architectures, and automated DevOps pipelines. Specializes in transforming large legacy applications into high availability, real time ecosystems using AWS, Kafka based asynchronous processing, infrastructure as code, secure API design, and advanced performance engineering."
+    },
+    {
+        name: "Sougandhika Tera",
+        slug: "sougandhika-tera",
+        role: "Data Engineer",
+        company: "Prorsum Technologies",
+        image: "",
+        linkedin: "https://www.linkedin.com/in/sougandhika-t-08b9371a9?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+        category: "Speakers",
+        experience: "4 years",
+        bio: "Microsoft Fabric specialist."
+    },
+    {
+        name: "Suchitra Venkatesan",
+        slug: "suchitra-venkatesan",
+        role: "Production Data Associate Scientist",
+        company: "Cepheid",
+        image: "",
+        linkedin: "https://www.linkedin.com/in/suchitra-venkatesan?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+        category: "Speakers",
+        experience: "6 years",
+        bio: "Sensors, digital twin, healthcare sector."
+    },
+    {
+        name: "Sai Saketh Sunkara",
+        slug: "sai-saketh-sunkara",
+        role: "Senior Technical Consultant",
+        company: "Perficient Inc.",
+        image: "",
+        linkedin: "www.linkedin.com/in/sai-sunkara-652909270",
+        category: "Speakers",
+        experience: "7+ years",
+        bio: "Specialize in Salesforce CRM, Sales Cloud, Service Cloud, Health Cloud, Commerce Cloud, Data Cloud Experience Cloud, AI, Advanced Apex, JavaScript, Lightning Web Components (LWC), REST/SOAP APIs and DevOps"
+    },
+    {
+        name: "Naresh Lokiny",
+        slug: "naresh-lokiny",
+        role: "Sr DevOps Cloud Engineer",
+        company: "Charter Communications",
+        image: "",
+        linkedin: "https://www.linkedin.com/in/nareshl/",
+        category: "Speakers",
+        experience: "10–12 years",
+        bio: "DevOps, Kubernetes, Cloud Infrastructure & Distributed Systems"
+    },
+    {
+        name: "Nitanshu Patel",
+        slug: "nitanshu-patel",
+        role: "Java Developer",
+        company: "StoneX Group",
+        image: "",
+        linkedin: "https://www.linkedin.com/in/nitanshu-patel-39733b2a2/",
+        category: "Speakers",
+        experience: "7-8 years",
+        bio: "Java Backend, Microservices & Financial Systems"
+    },
+    {
+        name: "Parth Patel",
+        slug: "parth-patel",
+        role: "Frontend Engineer",
+        company: "Telecommunications Platforms",
+        image: "",
+        linkedin: "https://www.linkedin.com/in/parth2973",
+        category: "Speakers",
+        experience: "6–9 years",
+        bio: "Frontend Architecture, Web Systems & UI Engineering"
+    },
+    {
+        name: "Pavan Kumar Mantha",
+        slug: "pavan-kumar-mantha",
+        role: "AVP, Principal Data Engineer Lead",
+        company: "Synchrony",
+        image: "",
+        category: "Speakers",
+        experience: "16 years",
+        bio: "Fintech, data engineering"
+    },
+    {
+        name: "Sandeep Nutakki",
+        slug: "sandeep-nutakki",
+        role: "Sr AI Engineer",
+        company: "Auger",
+        image: "",
+        category: "Speakers",
+        experience: "8 years",
+        bio: "AI"
+    },
+    {
+        name: "Uday Dhembare",
+        slug: "uday-dhembare",
+        role: "Data Engineering Manager",
+        company: "Amazon",
+        image: "",
+        linkedin: "www.linkedin.com/in/uday-dhembare-298b7a39",
+        category: "Speakers",
+        experience: "12 years",
+        bio: "Expert in development and deployment of large scale cross-border supply chain optimization and petabyte scale data engineering systems, specializing in real time transportation network design, mathematical & statistical modeling, and AI powered decision frameworks that operate across US, Canada, India and EU logistics ecosystems."
+    },
+    {
+        name: "Tripatjeet Singh",
+        slug: "tripatjeet-singh",
+        role: "Senior Cloud Engineer",
+        company: "UMB Bank",
+        image: "",
+        linkedin: "https://www.linkedin.com/in/tripatjeet-singh-7162606",
+        category: "Speakers",
+        experience: "15 years",
+        bio: "Cloud architecture, DevOps, AWS, Fintech, Generative & Agentic AI"
+    },
+    {
+        name: "Ekta Sojitra",
+        slug: "ekta-sojitra",
+        role: "Data Analytics and Data Science Engineer II",
+        company: "PG&E",
+        image: "",
+        linkedin: "https://www.linkedin.com/in/ekta-sojitra-55905a106",
+        category: "Speakers",
+        experience: "8.5 years",
+        bio: "Expert in industrial time series data engineering and large scale analytics platforms, with deep specialization in integrating OSIsoft PI historian data, engineering high volume ODI based pipelines, and delivering governed Power BI ecosystems that support predictive maintenance, asset health insights, operational intelligence, and enterprise reporting across utilities, electric power, and mining."
+    },
+    {
+        name: "Jeyakumar Ramachandran",
+        slug: "jeyakumar-ramachandran",
+        role: "Senior Technical Specialist",
+        company: "HCL Tech",
+        image: "",
+        linkedin: "https://www.linkedin.com/in/jeyakumar-ramachandran-3483b6124/",
+        category: "Speakers",
+        experience: "21 years 10 months",
+        bio: "Cloud Architect , DevOps Engineer, Kubernetes Engineer, MicroServices & Full Stack Developer"
+    },
+    {
+        name: "Venkata Sai Abhinav Piratla",
+        slug: "venkata-sai-abhinav-piratla",
+        role: "Senior Cybersecurity Specialist",
+        company: "dae Inc.",
+        image: "",
+        linkedin: "https://www.linkedin.com/in/abhinav-piratla",
+        category: "Speakers",
+        experience: "6 years",
+        bio: "Cybersecurity"
+    },
+    {
+        name: "Hemalatha Murugesan",
+        slug: "hemalatha-murugesan",
+        role: "Lead Software Engineer",
+        company: "Not specified",
+        image: "",
+        linkedin: "https://www.linkedin.com/in/hemalatha-murugesan-40885a181",
+        category: "Speakers",
+        experience: "14 years",
+        bio: "Expert in development and deployment of advanced software algorithms leveraging enhanced techniques in contact center automation and migration, with specific application in critical industries such as banking and financial technology."
+    }
+]
 
 export const judges: Person[] = [
     {
@@ -211,16 +397,16 @@ export const judges: Person[] = [
         bio: "Danil Matrosov is a software engineer and startup founder specializing in AI-driven systems and high-load backend architecture. He is the Founder & CEO of ParkOut, an AI platform that predicts parking availability using real-time data and machine learning, and the Founder of Octery, an AI intake automation system for service businesses. Previously, he worked as a backend engineer on large-scale fintech systems, designing distributed microservices and optimizing high-throughput infrastructure. His expertise includes AI systems, data-driven platforms, and scalable backend architecture, with a focus on building production-ready products."
     },
     {
-        name: "Nanda Lal Das",
-        slug: "nanda-lal-das",
-        role: "Full-stack Engineer",
-        company: "Cyber Peak IT Solutions",
-        image: "/avatars/nanda.jpeg",
+        name: "Vedika Saravanam",
+        slug: "vedika-saravanam",
+        role: "Software Developer (LLM Security)",
+        company: "Apple (Previously) -> Now a new employer",
+        image: "",
+        linkedin: "https://www.linkedin.com/in/vedika-saravanan/",
         category: "Judges",
-        email: "tikludas01@gmail.com",
-        contact: "+91 7044992445",
-        bio: "I build things, ship them, and make them matter. Won MSME Hackathon 4.0 & walked away with ₹5 lakh in funding for a tech-driven solution. I’m a full-stack engineer comfortable across the entire spectrum. I don’t just write code, I take it to production. At Cyber Peak IT Solutions, I built modules of a live Project Management System from scratch, replacing spreadsheet workflows with real software. At Dev Launchers, I maintained shared components in a monorepo used by engineers worldwide. Outside of code, I founded MetaMorph Hackathon built it from zero to 3,000+ registrations across India."
-    }
+        experience: "5–7 years",
+        bio: "AI, LLM Security & Advanced Computing, Quantum"
+    },
 ]
 
 export const allPeople = [...judges, ...speakers, ...organizingCommittee]

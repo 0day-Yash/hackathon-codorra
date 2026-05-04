@@ -74,6 +74,11 @@ function Hero() {
             </a>
           </Button>
           <Button size="lg" variant="outline" className="rounded-full h-12 px-10 border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-md transition-all font-semibold">
+            <a href="/prizes" className="inline-flex items-center">
+              <Trophy className="mr-2 size-4" /> View Prizes
+            </a>
+          </Button>
+          <Button size="lg" variant="outline" className="rounded-full h-12 px-10 border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-md transition-all font-semibold">
             <a href="https://discord.gg/9QpwAmX4Ke" target="_blank" rel="noopener" className="inline-flex items-center">
               <MessageSquare className="mr-2 size-4" /> Join Discord
             </a>
@@ -233,6 +238,20 @@ function Timeline() {
             <div className="overflow-x-auto">
               <ScheduleGrid />
             </div>
+          </div>
+        </Reveal>
+        <Reveal delay={200}>
+          <div className="flex justify-center mt-8">
+            <Button
+              variant="secondary"
+              className="rounded-lg border border-white/10 bg-white/5 hover:bg-white/10"
+              asChild
+            >
+              <a href="/schedule">
+                See Full Schedule
+                <ArrowRight className="ml-2 size-4" />
+              </a>
+            </Button>
           </div>
         </Reveal>
       </Container>

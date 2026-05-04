@@ -1,6 +1,7 @@
 "use client"
 
 import type { Event } from "./schedule-data"
+import Link from "next/link"
 
 interface EventBlockProps {
   event: Event
@@ -15,7 +16,7 @@ export default function EventBlock({ event, topOffset, height }: EventBlockProps
     return `${displayHour}:${minute.toString().padStart(2, "0")} ${period}`
   }
 
-  return (
+  const content = (
     <div
       className="absolute left-3 right-3 rounded-lg border border-border/50 bg-gradient-to-br from-card/90 via-card/80 to-card/70 backdrop-blur-md p-3 transition-all duration-300 hover:bg-card hover:border-accent/40 hover:shadow-xl hover:shadow-accent/10 cursor-pointer group overflow-hidden"
       style={{
@@ -44,5 +45,15 @@ export default function EventBlock({ event, topOffset, height }: EventBlockProps
       </div>
     </div>
   )
+
+  if (event.slug) {
+    return (
+      <Link href={`/sessions/${event.slug}`}>
+        {content}
+      </Link>
+    )
+  }
+
+  return content
 }
 
