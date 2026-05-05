@@ -172,7 +172,8 @@ export const organizingCommittee: Person[] = [
     }
 ]
 
-export const speakers: Person[] = [
+export const speakers: Person[] = []
+/*
     {
         name: "Arham Akheel",
         slug: "arham-akheel",
@@ -358,9 +359,9 @@ export const speakers: Person[] = [
         experience: "14 years",
         bio: "Expert in development and deployment of advanced software algorithms leveraging enhanced techniques in contact center automation and migration, with specific application in critical industries such as banking and financial technology."
     }
-]
+*/
 
-export const judges: Person[] = [
+export const judges: Person[] = [ 
     {
         name: "Prasenjit Sinha",
         slug: "prasenjit-sinha",
