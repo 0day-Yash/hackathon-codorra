@@ -4,8 +4,13 @@ import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
-import Aurora from "@/components/aurora"
+import dynamic from "next/dynamic"
 import "./globals.css"
+
+// Dynamically import Aurora with no SSR
+const Aurora = dynamic(() => import("@/components/aurora"), {
+  ssr: false,
+})
 
 export const metadata: Metadata = {
   title: "CODORRA 2026 | Global Cybersecurity & AI Hackathon",

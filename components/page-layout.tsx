@@ -5,7 +5,12 @@ import { cn } from "@/lib/utils"
 import { Reveal } from "@/components/fx/reveal"
 import { SectionHeader } from "@/components/section-header"
 import { OrnamentRings } from "@/components/ornament-rings"
-import TargetCursor from "@/components/target-cursor"
+import dynamic from "next/dynamic"
+
+// Dynamically import TargetCursor with no SSR to avoid server-side rendering issues
+const TargetCursor = dynamic(() => import("@/components/target-cursor"), {
+  ssr: false,
+})
 
 export function Container({ className, children }: { className?: string; children: React.ReactNode }) {
   return <div className={cn("mx-auto w-full max-w-7xl px-4", className)}>{children}</div>
@@ -21,7 +26,7 @@ export function PageHeader({
   className?: string 
 }) {
   return (
-    <section className="relative border-b">
+    <section className="relative border-b border-white/5">
       <div className="pointer-events-none absolute inset-0 radial-mask bg-dots opacity-[0.2]" />
       <Container className="relative z-10 py-16 md:py-20">
         <div className="mx-auto max-w-3xl text-center">
@@ -57,7 +62,7 @@ export function PageSection({
   withCursor?: boolean
 }) {
   return (
-    <section className={cn("section relative border-b", className)}>
+    <section className={cn("section relative border-b border-white/5", className)}>
       {withCursor && <TargetCursor spinDuration={2} hideDefaultCursor={true} />}
       <div className="pointer-events-none absolute inset-0 radial-mask opacity-[0.1]" />
       <Container className="relative z-10">

@@ -21,11 +21,11 @@ export function SectionHeader({
         className
       )}
     >
-      {eyebrow ? (
+      {eyebrow && (
         <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-muted-foreground/60 mb-4 block">
           {eyebrow}
         </span>
-      ) : null}
+      )}
 
       <h2
         className={cn(
@@ -35,7 +35,7 @@ export function SectionHeader({
         {title}
       </h2>
 
-      {desc ? (
+      {desc && (
         <p
           className={cn(
             "mt-4 text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl",
@@ -44,7 +44,7 @@ export function SectionHeader({
         >
           {desc}
         </p>
-      ) : null}
+      )}
     </div>
   )
 }

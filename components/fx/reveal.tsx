@@ -9,12 +9,12 @@ export function Reveal({
   className = "",
   children,
 }: {
-  as?: any
+  as?: React.ElementType
   delay?: number
   className?: string
   children: React.ReactNode
 }) {
-  const ref = useRef<HTMLDivElement | null>(null)
+  const ref = useRef<HTMLElement | null>(null)
   const [inView, setInView] = useState(false)
 
   useEffect(() => {
@@ -35,9 +35,11 @@ export function Reveal({
     return () => io.disconnect()
   }, [])
 
+  const Component = As as React.ElementType
+
   return (
-    <As ref={ref} className={`reveal ${inView ? "in" : ""} ${className}`} style={{ transitionDelay: `${delay}ms` }}>
+    <Component ref={ref} className={`reveal ${inView ? "in" : ""} ${className}`} style={{ transitionDelay: `${delay}ms` }}>
       {children}
-    </As>
+    </Component>
   )
 }
