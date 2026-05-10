@@ -1,8 +1,6 @@
 "use client"
 
 import type React from "react"
-import TextPressure from "@/components/text-pressure"
-import TargetCursor from "@/components/target-cursor"
 
 import { Navbar, Footer } from "@/components/navigation"
 import { cn } from "@/lib/utils"
@@ -37,7 +35,6 @@ import {
   Globe,
   Monitor,
 } from "lucide-react"
-import Lightning from "@/components/lightning"
 
 function Container({ className, children }: { className?: string; children: React.ReactNode }) {
   return <div className={cn("mx-auto w-full max-w-7xl px-4", className)}>{children}</div>
@@ -71,6 +68,11 @@ function Hero() {
           <Button size="lg" className="rounded-full h-12 px-10 bg-white text-black hover:bg-zinc-200 transition-all font-semibold shadow-xl shadow-white/5">
             <a href="https://unstop.com/hackathons/hackathon-2026-codorra-1669522" target="_blank" rel="noopener" className="inline-flex items-center">
               Register on Unstop <ArrowRight className="ml-2 size-4" />
+            </a>
+          </Button>
+          <Button size="lg" variant="outline" className="rounded-full h-12 px-10 border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-md transition-all font-semibold">
+            <a href="/prizes" className="inline-flex items-center">
+              <Trophy className="mr-2 size-4" /> View Prizes
             </a>
           </Button>
           <Button size="lg" variant="outline" className="rounded-full h-12 px-10 border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-md transition-all font-semibold">
@@ -233,6 +235,20 @@ function Timeline() {
             <div className="overflow-x-auto">
               <ScheduleGrid />
             </div>
+          </div>
+        </Reveal>
+        <Reveal delay={200}>
+          <div className="flex justify-center mt-8">
+            <Button
+              variant="secondary"
+              className="rounded-lg border border-white/10 bg-white/5 hover:bg-white/10"
+              asChild
+            >
+              <a href="/schedule">
+                See Full Schedule
+                <ArrowRight className="ml-2 size-4" />
+              </a>
+            </Button>
           </div>
         </Reveal>
       </Container>

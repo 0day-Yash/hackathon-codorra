@@ -10,6 +10,7 @@ import { Reveal } from "@/components/fx/reveal"
 import { SectionHeader } from "@/components/section-header"
 import { OrnamentRings } from "@/components/ornament-rings"
 import MuiTimeline from "@/components/mui-timeline"
+import Link from "next/link"
 import {
   Calendar,
   Clock,
@@ -29,163 +30,14 @@ import {
   Laptop,
   CheckCircle,
 } from "lucide-react"
+import { SCHEDULE_DAYS, SCHEDULE_EVENTS } from "@/config/session-data"
 
 export default function SchedulePage() {
-  const scheduleEvents = [
-    {
-      day: "Day 1 (Speakers & Kickoff)",
-      date: "Friday, May 29",
-      events: [
-        {
-          time: "9:00 AM - 10:00 AM",
-          title: "Opening Keynote",
-          description: "Welcome address, event overview, and the future of technology.",
-          location: "Live Stream",
-          type: "keynote",
-          icon: Mic,
-          online: true
-        },
-        {
-          time: "10:00 AM - 11:30 AM",
-          title: "Speaker Session: AI Frontiers",
-          description: "Exploring the next wave of generative AI and LLMs.",
-          location: "Live Stream",
-          type: "workshop",
-          icon: Mic,
-          online: true
-        },
-        {
-          time: "12:00 PM - 1:30 PM",
-          title: "Technical Workshop: DevSecOps",
-          description: "Integrating security into your development workflow.",
-          location: "Live Stream",
-          type: "workshop",
-          icon: Laptop,
-          online: true
-        },
-        {
-          time: "2:30 PM - 4:00 PM",
-          title: "Speaker Session: Mobile Innovation",
-          description: "Building world-class mobile experiences in 2026.",
-          location: "Live Stream",
-          type: "workshop",
-          icon: Mic,
-          online: true
-        },
-        {
-          time: "5:00 PM - 6:00 PM",
-          title: "Hackathon Official Kickoff",
-          description: "Theme reveal, rules, and track-specific guidelines.",
-          location: "Live Stream",
-          type: "ceremony",
-          icon: Monitor,
-          online: true
-        },
-        {
-          time: "6:00 PM",
-          title: "Hacking Begins!",
-          description: "The 48-hour coding window officially opens.",
-          location: "Global",
-          type: "start",
-          icon: Code,
-          online: true
-        }
-      ]
-    },
-    {
-      day: "Day 2 (Coding Marathon)",
-      date: "Saturday, May 30",
-      events: [
-        {
-          time: "9:00 AM - 10:00 AM",
-          title: "Morning Standup",
-          description: "Quick progress check and community announcements.",
-          location: "Discord",
-          type: "admin",
-          icon: Users,
-          online: true
-        },
-        {
-          time: "10:00 AM - 1:00 PM",
-          title: "Mentor Office Hours",
-          description: "Get one-on-one help from industry experts.",
-          location: "Discord / Zoom",
-          type: "mentoring",
-          icon: Users,
-          online: true
-        },
-        {
-          time: "3:00 PM - 4:00 PM",
-          title: "Lightning Tech Talks",
-          description: "Short, high-impact talks from our partners.",
-          location: "Live Stream",
-          type: "workshop",
-          icon: Mic,
-          online: true
-        },
-        {
-          time: "8:00 PM - 9:00 PM",
-          title: "Late Night Sync",
-          description: "Troubleshooting and motivation boost.",
-          location: "Discord",
-          type: "mentoring",
-          icon: Zap,
-          online: true
-        }
-      ]
-    },
-    {
-      day: "Day 3 (Demos & Awards)",
-      date: "Sunday, May 31",
-      events: [
-        {
-          time: "9:00 AM - 12:00 PM",
-          title: "Final Sprint",
-          description: "Polishing code and preparing submissions.",
-          location: "Global",
-          type: "code",
-          icon: Code,
-          online: true
-        },
-        {
-          time: "12:00 PM",
-          title: "Submission Deadline",
-          description: "Projects must be submitted on Devpost.",
-          location: "Devpost",
-          type: "submission",
-          icon: CheckCircle,
-          online: true
-        },
-        {
-          time: "2:00 PM - 5:00 PM",
-          title: "Project Demos",
-          description: "Finalists pitch their solutions to the judges.",
-          location: "Live Stream",
-          type: "presentation",
-          icon: Monitor,
-          online: true
-        },
-        {
-          time: "5:00 PM - 6:30 PM",
-          title: "Judges Deliberation",
-          description: "Final evaluation of the projects.",
-          location: "Private Room",
-          type: "judging",
-          icon: Award,
-          online: true
-        },
-        {
-          time: "7:00 PM - 8:30 PM",
-          title: "Closing Ceremony",
-          description: "Winner announcements and prize distribution.",
-          location: "Live Stream",
-          type: "ceremony",
-          icon: Trophy,
-          online: true
-        }
-      ]
-    }
-  ]
+  const scheduleEvents = SCHEDULE_DAYS.map((day) => ({
+    day: day.id === 0 ? "Day 1 (Speakers & Kickoff)" : day.id === 1 ? "Day 2 (Speaker Sessions)" : "Day 3 (Final Sessions & Deadline)",
+    date: day.date,
+    events: SCHEDULE_EVENTS.filter((event) => event.day === day.id),
+  }))
 
   const eventTypeColors = {
     workshop: "border border-white/10 text-white/50",
@@ -194,6 +46,7 @@ export default function SchedulePage() {
     admin: "border border-white/10 text-white/50",
     keynote: "border border-white/10 text-white/50",
     announcement: "border border-white/10 text-white/50",
+    kickoff: "border border-white/10 text-white/50",
     start: "border border-white/10 text-white/50",
     meal: "border border-white/10 text-white/50",
     mentoring: "border border-white/10 text-white/50",
@@ -204,6 +57,21 @@ export default function SchedulePage() {
     judging: "border border-white/10 text-white/50",
     code: "border border-white/10 text-white/50"
   }
+
+  const eventIcons: Record<string, React.ComponentType<{ className?: string }>> = {
+    keynote: Mic,
+    speaker: Mic,
+    ceremony: Trophy,
+    start: Code,
+    kickoff: Monitor,
+    submission: CheckCircle,
+    presentation: Monitor,
+    judging: Award,
+    code: Code,
+  }
+
+  const formatEventTime = (startTime: string, endTime?: string) =>
+    endTime ? `${startTime} - ${endTime}` : startTime
 
   const venueInfo = [
     {
@@ -220,7 +88,7 @@ export default function SchedulePage() {
     "24 hours are dedicated to speaker sessions, workshops, and global networking.",
     "48 hours are dedicated to non-stop coding and building.",
     "Participation is completely free for builders worldwide.",
-    "Submissions close May 31, 2026 at 12:00 PM IST."
+    "Submissions close May 31, 2026 at 4:00 PM IST."
   ]
 
 
@@ -256,8 +124,9 @@ export default function SchedulePage() {
 
                 <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                   {day.events.map((event, eventIndex) => {
-                    const EventIcon = event.icon
+                    const EventIcon = eventIcons[event.type] || Clock
                     const typeColor = eventTypeColors[event.type as keyof typeof eventTypeColors]
+                    const eventTime = formatEventTime(event.startTime, event.endTime)
 
                     return (
                       <Reveal key={event.title} delay={eventIndex * 50}>
@@ -268,25 +137,17 @@ export default function SchedulePage() {
                                 <EventIcon className="size-4" />
                               </div>
                               <div className="flex gap-1">
-                                {event.online && (
-                                  <Badge variant="outline" className="text-[10px] uppercase border-white/10 bg-white/5">
-                                    <Globe className="size-3 mr-1" />
-                                    Online
-                                  </Badge>
-                                )}
-                                {!event.online && (
-                                  <Badge className="text-[10px] uppercase bg-brand-gradient border-none text-white font-bold">
-                                    <MapPin className="size-3 mr-1" />
-                                    In-Person
-                                  </Badge>
-                                )}
+                                <Badge variant="outline" className="text-[10px] uppercase border-white/10 bg-white/5">
+                                  <Globe className="size-3 mr-1" />
+                                  Online
+                                </Badge>
                               </div>
                             </div>
                             <CardTitle className="text-lg mb-2">{event.title}</CardTitle>
                             <div className="space-y-1">
                               <div className="flex items-center gap-2 text-xs text-muted-foreground">
                                 <Clock className="size-3 text-white/40" />
-                                {event.time}
+                                {eventTime}
                               </div>
                               <div className="flex items-center gap-2 text-xs text-muted-foreground">
                                 <MapPin className="size-3 text-white/40" />
@@ -294,8 +155,15 @@ export default function SchedulePage() {
                               </div>
                             </div>
                           </CardHeader>
-                          <CardContent className="pt-2">
+                          <CardContent className="pt-2 space-y-4">
                             <p className="text-xs text-muted-foreground leading-relaxed">{event.description}</p>
+                            {event.slug && (
+                              <div>
+                                <Button variant="outline" size="sm" asChild>
+                                  <Link href={`/sessions/${event.slug}`}>View session details</Link>
+                                </Button>
+                              </div>
+                            )}
                           </CardContent>
                         </Card>
                       </Reveal>
