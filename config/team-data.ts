@@ -169,8 +169,20 @@ export const organizingCommittee: Person[] = [
         email: "hazimbhat2004@gmail.com",
         contact: "+91 70512 57198",
         bio: "I’m Hazim, a 21-year-old Bachelor of Technology student currently working as a Customer Success Team Lead. I am a passionate CSM, who loves to work and continuously strive to grow both personally and professionally. I have a strong interest in emerging technologies and love exploring electronic gadgets. About the hobbies, I enjoy playing games and watching cricket. I’m most of times curious, and always looking to improve my skills and learn something new."
+    },
+    {
+        name: "Anukrati Vishwakarma",
+        slug: "anukrati-vishwakarma",
+        role: "B.Tech Student",
+        company: "MIT Ujjain",
+        hackathonRole: "Organizer",
+        image: "/avatars/anukratti.jpeg",
+        category: "Organizing Committee",
+        department: "Community Outreach",
+        bio: "I am a second-year B.Tech student at MIT Ujjain, Madhya Pradesh, with a strong interest in technology, developer communities, and communication-focused roles. I completed a two-month internship at HackTour IND as a Community Outreach Intern, where I worked on community outreach, marketing, and managing developer communities. I am passionate about growth and collaboration, and I enjoy connecting with people, learning new technologies, and contributing to innovative communities."
     }
 ]
+
 
 export const speakers: Person[] = []
 
