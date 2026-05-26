@@ -10,6 +10,12 @@ import { Trophy, Star, Gift } from "lucide-react"
 
 const prizes = [
   {
+    id: "ipad-solo",
+    name: "iPad 11th Generation",
+    description: "First Prize for Solo Participants - Premium tablet for individual winners",
+    features: ["Solo category only", "11th generation", "Latest technology", "Perfect for creators"]
+  },
+  {
     id: "cash-prize",
     name: "₹5,000 Cash Prize",
     description: "Direct monetary award for winning teams",

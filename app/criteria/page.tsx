@@ -233,6 +233,153 @@ export default function CriteriaPage() {
 
       <PageSection>
         <SectionHeader
+          eyebrow="Hackathon Rules"
+          title="Eligibility & Requirements"
+          desc="Important guidelines to ensure fair competition and quality submissions."
+          className="cursor-target"
+        />
+        
+        <div className="grid gap-6 md:grid-cols-2 mb-12">
+          <Reveal>
+            <Card className="glass cursor-target">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Users className="size-5 text-primary" />
+                  Team Size
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-3">Teams must consist of:</p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="size-4 text-accent mt-0.5" />
+                    <span className="text-sm"><strong>1 to 4 members</strong> in total</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </Reveal>
+
+          <Reveal delay={100}>
+            <Card className="glass cursor-target">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Code className="size-5 text-accent" />
+                  Project Requirements
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="size-4 text-accent mt-0.5" />
+                    <span className="text-sm">Project must be <strong>completely built during the hackathon</strong></span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="size-4 text-accent mt-0.5" />
+                    <span className="text-sm"><strong>Git history is required</strong> or any alternate way of viewing file history for your repo</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </Reveal>
+
+          <Reveal delay={200}>
+            <Card className="glass cursor-target">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Target className="size-5 text-primary" />
+                  Track Options
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="size-4 text-accent mt-0.5" />
+                    <span className="text-sm"><strong>Problem Statement Track:</strong> Build solutions to provided problem statements</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="size-4 text-accent mt-0.5" />
+                    <span className="text-sm"><strong>Open Innovation Track:</strong> Build anything you want</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </Reveal>
+
+          <Reveal delay={300}>
+            <Card className="glass cursor-target">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Award className="size-5 text-accent" />
+                  Track Differentiation
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-3">Important note:</p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="size-4 text-accent mt-0.5" />
+                    <span className="text-sm"><strong>No differentiation between tracks</strong> - all projects compete on the same criteria</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </Reveal>
+
+          <Reveal delay={400}>
+            <Card className="glass cursor-target">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Code className="size-5 text-primary" />
+                  Code & IP Rights
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="size-4 text-accent mt-0.5" />
+                    <span className="text-sm">All code must be <strong>original work</strong> created during the hackathon</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="size-4 text-accent mt-0.5" />
+                    <span className="text-sm">You retain all <strong>intellectual property rights</strong> to your project</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="size-4 text-accent mt-0.5" />
+                    <span className="text-sm">Using pre-built projects or significant code from before the hackathon is <strong>not allowed</strong></span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </Reveal>
+
+          <Reveal delay={500}>
+            <Card className="glass cursor-target">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Users className="size-5 text-accent" />
+                  Conduct & Eligibility
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="size-4 text-accent mt-0.5" />
+                    <span className="text-sm">All participants must follow the <strong>Code of Conduct</strong></span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="size-4 text-accent mt-0.5" />
+                    <span className="text-sm">No external help from non-team members during development</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </Reveal>
+        </div>
+      </PageSection>
+
+      <PageSection>
+        <SectionHeader
           eyebrow="Evaluation Framework"
           title="Scoring Breakdown"
           desc="Our judges evaluate projects across four key dimensions, each weighted to reflect their importance in cybersecurity innovation."
@@ -359,45 +506,30 @@ export default function CriteriaPage() {
 
       <PageSection>
         <SectionHeader
-          eyebrow="Track-Specific Focus"
-          title="Specialized Criteria"
-          desc="Each track has specific emphasis areas while maintaining the core evaluation framework."
+          eyebrow="Tie-Breaker"
+          title="In Case of a Tie"
+          desc="How we handle equal scores between projects."
           className="cursor-target"
         />
         
-        <div className="space-y-6">
-          {trackSpecificCriteria.map((track, i) => (
-            <Reveal key={track.track} delay={i * 100}>
-              <Card className="glass cursor-target">
-                <CardHeader>
-                  <CardTitle className="flex items-center justify-between">
-                    <span>{track.track}</span>
-                    <Badge variant="outline">{track.focus}</Badge>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid gap-4 md:grid-cols-2">
-                    <div>
-                      <h4 className="font-semibold mb-2">Track Focus</h4>
-                      <p className="text-sm text-muted-foreground">{track.focus}</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-2">Special Emphasis</h4>
-                      <ul className="space-y-1">
-                        {track.emphasis.map((item, j) => (
-                          <li key={j} className="flex items-start gap-2 text-sm text-muted-foreground">
-                            <Star className="size-3 text-primary mt-1" />
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </Reveal>
-          ))}
-        </div>
+        <Reveal>
+          <Card className="glass cursor-target">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Users className="size-5 text-primary" />
+                Demo Round for Ties
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground mb-4">
+                In the event of a tie in final scores, the tied projects will participate in a <strong>demo round</strong> where they present their work to the judges. The judges will then make a final determination based on the quality of the presentation and their ability to answer technical questions.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Otherwise, no additional rounds are conducted - winners are determined by the scoring criteria outlined above.
+              </p>
+            </CardContent>
+          </Card>
+        </Reveal>
       </PageSection>
 
       <PageSection>
@@ -470,6 +602,18 @@ export default function CriteriaPage() {
             </Button>
           </div>
         </div>
+      </PageSection>
+
+      <PageSection className="bg-white/5 border-t border-white/10">
+        <Container>
+          <Reveal>
+            <div className="text-center p-6 rounded-lg border border-white/10 bg-white/5">
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                <strong>Important Notice:</strong> Winners will be announced immediately after final judging. However, prizes will only be awarded after verification for plagiarism, code violations, and adherence to hackathon rules. Any project found to violate these guidelines will be disqualified, and prizes will be forfeited.
+              </p>
+            </div>
+          </Reveal>
+        </Container>
       </PageSection>
 
       <div className="absolute right-6 top-10 pointer-events-none">
