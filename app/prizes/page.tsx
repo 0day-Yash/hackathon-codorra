@@ -1,6 +1,7 @@
 "use client"
 
 import type React from "react"
+import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { PageSection, Container } from "@/components/page-layout"
 import { Navbar, Footer } from "@/components/navigation"
@@ -11,39 +12,46 @@ import { Trophy, Star, Gift } from "lucide-react"
 const prizes = [
   {
     id: "first-place",
-    name: "🥇 First Place",
+    name: "First Place",
     description: "iPad 11th Generation (128GB, Sky Blue, WiFi)",
-    features: ["iPad 11th Gen", "128GB Storage", "Sky Blue Color", "WiFi Version", "Team Leader Award"]
+    features: ["iPad 11th Gen", "128GB Storage", "Sky Blue Color", "WiFi Version", "Team Leader Award"],
+    image: "/prizes/ipad-model-unselect-gallery-2-202503_FMT_WHH.jpg"
   },
   {
     id: "second-place",
-    name: "🥈 Second Place",
+    name: "Second Place",
     description: "PHILIPS Audio Speaker + Screwdriver Set",
-    features: ["PHILIPS TAS1400BK Speaker", "Peace Tech 25-in-1 Screwdriver Set", "Team Leader Award"]
+    features: ["PHILIPS TAS1400BK Speaker", "Peace Tech 25-in-1 Screwdriver Set", "Team Leader Award"],
+    image: "/prizes/speaker.webp",
+    secondImage: "/prizes/screwdriverset.jpg"
   },
   {
     id: "third-place",
-    name: "🥉 Third Place",
+    name: "Third Place",
     description: "Noise Tag 1: Global Item Tracker",
-    features: ["Noise Tag 1", "Cross-platform Compatible", "90dB Ring Volume", "Team Leader Award"]
+    features: ["Noise Tag 1", "Cross-platform Compatible", "90dB Ring Volume", "Team Leader Award"],
+    image: "/prizes/tag1.jpg"
   },
   {
     id: "cash-prizes",
-    name: "💰 Cash Prizes",
+    name: "Cash Prizes",
     description: "₹5,000 awarded to Top 3 Teams",
-    features: ["₹5,000 per team", "Top 3 teams eligible", "Direct bank transfer", "Team Leader Award"]
+    features: ["₹5,000 per team", "Top 3 teams eligible", "Direct bank transfer", "Team Leader Award"],
+    image: "/prizes/inr.jpg"
   },
   {
     id: "internship",
-    name: "💼 Internship Interviews",
+    name: "Internship Interviews",
     description: "All members of Top 5 teams eligible",
-    features: ["Top 5 teams", "All team members", "PurpleRain.Tech", "Career opportunity"]
+    features: ["Top 5 teams", "All team members", "PurpleRain.Tech", "Career opportunity"],
+    image: "/prizes/interns.jpg"
   },
   {
     id: "xyz-domain",
-    name: "🌐 Free .xyz Domain",
+    name: "Free .xyz Domain",
     description: "First 100 participants to claim",
-    features: ["1 year free", "First 100 only", "Full domain features", "Easy management"]
+    features: ["1 year free", "First 100 only", "Full domain features", "Easy management"],
+    image: "/prizes/xyz-domain.jpg"
   }
 ]
 
@@ -70,19 +78,39 @@ export default function PrizesPage() {
           </Reveal>
 
           {/* Prize List */}
-          <div className="space-y-3 max-w-4xl mx-auto">
+          <div className="space-y-6 max-w-4xl mx-auto">
             {prizes.map((prize, index) => (
               <Reveal key={prize.id} delay={index * 50}>
-                <div className="glass border border-white/10 rounded-xl p-6 hover:border-primary/40 transition-all duration-300 group">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 mt-1">
-                      <Gift className="size-6 text-primary" />
+                <div className="glass border border-white/10 rounded-xl overflow-hidden hover:border-primary/40 transition-all duration-300 group">
+                  <div className="grid md:grid-cols-3 gap-6 p-6">
+                    {/* Image Section */}
+                    <div className="md:col-span-1 flex items-center justify-center">
+                      <div className="relative w-full aspect-square rounded-lg overflow-hidden bg-white/5 border border-white/10">
+                        <Image
+                          src={prize.image}
+                          alt={prize.name}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                      {prize.secondImage && (
+                        <div className="relative w-full aspect-square rounded-lg overflow-hidden bg-white/5 border border-white/10 ml-4">
+                          <Image
+                            src={prize.secondImage}
+                            alt={`${prize.name} - Item 2`}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
+                        </div>
+                      )}
                     </div>
-                    <div className="flex-grow">
-                      <h3 className="text-lg font-semibold text-white group-hover:text-primary transition-colors mb-1">
+
+                    {/* Content Section */}
+                    <div className="md:col-span-2">
+                      <h3 className="text-2xl font-semibold text-white group-hover:text-primary transition-colors mb-2">
                         {prize.name}
                       </h3>
-                      <p className="text-sm text-muted-foreground mb-3">
+                      <p className="text-sm text-muted-foreground mb-4">
                         {prize.description}
                       </p>
                       <div className="flex flex-wrap gap-2">
