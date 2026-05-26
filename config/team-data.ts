@@ -175,10 +175,10 @@ export const organizingCommittee: Person[] = [
         slug: "anukrati-vishwakarma",
         role: "B.Tech Student",
         company: "MIT Ujjain",
-        hackathonRole: "Organizer",
+        hackathonRole: "Lead Organizer",
         image: "/avatars/anukratti.jpeg",
         category: "Organizing Committee",
-        department: "Community Outreach",
+        department: "Core Leadership",
         bio: "I am a second-year B.Tech student at MIT Ujjain, Madhya Pradesh, with a strong interest in technology, developer communities, and communication-focused roles. I completed a two-month internship at HackTour IND as a Community Outreach Intern, where I worked on community outreach, marketing, and managing developer communities. I am passionate about growth and collaboration, and I enjoy connecting with people, learning new technologies, and contributing to innovative communities."
     }
 ]
@@ -410,15 +410,58 @@ export const judges: Person[] = [
         bio: "Danil Matrosov is a software engineer and startup founder specializing in AI-driven systems and high-load backend architecture. He is the Founder & CEO of ParkOut, an AI platform that predicts parking availability using real-time data and machine learning, and the Founder of Octery, an AI intake automation system for service businesses. Previously, he worked as a backend engineer on large-scale fintech systems, designing distributed microservices and optimizing high-throughput infrastructure. His expertise includes AI systems, data-driven platforms, and scalable backend architecture, with a focus on building production-ready products."
     },
     {
-        name: "Vedika Saravanam",
-        slug: "vedika-saravanam",
-        role: "Software Developer (LLM Security)",
-        company: "Apple (Previously) -> Now a new employer",
-        image: "",
-        linkedin: "https://www.linkedin.com/in/vedika-saravanan/",
+        name: "Jeyakumar Ramachandran",
+        slug: "jeyakumar-ramachandran",
+        role: "Cloud Architect and Senior Technical Specialist",
+        company: "HCL Tech",
+        image: "/avatars/jeyakumar_photo.jpeg",
+        linkedin: "https://www.linkedin.com/in/jeyakumar-ramachandran-3483b6124/",
         category: "Judges",
-        experience: "5–7 years",
-        bio: "AI, LLM Security & Advanced Computing, Quantum"
+        experience: "15+ years",
+        bio: "Cloud Architect and Senior Technical Specialist with over 15 years of experience in software engineering, cloud infrastructure, DevOps, and enterprise architecture. Expertise spans Java, Spring Boot, Python, Kubernetes, OpenStack, Docker, automation, and cloud-native technologies. Extensive experience in designing scalable cloud platforms, implementing microservices architectures, automating infrastructure deployments using Ansible and Python, and building monitoring solutions with Prometheus and Grafana. Actively involved in applied AI, cloud innovation, and technical research initiatives. Based in Georgia, USA."
+    },
+    {
+        name: "Venkata Sai Abhinav Piratla",
+        slug: "venkata-sai-abhinav-piratla",
+        role: "Senior Cybersecurity Specialist & AI Security Researcher",
+        company: "DAE (District Arts & Education)",
+        image: "/avatars/Abhinav.png",
+        linkedin: "https://www.linkedin.com/in/abhinav-piratla",
+        category: "Judges",
+        experience: "6+ years",
+        bio: "Pioneering AI security educator and researcher specializing in medical device protection and cybersecurity education. Leading cybersecurity education for 120+ underserved students, designing hands-on labs in SIEM, vulnerability assessment, cloud security, and AI security. Published first-author research on AI-powered anomaly detection for artificial pancreas systems at CICN 2025, achieving 205% baseline improvements. Co-founder of Koopbox, a blockchain e-commerce platform serving thousands at 99.9% uptime with enterprise-grade DevSecOps. Expertise spans AI/ML for anomaly detection, Medical IoMT security, cybersecurity education, blockchain/DevSecOps, and full-stack development. Recipient of 2025 Global Recognition Award and Dean's Leadership Award. Passionate about protecting vulnerable lives through secure AI and democratizing advanced security education."
+    },
+    {
+        name: "Ekta Sojitra",
+        slug: "ekta-sojitra",
+        role: "Data Analytics & Data Science Engineer II",
+        company: "PG&E",
+        image: "/avatars/ektajpeg.jpeg",
+        linkedin: "https://www.linkedin.com/in/ekta-sojitra-55905a106",
+        category: "Judges",
+        experience: "8.5+ years",
+        bio: "Data Analytics & Data Science Engineer II specializing in large-scale data platforms, cloud-native ELT architectures, and applied machine learning. Designs and operates production pipelines processing 500M+ rows per day across Electric Power, Mining, and Utility sectors. Currently leading enterprise modernization to Snowflake and Informatica IDMC on AWS. Expertise spans data engineering, ML for predictive maintenance, cross-platform system integration, and industrial time series analytics. Passionate about evaluating projects that combine technical rigor with real-world impact across AI, ML, cloud, and application development."
+    },
+    {
+        name: "Tripatjeet Singh",
+        slug: "tripatjeet-singh",
+        role: "Senior Cloud Engineer",
+        company: "UMB Bank",
+        image: "/avatars/tripatjeep.jpeg",
+        linkedin: "https://www.linkedin.com/in/tripatjeet-singh-7162606",
+        category: "Judges",
+        experience: "15+ years",
+        bio: "Senior Cloud Engineer with 15+ years of experience delivering secure, scalable, and enterprise-grade cloud solutions within the banking and financial technology sector. Specializes in AWS cloud architecture, zero-trust security, multi-account governance, AI-driven cloud operations, and enterprise automation. Recognized for leading large-scale cloud modernization initiatives, designing resilient architectures from the ground up, and driving operational excellence in highly regulated financial environments. Deep expertise in cloud security, compliance, observability, DevSecOps, and infrastructure automation using AWS-native services and Terraform. Focuses on secure AI governance, autonomous cloud control systems, and resilient financial infrastructure architectures."
+    },
+    {
+        name: "Rambabu Tangirala",
+        slug: "rambabu-tangirala",
+        role: "Senior Data Engineer & Independent Researcher",
+        company: "Independent",
+        image: "/avatars/rambaby.jpeg",
+        category: "Judges",
+        experience: "11+ years",
+        bio: "Senior Data Engineer, Independent Researcher, IEEE Member, journal reviewer, and conference judge with 11+ years of experience in enterprise data engineering, cloud platforms, AI-driven data systems, and ETL modernization. Expertise includes Google BigQuery, Informatica IDMC/IICS, cloud data architecture, AI-enabled data quality frameworks, and intelligent automation systems. Passionate about advancing data engineering practices and evaluating innovative solutions at the intersection of data, AI, and cloud technologies."
     },
 ]
 
