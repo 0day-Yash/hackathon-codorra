@@ -180,6 +180,17 @@ export const organizingCommittee: Person[] = [
         category: "Organizing Committee",
         department: "Core Leadership",
         bio: "I am a second-year B.Tech student at MIT Ujjain, Madhya Pradesh, with a strong interest in technology, developer communities, and communication-focused roles. I completed a two-month internship at HackTour IND as a Community Outreach Intern, where I worked on community outreach, marketing, and managing developer communities. I am passionate about growth and collaboration, and I enjoy connecting with people, learning new technologies, and contributing to innovative communities."
+    },
+    {
+        name: "Ishika",
+        slug: "ishika",
+        role: "Graduate Professional",
+        company: "CODORRA",
+        hackathonRole: "Lead Organizer",
+        image: "/avatars/ishika.jpeg",
+        category: "Organizing Committee",
+        department: "Core Leadership",
+        bio: "Motivated and adaptable graduate with experience in client coordination, customer support, presentations, and teamwork. Strong communication and organizational skills with the ability to work effectively in fast-paced environments. Quick learner with a positive attitude and eagerness to contribute to professional roles across different industries while continuously developing new skills."
     }
 ]
 
@@ -462,6 +473,26 @@ export const judges: Person[] = [
         category: "Judges",
         experience: "11+ years",
         bio: "Senior Data Engineer, Independent Researcher, IEEE Member, journal reviewer, and conference judge with 11+ years of experience in enterprise data engineering, cloud platforms, AI-driven data systems, and ETL modernization. Expertise includes Google BigQuery, Informatica IDMC/IICS, cloud data architecture, AI-enabled data quality frameworks, and intelligent automation systems. Passionate about advancing data engineering practices and evaluating innovative solutions at the intersection of data, AI, and cloud technologies."
+    },
+    {
+        name: "Hemalatha Murugesan",
+        slug: "hemalatha-murugesan",
+        role: "Lead Software Engineer",
+        company: "Independent Researcher",
+        image: "/avatars/hemalatha.jpeg",
+        category: "Judges",
+        experience: "14+ years",
+        bio: "Software professional and independent researcher with expertise in banking technology, commercial lending platforms, core banking systems, and contact center solutions. Over a decade of experience in software engineering and enterprise application development, contributing to large-scale digital transformation initiatives including IVR modernization, lending automation, and banking system integrations. Areas of interest include Artificial Intelligence in banking operations, fraud detection, predictive analytics, intelligent contact center technologies, and data-driven financial solutions. Actively building a research and publication profile focused on AI-powered banking systems, commercial lending risk management, and customer experience optimization through modern technology platforms."
+    },
+    {
+        name: "Dr. Vedika Saravanan",
+        slug: "vedika-saravanan",
+        role: "Software Engineer & Researcher",
+        company: "Independent",
+        image: "",
+        category: "Judges",
+        experience: "5–7 years",
+        bio: "Software engineer and researcher with expertise in artificial intelligence, machine learning systems, cybersecurity tooling, and cloud-native platforms. Holds a PhD in Electrical Engineering and has contributed to research spanning advanced computing, reliability optimization, and scalable software systems. Work includes AI-driven developer tooling, secure infrastructure platforms, and high-performance computing applications."
     },
 ]
 
