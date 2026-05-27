@@ -34,6 +34,7 @@ import {
   Smartphone,
   Globe,
   Monitor,
+  Calendar,
 } from "lucide-react"
 
 function Container({ className, children }: { className?: string; children: React.ReactNode }) {
@@ -247,6 +248,20 @@ function Timeline() {
               <a href="/schedule">
                 See Full Schedule
                 <ArrowRight className="ml-2 size-4" />
+              </a>
+            </Button>
+          </div>
+        </Reveal>
+        <Reveal delay={300}>
+          <div className="flex justify-center mt-4">
+            <Button
+              variant="outline"
+              className="rounded-lg border border-white/10 bg-white/5 hover:bg-white/10"
+              asChild
+            >
+              <a href="https://calendar.google.com/calendar/u/0?cid=dGVhbUBjb2RvcnJhLnh5eg" target="_blank" rel="noopener">
+                <Calendar className="mr-2 size-4" />
+                Add to Calendar
               </a>
             </Button>
           </div>

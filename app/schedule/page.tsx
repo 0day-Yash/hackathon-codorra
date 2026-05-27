@@ -108,6 +108,19 @@ export default function SchedulePage() {
           className="cursor-target"
         />
 
+        <Reveal className="flex justify-center mb-8">
+          <Button
+            size="lg"
+            className="rounded-full h-12 px-10 bg-white text-black hover:bg-zinc-200 transition-all font-semibold shadow-xl shadow-white/5"
+            asChild
+          >
+            <a href="https://calendar.google.com/calendar/u/0?cid=dGVhbUBjb2RvcnJhLnh5eg" target="_blank" rel="noopener">
+              <Calendar className="mr-2 size-5" />
+              Add to Calendar
+            </a>
+          </Button>
+        </Reveal>
+
         <div className="space-y-12">
           {scheduleEvents.map((day, dayIndex) => (
             <Reveal key={day.day} delay={dayIndex * 100}>
