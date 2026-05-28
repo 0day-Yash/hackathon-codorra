@@ -494,6 +494,16 @@ export const judges: Person[] = [
         experience: "5–7 years",
         bio: "Software engineer and researcher with expertise in artificial intelligence, machine learning systems, cybersecurity tooling, and cloud-native platforms. Holds a PhD in Electrical Engineering and has contributed to research spanning advanced computing, reliability optimization, and scalable software systems. Work includes AI-driven developer tooling, secure infrastructure platforms, and high-performance computing applications."
     },
+    {
+        name: "Venkata Lakshmi Narasimha Kishore Vadapalli",
+        slug: "kishore-vadapalli",
+        role: "Senior Software Engineer",
+        company: "PRO IT INC",
+        image: "",
+        category: "Judges",
+        experience: "16+ years",
+        bio: "Expert in development and deployment of cloud native distributed enterprise platforms that modernize mission critical systems across banking, healthcare, and insurance through scalable Java microservices, event driven architectures, and automated DevOps pipelines. Specializes in transforming large legacy applications into high availability, real time ecosystems using AWS, Kafka based asynchronous processing, infrastructure as code, secure API design, and advanced performance engineering."
+    },
 ]
 
 export const allPeople = [...judges, ...speakers, ...organizingCommittee]

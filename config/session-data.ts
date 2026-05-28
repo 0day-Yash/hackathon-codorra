@@ -83,6 +83,25 @@ export const SCHEDULE_EVENTS: SessionEvent[] = [
     morePhoneNumbers: "https://tel.meet/ksp-iqot-sym?pin=2504719383806"
   },
   {
+    id: "s1b",
+    slug: "speaker-session-2b",
+    title: "Balancing Innovation and Compliance in Cloud-Native Financial and Enterprise Systems",
+    description: "Balancing innovation and compliance in cloud-native financial and enterprise systems requires organizations to modernize their technology platforms while maintaining strict regulatory, security, and operational standards. Learn how to integrate DevSecOps pipelines, automated compliance checks, zero-trust security models, and real-time monitoring into cloud-native ecosystems.",
+    day: 1,
+    date: "Saturday, May 30",
+    startTime: "5:00 PM",
+    endTime: "5:30 PM",
+    timeLabel: "5:00 PM - 5:30 PM",
+    location: "Live Stream",
+    type: "speaker",
+    host: "Kishore Vadapalli",
+    takeaways: ["DevSecOps pipelines and compliance automation", "Zero-trust security models in cloud-native systems", "Balancing innovation with regulatory requirements"],
+    meetLink: "https://meet.google.com/zuc-awyu-upr",
+    meetPin: "521 396 797 6890",
+    dialNumber: "(IT) +39 02 8734 8723",
+    morePhoneNumbers: "https://tel.meet/zuc-awyu-upr?pin=5213967976890"
+  },
+  {
     id: "s2",
     slug: "speaker-session-3",
     title: "Quiet Failures, Loud Breaches: Observability and Auto Remediation for Regulated Industry Data Pipelines",
