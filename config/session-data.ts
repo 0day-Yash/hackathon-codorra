@@ -12,6 +12,10 @@ export interface SessionEvent {
   type: "keynote" | "kickoff" | "speaker" | "deadline" | "ceremony" | "build" | "community"
   host: string
   takeaways?: string[]
+  meetLink?: string
+  meetPin?: string
+  dialNumber?: string
+  morePhoneNumbers?: string
 }
 
 export const SCHEDULE_DAYS = [
@@ -34,7 +38,11 @@ export const SCHEDULE_EVENTS: SessionEvent[] = [
     location: "Live Stream",
     type: "keynote",
     host: "CODORRA Team",
-    takeaways: ["Event goals and expectations", "How to submit", "Judging criteria overview", "Track structure and resources", "Tips for rapid prototyping", "Team alignment for the first 48 hours"]
+    takeaways: ["Event goals and expectations", "How to submit", "Judging criteria overview", "Track structure and resources", "Tips for rapid prototyping", "Team alignment for the first 48 hours"],
+    meetLink: "https://meet.google.com/ywe-zitc-dqq",
+    meetPin: "671 289 455 5064",
+    dialNumber: "(IT) +39 02 8734 8723",
+    morePhoneNumbers: "https://tel.meet/ywe-zitc-dqq?pin=6712894555064"
   },
   {
     id: "f3",
@@ -49,7 +57,11 @@ export const SCHEDULE_EVENTS: SessionEvent[] = [
     location: "Live Stream",
     type: "speaker",
     host: "Naresh Lokiny",
-    takeaways: ["Multi-cloud security strategy", "AI/ML infrastructure operations", "DevSecOps transformation and resilience"]
+    takeaways: ["Multi-cloud security strategy", "AI/ML infrastructure operations", "DevSecOps transformation and resilience"],
+    meetLink: "https://meet.google.com/rpg-zikt-zup",
+    meetPin: "825 911 165 6285",
+    dialNumber: "(IT) +39 02 8734 8723",
+    morePhoneNumbers: "https://tel.meet/rpg-zikt-zup?pin=8259111656285"
   },
   {
     id: "s1",
@@ -64,7 +76,11 @@ export const SCHEDULE_EVENTS: SessionEvent[] = [
     location: "Live Stream",
     type: "speaker",
     host: "Sai Saketh Sunkara",
-    takeaways: ["Agentforce AI agents with custom Apex actions", "Data Cloud integration and unified data architecture", "AppSec best practices — OAuth 2.0, Named Credentials, Shield Platform Encryption"]
+    takeaways: ["Agentforce AI agents with custom Apex actions", "Data Cloud integration and unified data architecture", "AppSec best practices — OAuth 2.0, Named Credentials, Shield Platform Encryption"],
+    meetLink: "https://meet.google.com/ksp-iqot-sym",
+    meetPin: "250 471 938 3806",
+    dialNumber: "(IT) +39 02 8734 8723",
+    morePhoneNumbers: "https://tel.meet/ksp-iqot-sym?pin=2504719383806"
   },
   {
     id: "s2",
@@ -79,7 +95,11 @@ export const SCHEDULE_EVENTS: SessionEvent[] = [
     location: "Live Stream",
     type: "speaker",
     host: "Gowtham Reddy Pappula",
-    takeaways: ["Pipeline observability and anomaly detection", "Automated remediation strategies", "Operational automation for regulated industries"]
+    takeaways: ["Pipeline observability and anomaly detection", "Automated remediation strategies", "Operational automation for regulated industries"],
+    meetLink: "https://meet.google.com/rqq-fnij-eyw",
+    meetPin: "513 937 913 1097",
+    dialNumber: "(IT) +39 02 8734 8723",
+    morePhoneNumbers: "https://tel.meet/rqq-fnij-eyw?pin=5139379131097"
   },
   {
     id: "su5",
@@ -106,7 +126,11 @@ export const SCHEDULE_EVENTS: SessionEvent[] = [
     location: "Live Stream",
     type: "ceremony",
     host: "CODORRA Team",
-    takeaways: ["Winner recognition", "Final wrap-up", "Next steps for participants"]
+    takeaways: ["Winner recognition", "Final wrap-up", "Next steps for participants"],
+    meetLink: "https://meet.google.com/vkq-phmv-tiy",
+    meetPin: "976 467 478 1548",
+    dialNumber: "(IT) +39 02 8734 8723",
+    morePhoneNumbers: "https://tel.meet/vkq-phmv-tiy?pin=9764674781548"
   }
 ]
 

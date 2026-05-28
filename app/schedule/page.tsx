@@ -170,6 +170,31 @@ export default function SchedulePage() {
                           </CardHeader>
                           <CardContent className="pt-2 space-y-4">
                             <p className="text-xs text-muted-foreground leading-relaxed">{event.description}</p>
+                            {event.meetLink && (
+                              <div className="space-y-2 pt-2 border-t border-white/10">
+                                <div className="text-xs font-semibold text-white">Google Meet Details:</div>
+                                <div className="space-y-1 text-xs text-muted-foreground">
+                                  <div>
+                                    <a href={event.meetLink} target="_blank" rel="noopener" className="text-primary hover:underline">
+                                      Join video call
+                                    </a>
+                                  </div>
+                                  {event.dialNumber && (
+                                    <div>Or dial: <span className="text-white/70">{event.dialNumber}</span></div>
+                                  )}
+                                  {event.meetPin && (
+                                    <div>PIN: <span className="text-white/70">{event.meetPin}</span></div>
+                                  )}
+                                  {event.morePhoneNumbers && (
+                                    <div>
+                                      <a href={event.morePhoneNumbers} target="_blank" rel="noopener" className="text-primary hover:underline">
+                                        More phone numbers
+                                      </a>
+                                    </div>
+                                  )}
+                                </div>
+                              </div>
+                            )}
                             {event.slug && (
                               <div>
                                 <Button variant="outline" size="sm" asChild>
