@@ -195,7 +195,51 @@ export const organizingCommittee: Person[] = [
 ]
 
 
-export const speakers: Person[] = []
+export const speakers: Person[] = [
+  {
+    name: "Naresh Lokiny",
+    slug: "naresh-lokiny",
+    role: "Sr DevOps Cloud Engineer",
+    company: "Charter Communications",
+    image: "",
+    linkedin: "https://www.linkedin.com/in/nareshl/",
+    category: "Speakers",
+    experience: "15+ years",
+    bio: "U.S.-based technology speaker, IEEE Senior Member, and cloud infrastructure professional specializing in multi-cloud platform engineering, DevSecOps transformation, Software, AI/ML infrastructure operations, and secure cloud-native environments. Holds a Master's degree in Computer Science Technology and has experience supporting complex critical deployments using orchestration technologies across cloud platforms."
+  },
+  {
+    name: "Sai Saketh Sunkara",
+    slug: "sai-saketh-sunkara",
+    role: "Senior Salesforce Developer and Technical Consultant",
+    company: "Perficient Inc.",
+    image: "",
+    linkedin: "https://www.linkedin.com/in/sai-sunkara-652909270",
+    category: "Speakers",
+    experience: "8+ years",
+    bio: "Senior Salesforce Developer and Technical Consultant with 8+ years of experience delivering enterprise-grade Salesforce solutions across Healthcare, Insurance, and Financial Services industries. Holding 12 Salesforce certifications including Health Cloud Accredited Professional, Data Cloud, and Agentforce Specialist. Specializes in architecting and delivering complex, scalable platforms leveraging Health Cloud, Experience Cloud, Sales Cloud, Service Cloud, Commerce Cloud, OmniStudio, Agentforce, and Data Cloud."
+  },
+  {
+    name: "Gowtham Reddy Pappula",
+    slug: "gowtham-reddy-pappula",
+    role: "Lead Data Engineer",
+    company: "Insurance Industry",
+    image: "",
+    category: "Speakers",
+    experience: "10+ years",
+    bio: "Lead Data Engineer based out of Dallas, Texas, currently working with a leading multinational company in the insurance industry. Works on building scalable cloud-based data platforms, enterprise ETL pipelines, and real-time data processing systems. Experience includes technologies such as Databricks, PySpark, Kafka, Snowflake, Azure, and AWS, with a focus on operational automation and large-scale enterprise data solutions. Holds a Master's degree in Computer Science from the University of North Texas and is AWS Certified as a Data Engineer – Associate."
+  },
+  {
+    name: "Venkata Lakshmi Narasimha Kishore Vadapalli",
+    slug: "kishore-vadapalli",
+    role: "Senior Software Engineer",
+    company: "PRO IT INC",
+    image: "",
+    linkedin: "https://www.linkedin.com/in/kishore-vadapalli-b1579014/",
+    category: "Speakers",
+    experience: "16+ years",
+    bio: "Expert in development and deployment of cloud native distributed enterprise platforms that modernize mission critical systems across banking, healthcare, and insurance through scalable Java microservices, event driven architectures, and automated DevOps pipelines. Specializes in transforming large legacy applications into high availability, real time ecosystems using AWS, Kafka based asynchronous processing, infrastructure as code, secure API design, and advanced performance engineering."
+  }
+]
 /*
     {
         name: "Arham Akheel",
