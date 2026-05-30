@@ -27,130 +27,49 @@ export const DAYS: Day[] = [
 
 export const MOCK_EVENTS: Event[] = [
   {
-    id: "f0",
-    title: "Hacking begins",
-    description: "48-hour build window opens.",
-    day: 0,
-    startTime: { hour: 10, minute: 0 },
-    endTime: { hour: 11, minute: 0 },
-  },
-  {
     id: "f1",
-    title: "Opening Keynote",
+    title: "Opening Keynote & Official Kickoff",
     description: "Welcome, event overview & rules.",
     day: 0,
     startTime: { hour: 11, minute: 0 },
-    endTime: { hour: 12, minute: 0 },
-  },
-  {
-    id: "f2",
-    title: "Official Kickoff",
-    description: "Go build something.",
-    day: 0,
-    startTime: { hour: 12, minute: 0 },
     endTime: { hour: 13, minute: 0 },
+    slug: "opening-keynote"
   },
   {
     id: "f3",
-    title: "Defensive AI in Regulated Industries: Production NLP and OCR at Scale",
-    description: "30 min speaker session.",
-    day: 0,
-    startTime: { hour: 14, minute: 0 },
-    endTime: { hour: 14, minute: 30 },
-    slug: "speaker-session-1"
-  },
-  {
-    id: "f4",
-    title: "The Connected Vehicle Attack Surface: Cybersecurity in Software-Defined Vehicles",
-    description: "30 min speaker session.",
-    day: 0,
-    startTime: { hour: 17, minute: 0 },
-    endTime: { hour: 17, minute: 30 },
-    slug: "speaker-session-2"
-  },
-  {
-    id: "f5",
-    title: "Event-Driven at Scale: Hardening Java Microservices and Kafka on AWS",
-    description: "30 min speaker session.",
-    day: 0,
-    startTime: { hour: 20, minute: 0 },
-    endTime: { hour: 20, minute: 30 },
-    slug: "speaker-session-3"
-  },
-  {
-    id: "f6",
-    title: "Securing the Modern Data Stack: Governance and Access Control with Microsoft Fabric",
-    description: "30 min speaker session.",
+    title: "Securing the AI Cloud: Defending Modern Multi-Cloud Platforms",
+    description: "30 min speaker session with Naresh Lokiny.",
     day: 0,
     startTime: { hour: 23, minute: 0 },
     endTime: { hour: 23, minute: 30 },
-    slug: "speaker-session-4"
+    slug: "speaker-session-1"
   },
   {
-    id: "s1",
-    title: "AI in Medical Devices: Sensor Data, Digital Twins, and the Patient-Privacy Boundary",
-    description: "30 min speaker session.",
-    day: 1,
-    startTime: { hour: 9, minute: 0 },
-    endTime: { hour: 9, minute: 30 },
-    slug: "speaker-session-5"
-  },
-  {
-    id: "s2",
-    title: "Enterprise CRM Under Attack: Securing Apex, LWC, and the Salesforce API Surface",
-    description: "30 min speaker session.",
-    day: 1,
-    startTime: { hour: 13, minute: 0 },
-    endTime: { hour: 13, minute: 30 },
-    slug: "speaker-session-6"
-  },
-  {
-    id: "s3",
-    title: "Speaker Session 7 — Privacy, Crypto & Zero Trust",
-    description: "30 min speaker session.",
+    id: "s1b",
+    title: "Balancing Innovation and Compliance in Cloud-Native Systems",
+    description: "30 min speaker session with Kishore Vadapalli.",
     day: 1,
     startTime: { hour: 17, minute: 0 },
     endTime: { hour: 17, minute: 30 },
+    slug: "speaker-session-2b"
   },
   {
-    id: "s4",
-    title: "Speaker Session 8 — Founders & Operators AMA",
-    description: "30 min speaker session.",
+    id: "s1",
+    title: "Building Intelligent, Secure Salesforce Applications",
+    description: "30 min speaker session with Sai Saketh Sunkara.",
     day: 1,
     startTime: { hour: 21, minute: 0 },
     endTime: { hour: 21, minute: 30 },
+    slug: "speaker-session-2"
   },
   {
-    id: "su1",
-    title: "Speaker Session 9 — Industry Leaders Panel",
-    description: "30 min speaker session.",
+    id: "s2",
+    title: "Quiet Failures, Loud Breaches: Observability and Auto Remediation",
+    description: "30 min speaker session with Gowtham Reddy Pappula.",
     day: 2,
     startTime: { hour: 9, minute: 0 },
     endTime: { hour: 9, minute: 30 },
-  },
-  {
-    id: "su2",
-    title: "Speaker Session 10 — Pitching & Demo Day Tips",
-    description: "30 min speaker session.",
-    day: 2,
-    startTime: { hour: 11, minute: 0 },
-    endTime: { hour: 11, minute: 30 },
-  },
-  {
-    id: "su3",
-    title: "Speaker Session 11 — Careers in Cybersecurity & AI",
-    description: "30 min speaker session.",
-    day: 2,
-    startTime: { hour: 13, minute: 0 },
-    endTime: { hour: 13, minute: 30 },
-  },
-  {
-    id: "su4",
-    title: "Speaker Session 12 — The Global Security Ecosystem",
-    description: "30 min speaker session.",
-    day: 2,
-    startTime: { hour: 15, minute: 0 },
-    endTime: { hour: 15, minute: 30 },
+    slug: "speaker-session-3"
   },
   {
     id: "su5",

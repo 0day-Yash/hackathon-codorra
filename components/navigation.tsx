@@ -1,10 +1,13 @@
 "use client"
 
 import type React from "react"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Container } from "@/components/page-layout"
 
 export function Navbar() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
     <header className="fixed top-0 z-50 w-full border-b border-white/5 bg-black/50 backdrop-blur-md">
       <Container>
@@ -33,7 +36,12 @@ export function Navbar() {
             >
               <a href="https://unstop.com/hackathons/hackathon-2026-codorra-1669522">Register</a>
             </Button>
-            <Button variant="ghost" size="icon" className="md:hidden text-white">
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              className="md:hidden text-white"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
               <span className="sr-only">Menu</span>
               <svg className="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
@@ -41,6 +49,29 @@ export function Navbar() {
             </Button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <nav className="md:hidden border-t border-white/5 bg-black/80 backdrop-blur-md">
+            <div className="flex flex-col gap-1 p-4">
+              <a href="/" onClick={() => setMobileMenuOpen(false)} className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-white hover:bg-white/5 rounded transition-colors">Home</a>
+              <a href="/about" onClick={() => setMobileMenuOpen(false)} className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-white hover:bg-white/5 rounded transition-colors">About</a>
+              <a href="/speakers" onClick={() => setMobileMenuOpen(false)} className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-white hover:bg-white/5 rounded transition-colors">Speakers</a>
+              <a href="/prizes" onClick={() => setMobileMenuOpen(false)} className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-white hover:bg-white/5 rounded transition-colors">Prizes</a>
+              <a href="/sponsors" onClick={() => setMobileMenuOpen(false)} className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-white hover:bg-white/5 rounded transition-colors">Sponsors</a>
+              <a href="/schedule" onClick={() => setMobileMenuOpen(false)} className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-white hover:bg-white/5 rounded transition-colors">Schedule</a>
+              <a href="/criteria" onClick={() => setMobileMenuOpen(false)} className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-white hover:bg-white/5 rounded transition-colors">Criteria</a>
+              <a href="/faq" onClick={() => setMobileMenuOpen(false)} className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-white hover:bg-white/5 rounded transition-colors">FAQ</a>
+              <Button
+                asChild
+                size="sm"
+                className="mt-2 rounded-full bg-white text-black hover:bg-zinc-200 w-full"
+              >
+                <a href="https://unstop.com/hackathons/hackathon-2026-codorra-1669522">Register</a>
+              </Button>
+            </div>
+          </nav>
+        )}
       </Container>
     </header>
   )

@@ -23,12 +23,12 @@ export const organizingCommittee: Person[] = [
         slug: "yash-kulkarni",
         role: "Founder & CEO",
         company: "PurpleRain TechSafe",
-        hackathonRole: "Co-founder & Lead Speaker",
+        hackathonRole: "Founder & Lead Organizer",
         image: "/avatars/yash.png",
         linkedin: "https://www.linkedin.com/in/yashkulkarni08/",
         category: "Organizing Committee",
         department: "Core Leadership",
-        bio: "Founder and CEO of PurpleRain TechSafe, leading innovation in the cybersecurity space. At CODORRA, Yash serves as the Co-founder and Lead Speaker, overseeing the vision and execution of the hackathon."
+        bio: "Founder and CEO of PurpleRain TechSafe, leading innovation in the cybersecurity space. At CODORRA, Yash serves as the Founder and Lead Organizer, overseeing the vision and execution of the hackathon."
     },
     {
         name: "Tanishka",
@@ -160,9 +160,9 @@ export const organizingCommittee: Person[] = [
     {
         name: "Hazim Hilal",
         slug: "hazim-hilal",
-        role: "Technical Support Lead",
+        role: "Coordinator for Speakers and Judges",
         company: "CODORRA",
-        hackathonRole: "Technical Support Lead",
+        hackathonRole: "Coordinator for Speakers and Judges",
         image: "/avatars/hamid.jpeg",
         category: "Organizing Committee",
         department: "Operations",
@@ -257,16 +257,6 @@ export const speakers: Person[] = [
     category: "Speakers",
     experience: "18+ years",
     bio: "Senior Software Engineer and enterprise infrastructure specialist with nearly two decades of experience in information technology. Currently works in the consulting services industry, focusing on cloud automation, configuration management, compliance engineering, and secure multi-cloud operations. Experience spans regulated enterprise environments including financial services, banking, business services, oil and gas, and consulting. Works on building scalable automation frameworks, infrastructure-as-code solutions, compliance enforcement models, and DevSecOps-driven configuration management systems. Technical expertise includes Puppet, Ansible, cloud-native automation, policy enforcement, compliance monitoring, and AI-assisted compliance intelligence, with a focus on improving infrastructure reliability, security, and audit readiness at enterprise scale."
-  },
-  {
-    name: "Praween Kumar",
-    slug: "praween-kumar",
-    role: "System Architect",
-    company: "Stealth Automotive Startup",
-    image: "/avatars/praween_kumar.jpg",
-    category: "Speakers",
-    experience: "18+ years",
-    bio: "System Architect at a stealth automotive startup, working on scalable platform architecture across multiple layers. Over 18 years across Embedded, Automotive, Fintech, MedTech, and Semiconductors — passionate about turning bold ideas into scalable, real-world systems."
   }
 ]
 /*
