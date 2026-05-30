@@ -222,7 +222,7 @@ export const speakers: Person[] = [
     slug: "gowtham-reddy-pappula",
     role: "Lead Data Engineer",
     company: "Insurance Industry",
-    image: "",
+    image: "/avatars/gowtham.jpg",
     category: "Speakers",
     experience: "10+ years",
     bio: "Lead Data Engineer based out of Dallas, Texas, currently working with a leading multinational company in the insurance industry. Works on building scalable cloud-based data platforms, enterprise ETL pipelines, and real-time data processing systems. Experience includes technologies such as Databricks, PySpark, Kafka, Snowflake, Azure, and AWS, with a focus on operational automation and large-scale enterprise data solutions. Holds a Master's degree in Computer Science from the University of North Texas and is AWS Certified as a Data Engineer – Associate."
@@ -237,6 +237,36 @@ export const speakers: Person[] = [
     category: "Speakers",
     experience: "16+ years",
     bio: "Expert in development and deployment of cloud native distributed enterprise platforms that modernize mission critical systems across banking, healthcare, and insurance through scalable Java microservices, event driven architectures, and automated DevOps pipelines. Specializes in transforming large legacy applications into high availability, real time ecosystems using AWS, Kafka based asynchronous processing, infrastructure as code, secure API design, and advanced performance engineering."
+  },
+  {
+    name: "Mariappan Ayyarrappan",
+    slug: "mariappan-ayyarrappan",
+    role: "Principal Software Engineer",
+    company: "Invesco",
+    image: "/avatars/Mariappan-Picture.png",
+    category: "Speakers",
+    experience: "17+ years",
+    bio: "Principal Software Engineer with over 17 years of experience building scalable financial analytics platforms, secure enterprise systems, and high-performance web applications. At Invesco, architected a robust frontend platform from the ground up using Next.js, React, and Node.js. Previously at Tenable, led application security initiatives and optimized cloud security infrastructure, delivering $120K in annual savings. His career spans industry leaders including Macy's and Matrimony.com, with deep expertise in frontend architecture, API integration, middleware engineering, and application security across AWS, GCP, and Azure. A published researcher and IEEE Senior Member, Mariappan has authored papers on topics ranging from scalable frontend architectures and JavaScript performance optimization to microservices and asset management platforms. Passionate about building secure, resilient web systems and sharing practical engineering insights with the developer community."
+  },
+  {
+    name: "Nadeem Siddiqui",
+    slug: "nadeem-siddiqui",
+    role: "Senior Software Engineer",
+    company: "Consulting Services",
+    image: "/avatars/nadeem.jpg",
+    category: "Speakers",
+    experience: "18+ years",
+    bio: "Senior Software Engineer and enterprise infrastructure specialist with nearly two decades of experience in information technology. Currently works in the consulting services industry, focusing on cloud automation, configuration management, compliance engineering, and secure multi-cloud operations. Experience spans regulated enterprise environments including financial services, banking, business services, oil and gas, and consulting. Works on building scalable automation frameworks, infrastructure-as-code solutions, compliance enforcement models, and DevSecOps-driven configuration management systems. Technical expertise includes Puppet, Ansible, cloud-native automation, policy enforcement, compliance monitoring, and AI-assisted compliance intelligence, with a focus on improving infrastructure reliability, security, and audit readiness at enterprise scale."
+  },
+  {
+    name: "Praween Kumar",
+    slug: "praween-kumar",
+    role: "System Architect",
+    company: "Stealth Automotive Startup",
+    image: "/avatars/praween_kumar.jpg",
+    category: "Speakers",
+    experience: "18+ years",
+    bio: "System Architect at a stealth automotive startup, working on scalable platform architecture across multiple layers. Over 18 years across Embedded, Automotive, Fintech, MedTech, and Semiconductors — passionate about turning bold ideas into scalable, real-world systems."
   }
 ]
 /*
