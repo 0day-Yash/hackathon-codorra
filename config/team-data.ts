@@ -201,7 +201,7 @@ export const speakers: Person[] = [
     slug: "naresh-lokiny",
     role: "Sr DevOps Cloud Engineer",
     company: "Charter Communications",
-    image: "",
+    image: "/avatars/Naresh_Lokiny.png",
     linkedin: "https://www.linkedin.com/in/nareshl/",
     category: "Speakers",
     experience: "15+ years",
@@ -212,8 +212,7 @@ export const speakers: Person[] = [
     slug: "sai-saketh-sunkara",
     role: "Senior Salesforce Developer and Technical Consultant",
     company: "Perficient Inc.",
-    image: "",
-    linkedin: "https://www.linkedin.com/in/sai-sunkara-652909270",
+    image: "/avatars/sai-saketh.jpeg",
     category: "Speakers",
     experience: "8+ years",
     bio: "Senior Salesforce Developer and Technical Consultant with 8+ years of experience delivering enterprise-grade Salesforce solutions across Healthcare, Insurance, and Financial Services industries. Holding 12 Salesforce certifications including Health Cloud Accredited Professional, Data Cloud, and Agentforce Specialist. Specializes in architecting and delivering complex, scalable platforms leveraging Health Cloud, Experience Cloud, Sales Cloud, Service Cloud, Commerce Cloud, OmniStudio, Agentforce, and Data Cloud."
@@ -233,7 +232,7 @@ export const speakers: Person[] = [
     slug: "kishore-vadapalli",
     role: "Senior Software Engineer",
     company: "PRO IT INC",
-    image: "",
+    image: "/avatars/kishore.jpeg",
     linkedin: "https://www.linkedin.com/in/kishore-vadapalli-b1579014/",
     category: "Speakers",
     experience: "16+ years",
@@ -537,16 +536,6 @@ export const judges: Person[] = [
         category: "Judges",
         experience: "5–7 years",
         bio: "Software engineer and researcher with expertise in artificial intelligence, machine learning systems, cybersecurity tooling, and cloud-native platforms. Holds a PhD in Electrical Engineering and has contributed to research spanning advanced computing, reliability optimization, and scalable software systems. Work includes AI-driven developer tooling, secure infrastructure platforms, and high-performance computing applications."
-    },
-    {
-        name: "Venkata Lakshmi Narasimha Kishore Vadapalli",
-        slug: "kishore-vadapalli",
-        role: "Senior Software Engineer",
-        company: "PRO IT INC",
-        image: "",
-        category: "Judges",
-        experience: "16+ years",
-        bio: "Expert in development and deployment of cloud native distributed enterprise platforms that modernize mission critical systems across banking, healthcare, and insurance through scalable Java microservices, event driven architectures, and automated DevOps pipelines. Specializes in transforming large legacy applications into high availability, real time ecosystems using AWS, Kafka based asynchronous processing, infrastructure as code, secure API design, and advanced performance engineering."
     },
 ]
 
